@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root "index#get"
-  get 'helloworld' => 'search#helloworld'
+  namespace 'api' do
+    namespace 'v1' do
+      resources :top
+    end
+  end
 end
