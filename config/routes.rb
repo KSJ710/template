@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :top
     end
   end
+
+  resources :products
 end
