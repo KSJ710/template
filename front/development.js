@@ -2,68 +2,43 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const src  = path.resolve(__dirname, 'src')
-const MODE = "development";
-const enabledSourceMap = MODE === "development";
+const dist = path.resolve(__dirname, 'dist')
 
-module.exports = {
-  mode: MODE,
-  entry: src + "/index.js",
+export default {
+  mode: 'development',
+  entry: src + '/index.jsx',
+
   output: {
-    path: path.resolve(__dirname, 'static/js'),
+    path: dist,
     filename: 'bundle.js'
   },
+
   module: {
     rules: [
       {
-        enforce: "pre",
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                "@babel/preset-env"
-              ]
-            }
-          }
-        ]
-      },
-      {
-        test: /\.scss/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              sourceMap: enabledSourceMap
-            }
-          }
-        ]
-      },
-      {
-        loader: "sass-loader",
-        options: {
-          // ソースマップの利用有無
-          sourceMap: enabledSourceMap
-        }
+        loader: 'babel-loader'
       }
     ]
   },
+
   resolve: {
     extensions: ['.js', '.jsx']
   },
+
   plugins: [
-    //以下追記
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html'),
+      template: src + '/index.html',
       filename: 'index.html'
     })
-  ]
+  ],
+  devServer: {
+    open: true,//ブラウザを自動で開く
+    openPage: "index.html",//自動で指定したページを開く
+    contentBase: path.join(__dirname, 'public'),// HTML等コンテンツのルートディレクトリ
+    watchContentBase: true,//コンテンツの変更監視をする
+    host: "0.0.0.0",
+    port: 3000, // ポート番号
+  }
 }

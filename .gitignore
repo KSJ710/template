@@ -21,4 +21,10 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# add
+Vagrantfile
+/.idea
+/.vagrant
+/.vscode
+/node_modules
 /vendor
