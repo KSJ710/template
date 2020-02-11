@@ -1,8 +1,0 @@
-{
-  "editor.tabSize": 2,
-  // コードナビゲーションの機能を有効にします
-  "ruby.intellisense": "rubyLocate",
-  // v0.20.0 から搭載された新しいLanguage serverを有効にします。
-  // 有効にすると def-end などのブロックを区切り語にカーソルが当たっているときに、対になる区切り語もハイライトされて認識しやすくなります。
-  "ruby.useLanguageServer": true
-}
