@@ -26,5 +26,4 @@ Vagrantfile
 /.idea
 /.vagrant
 /.vscode
-/node_modules
 /vendor
