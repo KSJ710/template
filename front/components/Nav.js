@@ -1,19 +1,26 @@
+import Link from 'next/link'
+
 export default function Nav() {
   return (
-    <div>
+    <nav>
       <ul>
-        <li>ホーム</li>
-        <li>ログイン</li>
+        <Link href="/"><a><li>ホーム</li></a></Link>
+        <Link href="/login"><a><li>ログイン</li></a></Link>
+        <Link href="#"><a><li>その他</li></a></Link>
       </ul>
       <style jsx>{`
       ul {
+        with: 100%;
+        padding: 0% 10%;
         display: flex;
-        background-color: red;
       }
       li {
-        justify-content: space-between;
+        margin-right: 20px;
+      }
+      li:last-child {
+        margin-right: 0px;
       }
     `}</style>
-    </div>
+    </nav>
   )
 }

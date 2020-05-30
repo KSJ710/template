@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Nav from '../components/Nav'
 
 export default function Home() {
   return (
@@ -8,10 +9,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Nav />
+
       <main>
-        <h1 className="title">
-          <a href="login">login</a>
-        </h1>
 
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -63,15 +63,6 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
