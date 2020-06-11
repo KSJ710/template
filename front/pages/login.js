@@ -1,7 +1,11 @@
+import { useSession, signin, signout } from 'next-auth/client'
+
 import Head from 'next/head'
 import Nav from '../components/Nav'
 
-export default function Home() {
+export default function Login() {
+  const [session, loading] = useSession()
+
   return (
     <div className="container">
       <Head>
@@ -59,6 +63,6 @@ export default function Home() {
           list-style-type: none;
         }
       `}</style>
-    </div>
+    </div >
   )
 }

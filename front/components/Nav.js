@@ -4,9 +4,9 @@ export default function Nav() {
   return (
     <nav>
       <ul>
-        <Link href="/"><a><li>ホーム</li></a></Link>
-        <Link href="/login"><a><li>ログイン</li></a></Link>
-        <Link href="#"><a><li>その他</li></a></Link>
+        <li><Link href="/"><a>ホーム</a></Link></li>
+        <li><Link href="login"><a>ログイン</a></Link></li>
+        <li><Link href="#"><a>その他</a></Link></li>
       </ul>
       <style jsx>{`
       ul {
