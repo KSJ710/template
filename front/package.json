@@ -8,6 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@aws-amplify/api": "^3.1.17",
+    "@aws-amplify/core": "^3.4.0",
+    "@aws-amplify/pubsub": "^3.0.18",
+    "aws-amplify": "^3.0.18",
     "bootstrap": "^4.5.0",
     "next": "9.3.5",
     "passport": "^0.4.1",

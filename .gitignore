@@ -33,13 +33,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# add
-Vagrantfile
-/.idea
-/.vagrant
-/.vscode
+# front
+front/node_modules
+front/.next
 
-#amplify
+# amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
 amplify/mock-data
