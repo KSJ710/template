@@ -1,30 +1,31 @@
-import Amplify, { API, Auth, graphqlOperation } from 'aws-amplify';
-import awsconfig from '../../src/aws-exports';
-import { createTodo, updateTodo, deleteTodo } from '../../src/graphql/mutations';
-import { listTodos } from '../../src/graphql/queries';
+import Head from 'next/head'
+import Nav from '../components/Nav'
 
-Amplify.configure(awsconfig);
-
-const todo = { name: "My first todo", description: "Hello world!" };
-
-/* create a todo */
-API.graphql(graphqlOperation(createTodo, { input: todo }));
-
-export default function Login() {
+export default function Auth() {
 
   return (
     <div className="container">
+      <Head>
+        <title>mysite</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Nav />
+
       <main>
-        <form action="#" method="post">
+        <form action="/api/auth" method="post">
           <ul>
             <li>
-              <input type="text" id="name" name="name" placeholder="名前" />
+              <input type="text" id="email" name="email" placeholder="Email" />
+            </li>
+            <li>
+              <input type="text" id="username" name="username" placeholder="名前" />
             </li>
             <li>
               <input type="text" id="password" name="password" placeholder="パスワード" />
             </li>
             <li>
-              <button type="submit">ログイン</button>
+              <button type="submit">sign</button>
             </li>
           </ul>
         </form>

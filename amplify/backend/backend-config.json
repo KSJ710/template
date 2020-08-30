@@ -16,5 +16,13 @@
 				}
 			}
 		}
+	},
+	"auth": {
+		"mysitec457e554": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
 	}
 }
