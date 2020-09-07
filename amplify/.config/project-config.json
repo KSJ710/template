@@ -5,7 +5,7 @@
     "javascript": {
         "framework": "react",
         "config": {
-            "SourceDir": "/front/public",
+            "SourceDir": "/src",
             "DistributionDir": "/front/output",
             "BuildCommand": "npm build",
             "StartCommand": "npm start"
