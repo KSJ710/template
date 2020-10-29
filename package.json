@@ -1,0 +1,23 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@aws-amplify/api": "^3.2.7",
+    "@aws-amplify/core": "^3.7.0",
+    "@aws-amplify/pubsub": "^3.2.5",
+    "aws-amplify": "^3.3.4",
+    "bootstrap": "^4.5.3",
+    "mysql2": "^2.2.5",
+    "next": "^10.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.27.0",
+    "sequelize": "^6.3.5"
+  }
+}
