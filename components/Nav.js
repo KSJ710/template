@@ -5,8 +5,8 @@ export default function Nav() {
     <nav>
       <ul>
         <li><Link href="/"><a>ホーム</a></Link></li>
-        <li><Link href="login"><a>ログイン</a></Link></li>
-        <li><Link href="auth/auth"><a>サインアップ</a></Link></li>
+        <li><Link href="/auth/login"><a>ログイン</a></Link></li>
+        <li><Link href="/auth/auth"><a>サインアップ</a></Link></li>
         <li><Link href="#"><a>その他</a></Link></li>
       </ul>
       <style jsx>{`
