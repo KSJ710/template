@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Nav from '../../components/Nav'
+import Head from "next/head"
+import Nav from "../../components/Nav"
 
 export default function Knowlege() {
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
         <title>mysite</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Nav />
       <main>
@@ -14,8 +14,7 @@ export default function Knowlege() {
         <div></div>
         <div></div>
       </main>
-      <footer>
-      </footer>
+      <footer></footer>
 
       <style jsx>{`
         main {

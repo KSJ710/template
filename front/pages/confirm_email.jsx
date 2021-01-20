@@ -1,37 +1,34 @@
-import { useRouter } from 'next/router'
-import Head from 'next/head'
-import Nav from '../components/Nav'
-const https = require('https')
-
+import { useRouter } from "next/router"
+import Head from "next/head"
+import Nav from "../components/Nav"
+const https = require("https")
 
 export default function Auth() {
-const router = useRouter()
-const { confirmation_code } = router.query
-console.log(router.asPath)
-const confirmResult = 0
-// https.request(`https://mysite-710.auth.ap-northeast-1.amazoncognito.com/confirmUser?client_id=${client_id}&user_name=${user_name}&confirmation_code=${confirmation_code}`, (res) => {
-//     if (res.statusCode == 200) {
-//       confirmResult = <p>認証成功</p>
-//     } else {
-//       confirmResult = <p>認証失敗</p>
-//     }
-// }).on('error', (e) => {
-//   console.error(`エラーが出ました： ${e.message}`);
-// })
+  const router = useRouter()
+  const { confirmation_code } = router.query
+  console.log(router.asPath)
+  const confirmResult = 0
+  // https.request(`https://mysite-710.auth.ap-northeast-1.amazoncognito.com/confirmUser?client_id=${client_id}&user_name=${user_name}&confirmation_code=${confirmation_code}`, (res) => {
+  //     if (res.statusCode == 200) {
+  //       confirmResult = <p>認証成功</p>
+  //     } else {
+  //       confirmResult = <p>認証失敗</p>
+  //     }
+  // }).on('error', (e) => {
+  //   console.error(`エラーが出ました： ${e.message}`);
+  // })
 
   return (
-    <div className="container">
+    <div className='container'>
       <Head>
         <title>mysite</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <Nav />
 
-      <main>
-      </main>
-      <footer>
-      </footer>
+      <main></main>
+      <footer></footer>
 
       <style jsx>{`
         main {
@@ -63,6 +60,6 @@ const confirmResult = 0
           list-style-type: none;
         }
       `}</style>
-    </div >
+    </div>
   )
 }
