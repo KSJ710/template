@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Nav from "../../components/Nav";
+import Nav from "../components/Nav";
 
 export default function Home() {
   return (
@@ -9,30 +9,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav />
-
-      <main>
-        <div className="box1"></div>
-        <div className="box2"></div>
+      <main className="text-red-500">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div>
       </main>
 
       <footer></footer>
 
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .box1 {
-          height: 200px;
-          width: 100%;
-          background-color: red;
-        }
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 }

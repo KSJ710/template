@@ -12,14 +12,16 @@
     "@aws-amplify/core": "^3.7.0",
     "@aws-amplify/pubsub": "^3.2.5",
     "app-root-path": "^3.0.0",
+    "autoprefixer": "^10.2.4",
     "aws-amplify": "^3.3.4",
-    "bootstrap": "^4.5.3",
     "mysql2": "^2.2.5",
     "next": "^10.0.0",
+    "postcss": "^8.2.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "sass": "^1.27.0",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@types/react": "^16.9.55",
