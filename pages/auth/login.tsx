@@ -3,7 +3,7 @@ import Nav from "../../components/Nav";
 
 export default function Login() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>mysite</title>
         <link rel="icon" href="/favicon.ico" />
