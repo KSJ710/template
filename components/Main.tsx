@@ -9,6 +9,8 @@ export default function Main() {
         main {
           grid-area: main;
           height: 100vh;
+
+          background-color: #321900;
         }
       `}</style>
     </main>

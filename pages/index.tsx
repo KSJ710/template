@@ -1,10 +1,9 @@
-import Head from "next/head";
-import App from "../components/App";
+import Main from "../components/Main";
 
 export default function Home() {
   return (
-    <div className="root">
-      <App />
+    <div>
+      <Main />
       <style jsx>{``}</style>
     </div>
   );

@@ -10,17 +10,17 @@ export default function SpNav() {
           </Link>
         </li>
         <li>
-          <Link href="/auth/login">
-            <a>ログイン</a>
+          <Link href="/program">
+            <a>プログラム</a>
           </Link>
         </li>
         <li>
-          <Link href="/auth/auth">
-            <a>サインアップ</a>
+          <Link href="/design">
+            <a>デザイン</a>
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="/other">
             <a>その他</a>
           </Link>
         </li>
