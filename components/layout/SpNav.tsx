@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SpNav() {
   return (
-    <nav className="bg-red-300">
+    <nav>
       <ul className="gap-y-4">
         <li>
           <Link href="/">
@@ -32,7 +32,6 @@ export default function SpNav() {
           position: absolute;
           width: 100vw;
           height: 100vh;
-          opacity: 0.8;
         }
         ul {
           height: 100vh;
@@ -40,6 +39,8 @@ export default function SpNav() {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
+          background-color: #641900;
         }
         li {
         }

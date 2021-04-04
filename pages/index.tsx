@@ -1,10 +1,9 @@
-import Main from "../components/Main";
+import Main from "../components/layout/Main";
 
 export default function Home() {
   return (
-    <div>
-      <Main />
+    <Main>
       <style jsx>{``}</style>
-    </div>
+    </Main>
   );
 }

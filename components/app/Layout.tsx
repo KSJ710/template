@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Nav from "../components/Nav";
-import SpNav from "../components/SpNav";
-import Main from "../components/Main";
-import Hambug from "../components/button/Hambug";
-import Footer from "../components/Footer";
+import Nav from "../layout/Nav";
+import SpNav from "../layout/SpNav";
+import Hambug from "../button/Hambug";
+import Footer from "../layout/Footer";
 
 class Layout extends React.Component<{}, { screenWidth: number; hambugState: boolean }> {
   widthThreshold: number;
@@ -69,6 +68,7 @@ class Layout extends React.Component<{}, { screenWidth: number; hambugState: boo
             grid-template-rows: repeat(3, auto);
             grid-template-columns: repeat(1, auto);
             background-color: #96e600;
+            color: #96e600;
           }
         `}</style>
       </div>

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Nav() {
   return (
     <footer className="bg-gray-300">

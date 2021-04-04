@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
-
-export default function Main() {
+export default function Main(props) {
   return (
-    <main className="bg-blue-300">
-      <p>テキストテキストテキスト</p>
+    <main>
+      {props.children}
 
       <style jsx>{`
         main {

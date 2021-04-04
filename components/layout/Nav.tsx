@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="bg-red-300">
+    <nav>
       <ul>
         <li>
           <Link href="/">
@@ -29,6 +29,8 @@ export default function Nav() {
       <style jsx>{`
         nav {
           grid-area: nav;
+
+          background-color: #641900;
         }
         ul {
           display: flex;
