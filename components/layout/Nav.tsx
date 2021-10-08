@@ -1,45 +1,24 @@
 import Link from "next/link";
+import SearchIcon from "@material-ui/icons/Search";
+import HambugModal from "../button/HambugModal";
+import React, { useState } from "react";
 
 export default function Nav() {
   return (
-    <nav>
-      <ul>
+    <nav className="bg-green-400 flex h-12 items-center justify-between px-4">
+      <h1>My Site Web</h1>
+      <ul className="gap-4">
         <li>
-          <Link href="/">
-            <a>ホーム</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/auth/login">
-            <a>ログイン</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/auth/auth">
-            <a>サインアップ</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="#">
-            <a>その他</a>
-          </Link>
+          <HambugModal />
         </li>
       </ul>
 
       <style jsx>{`
         nav {
           grid-area: nav;
-
-          background-color: #641900;
         }
         ul {
           display: flex;
-        }
-        li {
-          margin-right: 20px;
-        }
-        li:last-child {
-          margin-right: 0px;
         }
       `}</style>
     </nav>

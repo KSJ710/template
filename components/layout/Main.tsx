@@ -6,9 +6,7 @@ export default function Main(props) {
       <style jsx>{`
         main {
           grid-area: main;
-          height: 100vh;
-
-          background-color: #321900;
+          background-color: #800000;
         }
       `}</style>
     </main>
