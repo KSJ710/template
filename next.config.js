@@ -1,17 +1,14 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
+const path = require("path");
 
 module.exports = (phase, { defaultConfig }) => {
-  const pRoot = require("app-root-path");
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      env: {
-        host: 'http://localhost:3000/'
-      }
-    }
+      env: {},
+    };
   }
 
   return {
-    env: {
-    }
-  }
-}
+    env: {},
+  };
+};

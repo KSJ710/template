@@ -1,40 +1,30 @@
-import Head from "next/head"
-import Nav from "../components/Nav"
+import Head from "next/head";
+import Nav from "../../components/Nav";
 
 export default function Auth() {
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         <title>mysite</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Nav />
 
       <main>
-        <form action='/api/auth' method='post'>
+        <form action="/api/auth" method="post">
           <ul>
             <li>
-              <input type='text' id='email' name='email' placeholder='Email' />
+              <input type="text" id="email" name="email" placeholder="Email" />
             </li>
             <li>
-              <input
-                type='text'
-                id='username'
-                name='username'
-                placeholder='名前'
-              />
+              <input type="text" id="username" name="username" placeholder="名前" />
             </li>
             <li>
-              <input
-                type='text'
-                id='password'
-                name='password'
-                placeholder='パスワード'
-              />
+              <input type="text" id="password" name="password" placeholder="パスワード" />
             </li>
             <li>
-              <button type='submit'>sign</button>
+              <button type="submit">sign</button>
             </li>
           </ul>
         </form>
@@ -72,5 +62,5 @@ export default function Auth() {
         }
       `}</style>
     </div>
-  )
+  );
 }
