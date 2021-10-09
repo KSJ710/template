@@ -8,7 +8,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
@@ -17,5 +17,11 @@
     "target": "es5"
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_document.js"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_document.js",
+    "index.mjs"
+  ]
 }
