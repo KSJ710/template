@@ -47,6 +47,13 @@ model Category {
   @@map("category")
 }
 
+model Test {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  @@map("test")
+}
+
 enum Role {
   USER
   ADMIN
