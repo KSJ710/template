@@ -1,30 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  background-color: #ccc;
-}
-
-.btn--orange,
-a.btn--orange {
-  color: #fff;
-  background-color: #eb6100;
-}
-.btn--orange:hover,
-a.btn--orange:hover {
-  color: #fff;
-  background: #f56500;
-}
-
-a.btn--radius {
-  padding: 5px 30px;
-  border-radius: 100vh;
-  display: inline-block;
-  text-align: center;
-}
-
-.oya {
+.grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: 100px;
@@ -36,6 +10,7 @@ a.btn--radius {
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 3;
+  background-color: #884444;
 }
 
 .ko2 {
@@ -48,7 +23,6 @@ a.btn--radius {
 .ko3 {
   grid-column-start: 5;
   grid-column-end: 7;
-
   grid-row-start: 3;
   grid-row-end: 5;
 }
@@ -56,7 +30,6 @@ a.btn--radius {
 .ko4 {
   grid-column-start: 1;
   grid-column-end: 7;
-
   grid-row-start: 5;
   grid-row-end: 7;
-}
+}/*# sourceMappingURL=Temp00001.module.css.map */

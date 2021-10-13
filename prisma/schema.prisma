@@ -8,55 +8,24 @@ datasource db {
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique
-  name    String?
-  role    Role     @default(USER)
-  posts   Post[]
-  profile Profile?
+  id   Int    @id @default(autoincrement())
+  name String
+  age  Int
 
   @@map("user")
 }
 
-model Profile {
-  id     Int    @id @default(autoincrement())
-  bio    String
-  user   User   @relation(fields: [userId], references: [id])
-  userId Int    @unique
+model Template {
+  id         Int         @id @default(autoincrement())
+  name       String
+  layoutTugs LayoutTug[] @relation(references: [id])
 
-  @@map("profile")
+  @@map("template")
 }
 
-model Post {
-  id         Int        @id @default(autoincrement())
-  createdAt  DateTime   @default(now())
-  title      String
-  published  Boolean    @default(false)
-  author     User       @relation(fields: [authorId], references: [id])
-  authorId   Int
-  categories Category[] @relation(references: [id])
+model LayoutTug {
+  id       Int        @id @default(autoincrement())
+  template Template[] @relation(references: [id])
 
-  @@map("post")
-}
-
-model Category {
-  id    Int    @id @default(autoincrement())
-  name  String
-  posts Post[] @relation(references: [id])
-
-  @@map("category")
-}
-
-model Test {
-  id   Int    @id @default(autoincrement())
-  name String
-
-  @@map("test")
-}
-
-enum Role {
-  USER
-  ADMIN
-
-  @@map("role")
+  @@map("layout_tug")
 }
