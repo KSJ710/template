@@ -1,12 +1,12 @@
-import styles from "./css/Temp00001.module.css"
+import styles from "./Temp00001.module.scss"
+
 export default function Temp00001() {
   return (
     <div className={styles.grid}>
-      <header className={styles.ko1}></header>
-      <main className={styles.ko2}></main>
-      <aside className={styles.ko3}></aside>
-      <footer className={styles.ko4}></footer>
-      <style jsx>{``}</style>
+      <header className={styles.header}></header>
+      <main className={styles.main}></main>
+      <aside className={styles.sidebar}></aside>
+      <footer className={styles.footer}></footer>
     </div>
   )
 }

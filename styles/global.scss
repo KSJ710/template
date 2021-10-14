@@ -1,0 +1,44 @@
+.bg_red_f60012 {
+  background-color: #f60012;
+}
+.bg_orange_f39800 {
+  background-color: #f39800;
+}
+.bg_yellow_fff100 {
+  background-color: #fff100;
+}
+.bg_yellow_green_bfc31f {
+  background-color: #bfc31f;
+}
+.bg_green_009944 {
+  background-color: #009944;
+}
+.bg_green_009e96 {
+  background-color: #009e96;
+}
+
+@mixin bg_color($color: #000) {
+  background-color: $color;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+a.btn--radius {
+  padding: 5px 30px;
+  border-radius: 100vh;
+  display: inline-block;
+  text-align: center;
+}

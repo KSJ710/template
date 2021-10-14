@@ -1,0 +1,22 @@
+.bg_red_f60012 {
+  background-color: #f60012;
+}
+.bg_orange_f39800 {
+  background-color: #f39800;
+}
+.bg_yellow_fff100 {
+  background-color: #fff100;
+}
+.bg_yellow_green_bfc31f {
+  background-color: #bfc31f;
+}
+.bg_green_009944 {
+  background-color: #009944;
+}
+.bg_green_009e96 {
+  background-color: #009e96;
+}
+
+@mixin bg_color($color: #000) {
+  background-color: $color;
+}
