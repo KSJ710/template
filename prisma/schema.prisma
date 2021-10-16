@@ -15,17 +15,9 @@ model User {
   @@map("user")
 }
 
-model Template {
-  id         Int         @id @default(autoincrement())
-  name       String
-  layoutTugs LayoutTug[] @relation(references: [id])
+model Color {
+  id        Int    @id @default(autoincrement())
+  className String @map("class_name")
 
-  @@map("template")
-}
-
-model LayoutTug {
-  id       Int        @id @default(autoincrement())
-  template Template[] @relation(references: [id])
-
-  @@map("layout_tug")
+  @@map("color")
 }
