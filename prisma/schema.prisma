@@ -17,6 +17,7 @@ model User {
 
 model Color {
   id        Int    @id @default(autoincrement())
+  name      String
   className String @map("class_name")
 
   @@map("color")

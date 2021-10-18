@@ -1,4 +1,5 @@
 import React from "react"
+import bg from "./Background.module.scss"
 
 type Color = {
   id: number
@@ -32,9 +33,7 @@ class FromBackground extends React.Component<Props, Status> {
 
   render() {
     return (
-      <div className='relative w-full'>
-        <ul> {this.listColor} </ul>
-      </div>
+      <ul className={`${bg.selectBackground} flex w-1/2`}>{this.listColor}</ul>
     )
   }
 }

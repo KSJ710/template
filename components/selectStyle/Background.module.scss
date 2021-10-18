@@ -1,0 +1,5 @@
+@use "_position" as ps;
+
+.selectBackground {
+  @include ps.tblrCener;
+}
