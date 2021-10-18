@@ -1,24 +1,29 @@
 import React from "react"
-import FormBackground from "components/form/Background"
+import SelectBg from "components/selectStyle/Background"
 import styles from "./Temp00001.module.scss"
 
-type Props = { color: any }
+type Color = {
+  id: number
+  className: string
+}
+type Props = { color: Color[] }
 type Status = { background: string }
 
 class Temp00001 extends React.Component<Props, Status> {
-  className: string
-
   constructor(props) {
     super(props)
     this.state = { background: "" }
-    console.log(this.className)
+    this.colorChange = this.colorChange.bind(this)
+  }
+
+  colorChange(className) {
+    this.setState({ background: className })
   }
 
   render() {
     return (
       <>
-        {console.log(this.props.color)}
-        <FormBackground color={this.props.color} />
+        <SelectBg color={this.props.color} colorChange={this.colorChange} />
         <div className={styles.grid}>
           <header
             className={`${styles.header} ${this.state.background}`}></header>

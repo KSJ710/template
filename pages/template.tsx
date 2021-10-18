@@ -4,17 +4,20 @@ import { InferGetServerSidePropsType } from "next"
 import { PrismaClient } from "@prisma/client"
 import Temp00001 from "components/Tamplate/Temp00001"
 
-function Template({
+const Template = ({
   color,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log(color)
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return <Temp00001 color={color} />
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const prisma = new PrismaClient()
-  const color = await prisma.color.findMany({})
-  console.log(color)
+  type Color = {
+    id: number
+    className: string
+  }
+
+  const prisma: PrismaClient = new PrismaClient()
+  const color: Color[] = await prisma.color.findMany({})
   return {
     props: { color },
   }
