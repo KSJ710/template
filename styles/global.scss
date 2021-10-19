@@ -2,24 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #ccc;
-}
+@layer utilities {
+  .btn--orange,
+  .btn--orange {
+    color: #fff;
+    background-color: #eb6100;
+  }
+  .btn--orange:hover,
+  .btn--orange:hover {
+    color: #fff;
+    background: #f56500;
+  }
 
-.btn--orange,
-a.btn--orange {
-  color: #fff;
-  background-color: #eb6100;
-}
-.btn--orange:hover,
-a.btn--orange:hover {
-  color: #fff;
-  background: #f56500;
-}
-
-a.btn--radius {
-  padding: 5px 30px;
-  border-radius: 100vh;
-  display: inline-block;
-  text-align: center;
+  .btn--radius {
+    padding: 5px 30px;
+    border-radius: 100vh;
+    display: inline-block;
+    text-align: center;
+  }
 }
