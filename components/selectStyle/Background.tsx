@@ -33,7 +33,9 @@ class FromBackground extends React.Component<Props, Status> {
 
   render() {
     return (
-      <ul className={`${bg.selectBackground} flex w-1/2`}>{this.listColor}</ul>
+      <ul className={`${bg.selectBackground} flex w-1/2 bg-@96514d`}>
+        {this.listColor}
+      </ul>
     )
   }
 }

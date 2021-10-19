@@ -8,9 +8,14 @@ CREATE TABLE "user" (
 );
 
 -- CreateTable
-CREATE TABLE "color" (
+CREATE TABLE "bg_color" (
     "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
     "class_name" TEXT NOT NULL,
+    "kana_name" TEXT NOT NULL,
 
-    CONSTRAINT "color_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "bg_color_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "bg_color_class_name_key" ON "bg_color"("class_name");

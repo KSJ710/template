@@ -10,7 +10,7 @@
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 3;
-  background: #000;
+  background: rgb(129, 69, 69);
 }
 
 .main {
@@ -18,7 +18,7 @@
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 5;
-  background: #000;
+  background: rgb(82, 177, 172);
 }
 
 .sidebar {
@@ -26,7 +26,7 @@
   grid-column-end: 7;
   grid-row-start: 3;
   grid-row-end: 5;
-  background: #000;
+  background: rgb(117, 102, 59);
 }
 
 .footer {
@@ -34,5 +34,5 @@
   grid-column-end: 7;
   grid-row-start: 5;
   grid-row-end: 7;
-  background: #000;
+  background: rgb(33, 15, 56);
 }

@@ -18,7 +18,8 @@ model User {
 model Color {
   id        Int    @id @default(autoincrement())
   name      String
-  className String @map("class_name")
+  className String @unique @map("class_name")
+  kanaName  String @map("kana_name")
 
   @@map("color")
 }

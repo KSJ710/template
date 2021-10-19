@@ -11,13 +11,14 @@ const Template = ({
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  type Color = {
+  type bgColor = {
     id: number
+    name: string
     className: string
   }
 
   const prisma: PrismaClient = new PrismaClient()
-  const color: Color[] = await prisma.color.findMany({})
+  const color: bgColor[] = await prisma.color.findMany({})
   return {
     props: { color },
   }
