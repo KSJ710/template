@@ -1,7 +1,23 @@
-import Head from "next/head";
-import Nav from "../../components/Nav";
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import Nav from '../../components/Nav';
+const https = require('https');
 
 export default function Auth() {
+  const router = useRouter();
+  const { confirmation_code } = router.query;
+  console.log(router.asPath);
+  const confirmResult = 0;
+  // https.request(`https://mysite-710.auth.ap-northeast-1.amazoncognito.com/confirmUser?client_id=${client_id}&user_name=${user_name}&confirmation_code=${confirmation_code}`, (res) => {
+  //     if (res.statusCode == 200) {
+  //       confirmResult = <p>認証成功</p>
+  //     } else {
+  //       confirmResult = <p>認証失敗</p>
+  //     }
+  // }).on('error', (e) => {
+  //   console.error(`エラーが出ました： ${e.message}`);
+  // })
+
   return (
     <div className="container">
       <Head>
@@ -11,24 +27,7 @@ export default function Auth() {
 
       <Nav />
 
-      <main>
-        <form action="/api/auth" method="post">
-          <ul>
-            <li>
-              <input type="text" id="email" name="email" placeholder="Email" />
-            </li>
-            <li>
-              <input type="text" id="username" name="username" placeholder="名前" />
-            </li>
-            <li>
-              <input type="text" id="password" name="password" placeholder="パスワード" />
-            </li>
-            <li>
-              <button type="submit">sign</button>
-            </li>
-          </ul>
-        </form>
-      </main>
+      <main></main>
       <footer></footer>
 
       <style jsx>{`

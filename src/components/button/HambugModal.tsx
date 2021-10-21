@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 function HambugModal() {
   const [hambugState, setHambugState] = useState(false);
@@ -60,7 +60,7 @@ function HambugModal() {
     <>
       <button
         id="hambug"
-        className={`hambug_trigger ${hambugState ? "active" : ""}`}
+        className={`hambug_trigger ${hambugState ? 'active' : ''}`}
         onClick={() => setHambugState(!hambugState)}
       >
         <span></span>
