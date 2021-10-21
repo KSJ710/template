@@ -2,10 +2,6 @@ import React from 'react';
 import SelectBg from 'src/components/selectStyle/Background';
 import styles from './Temp00001.module.scss';
 
-type Color = {
-  id: number;
-  className: string;
-};
 type Props = { color: Color[] };
 type Status = { background: string };
 

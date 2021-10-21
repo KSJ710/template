@@ -1,13 +1,6 @@
 import React from 'react';
 import bg from './Background.module.scss';
 
-type Color = {
-  id: number;
-  name: string;
-  className: string;
-  kana_name: string;
-};
-
 type Props = {
   color: Color[];
   colorChange: (e: any) => void;

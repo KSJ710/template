@@ -1,12 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `bg_color` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "bg_color";
-
 -- CreateTable
 CREATE TABLE "color" (
     "id" SERIAL NOT NULL,

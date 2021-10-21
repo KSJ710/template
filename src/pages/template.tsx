@@ -9,12 +9,6 @@ const Template = ({ color }: InferGetServerSidePropsType<typeof getServerSidePro
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  type Color = {
-    id: number;
-    name: string;
-    className: string;
-  };
-
   const prisma: PrismaClient = new PrismaClient();
   const color: Color[] = await prisma.color.findMany({});
   return {
