@@ -16,7 +16,7 @@ class FromBackground extends React.Component<Props, Status> {
     this.color = props.color;
     this.handleChange = this.handleChange.bind(this);
     this.listColor = props.color.map((color: Color) => (
-      <li key={color.id} className={`bg-${color.className} flex-auto`}>
+      <li key={color.id} className={`bg-${color.className} flex-1`}>
         <button value={color.className} onClick={this.handleChange}>
           {color.name}
         </button>
@@ -28,7 +28,9 @@ class FromBackground extends React.Component<Props, Status> {
   }
 
   render() {
-    return <ul className={`${bg.selectBackground} flex flex-wrap w-full`}>{this.listColor}</ul>;
+    return (
+      <ul className={`${bg.selectBackground} flex flex-wrap w-1/2 gap-2`}>{this.listColor}</ul>
+    );
   }
 }
 
