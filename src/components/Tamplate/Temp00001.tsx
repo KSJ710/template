@@ -3,17 +3,21 @@ import SelectBg from 'src/components/selectStyle/Background';
 import styles from './Temp00001.module.scss';
 
 type Props = { color: Color[] };
-type Status = { background: string };
+type Status = {
+  background: string;
+  x: number;
+  y: number;
+};
 
 class Temp00001 extends React.Component<Props, Status> {
   constructor(props) {
     super(props);
-    this.state = { background: '' };
+    this.state = { background: '', x: 0, y: 0 };
     this.colorChange = this.colorChange.bind(this);
   }
 
-  colorChange(className) {
-    this.setState({ background: className });
+  colorChange(className: string, x: number, y: number) {
+    this.setState({ background: className, x: x, y: y });
   }
 
   render() {

@@ -3,11 +3,11 @@ import bg from './Background.module.scss';
 
 type Props = {
   color: Color[];
-  colorChange: (e: any) => void;
+  colorChange: (className: string) => void;
 };
 type Status = {};
 
-class FromBackground extends React.Component<Props, Status> {
+class FormBackground extends React.Component<Props, Status> {
   color: Color[];
   listColor: JSX.Element;
 
@@ -16,7 +16,7 @@ class FromBackground extends React.Component<Props, Status> {
     this.color = props.color;
     this.handleChange = this.handleChange.bind(this);
     this.listColor = props.color.map((color: Color) => (
-      <li key={color.id} className={`bg-${color.className} flex-1`}>
+      <li key={color.id} className={`bg-${color.className} flex-grow text-center`}>
         <button value={color.className} onClick={this.handleChange}>
           {color.name}
         </button>
@@ -24,14 +24,14 @@ class FromBackground extends React.Component<Props, Status> {
     ));
   }
   handleChange(e) {
-    this.props.colorChange(e.target.value);
+    this.props.colorChange(e);
   }
 
   render() {
     return (
-      <ul className={`${bg.selectBackground} flex flex-wrap w-1/2 gap-2`}>{this.listColor}</ul>
+      <ul className={`${bg.selectBackground} flex flex-wrap w-1/2 gap-2 mt-2`}>{this.listColor}</ul>
     );
   }
 }
 
-export default FromBackground;
+export default FormBackground;
