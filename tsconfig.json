@@ -17,12 +17,5 @@
     "target": "es5"
   },
   "exclude": ["node_modules"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/pages/_document.js",
-    "index.mjs",
-    "test_prisma.js"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "index.mjs", "test_prisma.js"]
 }

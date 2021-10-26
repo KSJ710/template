@@ -4,7 +4,7 @@ import colors from './seed_data/colors';
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.color.createMany({ data: colors });
+  await prisma.colors.createMany({ data: colors });
 }
 
 main()

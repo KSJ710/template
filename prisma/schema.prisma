@@ -7,11 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Color {
+model Colors {
   id        Int    @id @default(autoincrement())
   name      String
   className String @unique @map("class_name")
   kanaName  String @map("kana_name")
 
-  @@map("color")
+  @@map("colors")
 }
