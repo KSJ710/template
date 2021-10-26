@@ -14,7 +14,7 @@ export const EditContext = createContext(
   }
 );
 const Template = () => {
-  const [currentTrget, setCurrentTarget] = useState<HTMLElement>(null);
+  const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
   const [display, setDisplay] = useState<string>('none');
   const [color, setColor] = useState<string>(null);
   const editVar = {
@@ -29,13 +29,7 @@ const Template = () => {
   return (
     <>
       <EditContext.Provider value={editVar}>
-        <EditTools
-          currentTarget={currentTrget}
-          display={display}
-          position_x={null}
-          position_y={null}
-        />
-        {/* <Temp00001 setCurrentTarget={setCurrentTarget} setDisplay={setDisplay} display={display} /> */}
+        <EditTools />
         <Temp00001 />
       </EditContext.Provider>
     </>
