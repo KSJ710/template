@@ -1,7 +1,8 @@
 /* eslint-disable tailwindcss/no-custom-classname */
+import React, { ReactElemnt } from 'react';
 import Link from 'next/link';
 
-export default function Index() {
+const Index: React.VFC = (): ReactElemnt => {
   return (
     <div className="container mx-auto w-full h-screen bg-@006e54">
       <div className="flex justify-center items-center w-auto h-full">
@@ -12,4 +13,6 @@ export default function Index() {
       <style jsx>{``}</style>
     </div>
   );
-}
+};
+
+export default Index;
