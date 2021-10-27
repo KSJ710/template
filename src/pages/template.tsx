@@ -26,13 +26,4 @@ const Template = () => {
   );
 };
 
-type EditVar = {
-  color: string;
-  setColor: React.Dispatch<string>;
-  currentTarget: HTMLElement;
-  setCurrentTarget: React.Dispatch<HTMLElement>;
-  display: string;
-  setDisplay: React.Dispatch<string>;
-};
-
 export default Template;

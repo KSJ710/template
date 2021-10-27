@@ -1,9 +1,12 @@
-import React, { ReactElement } from 'react';
+import React, { useContext } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
+import { EditContext } from 'src/pages/template';
 import bg from './Background.module.scss';
 
 const BackgroundColor = () => {
+  const editVar: EditVar = useContext(EditContext);
+  const hundleBgColer = (e) => (editVar.currentTarget.style.backgroundColor = e.target.value);
   const { data, error } = useSWR('/api/colors', fetcher);
   console.log(data);
 
@@ -14,9 +17,9 @@ const BackgroundColor = () => {
   if (!data) {
     return <div>loading...</div>;
   } else {
-    const listColor: ReactElement = data.map((color: Color) => (
-      <li key={color.id} className={`bg-${color.className} flex-grow text-center`}>
-        <button value={color.className} onClick={null}>
+    const listColor = data.map((color: Color) => (
+      <li key={color.id} className={`bg-${color.colorCode} flex-grow text-center`}>
+        <button value={color.colorCode} onClick={hundleBgColer}>
           {color.name}
         </button>
       </li>

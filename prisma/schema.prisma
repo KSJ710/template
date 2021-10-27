@@ -10,7 +10,7 @@ datasource db {
 model Colors {
   id        Int    @id @default(autoincrement())
   name      String
-  className String @unique @map("class_name")
+  colorCode String @unique @map("color_code")
   kanaName  String @map("kana_name")
 
   @@map("colors")

@@ -3,12 +3,9 @@ import Background from 'src/components/edit_tools/Background';
 import { EditContext } from 'src/pages/template';
 
 const EditTools = () => {
-  const editVar = useContext(EditContext);
-  const set = () => {
-    editVar.currentTarget.style.backgroundColor = '#aaaaaa';
-  };
+  const editVar: EditVar = useContext(EditContext);
   return (
-    <div onClick={set} style={{ display: `${editVar.display}` }}>
+    <div style={{ display: `${editVar.display}` }}>
       <Background />
     </div>
   );
