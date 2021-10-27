@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
 import bg from './Background.module.scss';
@@ -14,7 +14,7 @@ const BackgroundColor = () => {
   if (!data) {
     return <div>loading...</div>;
   } else {
-    const listColor = data.map((color) => (
+    const listColor: ReactElement = data.map((color: Color) => (
       <li key={color.id} className={`bg-${color.className} flex-grow text-center`}>
         <button value={color.className} onClick={null}>
           {color.name}
@@ -25,7 +25,7 @@ const BackgroundColor = () => {
   }
 };
 
-const fetcher = (url) =>
+const fetcher: Fetcher = (url) =>
   axios.get(url).then((res) => {
     return res.data;
   });
