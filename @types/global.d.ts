@@ -1,4 +1,4 @@
-type Colors = {
+type Color = {
   id: number;
   name: string;
   className: string;
