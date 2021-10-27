@@ -1,9 +1,9 @@
-import React, { ReactElement, useContext } from 'react';
+import React, { useContext } from 'react';
 import styles from './Temp00001.module.scss';
 import Nav from 'src/components/template_parts/navigation/Nav00001';
 import { EditContext } from 'src/pages/template';
 
-const Temp00001: React.VFC = (): ReactElement => {
+const Temp00001 = (): JSX.Element => {
   const editVar = useContext(EditContext);
   const toggleEditTools = (e) => {
     editVar.setCurrentTarget(e.currentTarget);

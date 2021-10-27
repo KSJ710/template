@@ -1,10 +1,10 @@
-import React, { ReactElement, useContext } from 'react';
+import React, { useContext } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
 import { EditContext } from 'src/pages/template';
 import bg from './Background.module.scss';
 
-const BackgroundColor: React.VFC = (): ReactElement => {
+const BackgroundColor = (): JSX.Element => {
   const editVar: EditVar = useContext(EditContext);
   const hundleBgColer = (e) => (editVar.currentTarget.style.backgroundColor = e.target.value);
   const { data, error } = useSWR('/api/colors', fetcher);
