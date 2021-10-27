@@ -2,15 +2,6 @@ import React, { createContext, useState } from 'react';
 import Temp00001 from 'src/components/templates/Temp00001';
 import EditTools from 'src/components/layout/EditTools';
 
-type EditVar = {
-  color: string;
-  setColor: React.Dispatch<string>;
-  currentTarget: HTMLElement;
-  setCurrentTarget: React.Dispatch<HTMLElement>;
-  display: string;
-  setDisplay: React.Dispatch<string>;
-};
-
 export const EditContext = createContext({} as EditVar);
 const Template = () => {
   const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
@@ -35,12 +26,13 @@ const Template = () => {
   );
 };
 
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const prisma: PrismaClient = new PrismaClient();
-//   const color: Color[] = await prisma.color.findMany({});
-//   return {
-//     props: { color },
-//   };
-// };
+type EditVar = {
+  color: string;
+  setColor: React.Dispatch<string>;
+  currentTarget: HTMLElement;
+  setCurrentTarget: React.Dispatch<HTMLElement>;
+  display: string;
+  setDisplay: React.Dispatch<string>;
+};
 
 export default Template;
