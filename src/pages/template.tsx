@@ -1,23 +1,22 @@
 import React, { createContext, useState } from 'react';
-import { PrismaClient } from '@prisma/client';
 import Temp00001 from 'src/components/templates/Temp00001';
 import EditTools from 'src/components/layout/EditTools';
 
-export const EditContext = createContext(
-  {} as {
-    color: string;
-    setColor: React.Dispatch<string>;
-    currentTarget: HTMLElement;
-    setCurrentTarget: React.Dispatch<HTMLElement>;
-    display: string;
-    setDisplay: React.Dispatch<string>;
-  }
-);
+type EditVar = {
+  color: string;
+  setColor: React.Dispatch<string>;
+  currentTarget: HTMLElement;
+  setCurrentTarget: React.Dispatch<HTMLElement>;
+  display: string;
+  setDisplay: React.Dispatch<string>;
+};
+
+export const EditContext = createContext({} as EditVar);
 const Template = () => {
   const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
   const [display, setDisplay] = useState<string>('none');
   const [color, setColor] = useState<string>(null);
-  const editVar = {
+  const editVar: EditVar = {
     color: color,
     setColor: setColor,
     currentTarget: currentTrget,
