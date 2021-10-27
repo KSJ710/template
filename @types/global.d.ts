@@ -1,6 +1,6 @@
-type Color = {
+type Colors = {
   id: number;
   name: string;
   className: string;
-  kana_name: string;
+  kanaName: string;
 };
