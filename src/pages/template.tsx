@@ -6,7 +6,7 @@ export const EditContext = createContext({} as EditVar);
 
 const Template = (): JSX.Element => {
   const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
-  const [display, setDisplay] = useState<string>('none');
+  const [display, setDisplay] = useState<string>('hidden');
   const [color, setColor] = useState<string>(null);
   const editVar: EditVar = {
     currentTarget: currentTrget,

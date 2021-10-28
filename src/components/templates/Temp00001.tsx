@@ -7,7 +7,7 @@ const Temp00001 = (): JSX.Element => {
   const editVar = useContext(EditContext);
   const toggleEditTools = (e) => {
     editVar.setCurrentTarget(e.currentTarget);
-    editVar.display == 'none' ? editVar.setDisplay('block') : editVar.setDisplay('none');
+    editVar.display == 'hidden' ? editVar.setDisplay('block') : editVar.setDisplay('hidden');
   };
 
   return (
