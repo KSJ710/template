@@ -8,8 +8,10 @@ type Color = {
 type EditVar = {
   currentTarget: HTMLElement;
   setCurrentTarget: React.Dispatch<HTMLElement>;
-  display: string;
-  setDisplay: React.Dispatch<string>;
+  display: Display;
+  setDisplay: React.Dispatch<Display>;
 };
+
+type classDisplay = 'hidden' | 'block';
 
 type Fetcher = (url: string) => Promise<any>;
