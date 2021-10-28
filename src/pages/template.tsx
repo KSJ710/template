@@ -9,8 +9,6 @@ const Template = (): JSX.Element => {
   const [display, setDisplay] = useState<string>('none');
   const [color, setColor] = useState<string>(null);
   const editVar: EditVar = {
-    color: color,
-    setColor: setColor,
     currentTarget: currentTrget,
     setCurrentTarget: setCurrentTarget,
     display: display,
