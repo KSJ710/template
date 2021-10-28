@@ -19,12 +19,14 @@ const BackgroundColor = (): JSX.Element => {
   } else {
     const listColor = data.map((color: Color) => (
       <li key={color.id} className={`bg-${color.colorCode} flex-grow text-center list-none`}>
-        <button value={color.colorCode} onClick={hundleBgColer}>
+        <button className="w-96" value={color.colorCode} onClick={hundleBgColer}>
           {color.name}
         </button>
       </li>
     ));
-    return <ul>{listColor}</ul>;
+    return (
+      <ul className={`${styles.selectBackgroundColor} flex flex-wrap flex-1 w-2/3`}>{listColor}</ul>
+    );
   }
 };
 

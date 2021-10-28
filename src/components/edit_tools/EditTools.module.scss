@@ -1,5 +1,5 @@
 @use '_position' as ps;
 
 .editToolBox {
-  @include ps.tblrCener;
+  @include ps.boxCener;
 }

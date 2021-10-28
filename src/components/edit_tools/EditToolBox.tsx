@@ -12,9 +12,6 @@ const EditToolBox = (): JSX.Element => {
   };
   return (
     <div className={`${editVar.display} ${styles.editToolBox}`}>
-      <div>背景</div>
-      <div>効果</div>
-      <div>枠線</div>
       <Background />
     </div>
   );
