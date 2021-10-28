@@ -1,13 +1,12 @@
 import React, { createContext, useState } from 'react';
 import Temp00001 from 'src/components/templates/Temp00001';
-import EditTools from 'src/components/layout/EditTools';
+import EditToolBox from 'src/components/edit_tools/EditToolBox';
 
 export const EditContext = createContext({} as EditVar);
 
 const Template = (): JSX.Element => {
   const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
   const [display, setDisplay] = useState<string>('hidden');
-  const [color, setColor] = useState<string>(null);
   const editVar: EditVar = {
     currentTarget: currentTrget,
     setCurrentTarget: setCurrentTarget,
@@ -18,7 +17,7 @@ const Template = (): JSX.Element => {
   return (
     <>
       <EditContext.Provider value={editVar}>
-        <EditTools />
+        <EditToolBox />
         <Temp00001 />
       </EditContext.Provider>
     </>
