@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrap {
+  margin: 30px;
+}
+
 body,
 div#__next {
   height: 100%;
