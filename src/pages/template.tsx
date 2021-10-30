@@ -17,9 +17,9 @@ const Template = (): JSX.Element => {
 
   return (
     <EditContext.Provider value={editVar}>
-      <div className="box">
+      <div className="wrap">
         <i className="box">aaa</i>
-        <i className="m-10 gg-adidas"></i>
+        <i className="m-[232px] w-[999px] gg-adidas"></i>
         <i className="gg-add-r"></i>
       </div>
       <EditToolBox />

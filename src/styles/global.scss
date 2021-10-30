@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 .wrap {
+  @apply bg-red-500;
   margin: 30px;
 }
 
