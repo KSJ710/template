@@ -19,7 +19,7 @@ const BackgroundColor = (): JSX.Element => {
   } else {
     const listColor = data.map((color: Color) => (
       <li key={color.id} className={`bg-${color.colorCode} flex-grow text-center list-none`}>
-        <button className="" value={color.colorCode} onClick={hundleBgColer}>
+        <button className="" value={`#${color.colorCode}`} onClick={hundleBgColer}>
           {color.name}
         </button>
       </li>

@@ -12,6 +12,6 @@ type EditVar = {
   setDisplay: React.Dispatch<Display>;
 };
 
-type classDisplay = 'hidden' | 'block';
+type classDisplay = 'display-none' | 'dsiplay-block';
 
 type Fetcher = (url: string) => Promise<any>;
