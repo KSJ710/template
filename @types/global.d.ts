@@ -5,7 +5,7 @@ type Color = {
   kanaName: string;
 };
 
-type EditVar = {
+type TempEditVar = {
   currentTarget: HTMLElement;
   setCurrentTarget: React.Dispatch<HTMLElement>;
   display: Display;

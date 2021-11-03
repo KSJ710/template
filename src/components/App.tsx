@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './App.module.scss'
+import styles from './App.module.scss';
 
 const App = (): JSX.Element => {
   return (
@@ -12,7 +12,6 @@ const App = (): JSX.Element => {
       </div>
     </div>
   );
+};
 
-}
-
-export default App
+export default App;
