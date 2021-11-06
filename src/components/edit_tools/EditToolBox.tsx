@@ -6,7 +6,7 @@ import styles from './EditToolBox.module.scss';
 
 const EditToolBox = (): JSX.Element => {
   const tempEditVar: TempEditVar = useContext(TempEditContext);
-  const [display, setDisplay] = useState('none');
+  const [display, setDisplay] = useState<classDisplay>('none');
 
   const hundleHiddenEditToolBox = () => {
     setDisplay('none');
