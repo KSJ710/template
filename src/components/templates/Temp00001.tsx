@@ -3,7 +3,7 @@ import styles from './Temp00001.module.scss';
 import Nav from 'src/components/template_parts/navigation/Nav00001';
 import { TempEditContext } from 'src/pages/template';
 
-const Temp00001 = (props): JSX.Element => {
+const Temp00001 = (): JSX.Element => {
   const editVar = useContext(TempEditContext);
   const toggleEditTools = (e) => {
     editVar.setCurrentTarget(e.currentTarget);
