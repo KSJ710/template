@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 export default function Nav() {
   return (
-    <nav className="bg-green-400 flex h-12 items-center justify-between px-4">
+    <nav className="flex justify-between items-center px-4 h-12 bg-green-400">
       <h1>My Site Web</h1>
       <ul className="gap-4">
         <li>

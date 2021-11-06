@@ -7,7 +7,7 @@ export const TempEditContext = createContext({} as TempEditVar);
 
 const Template = (): JSX.Element => {
   const [currentTrget, setCurrentTarget] = useState<HTMLElement | null>(null);
-  const [display, setDisplay] = useState<classDisplay>('display-none');
+  const [display, setDisplay] = useState<classDisplay>('none');
   const tempEditVar: TempEditVar = {
     currentTarget: currentTrget,
     setCurrentTarget: setCurrentTarget,

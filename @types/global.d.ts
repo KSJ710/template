@@ -12,6 +12,6 @@ type TempEditVar = {
   setDisplay: React.Dispatch<Display>;
 };
 
-type classDisplay = 'display-none' | 'dsiplay-block';
+type classDisplay = 'none' | 'block';
 
 type Fetcher = (url: string) => Promise<any>;

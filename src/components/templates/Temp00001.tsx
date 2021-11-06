@@ -7,13 +7,9 @@ const Temp00001 = (props): JSX.Element => {
   const editVar = useContext(TempEditContext);
   const toggleEditTools = (e) => {
     editVar.setCurrentTarget(e.currentTarget);
-    editVar.display == 'display-none'
-      ? editVar.setDisplay('display-block')
-      : editVar.setDisplay('display-none');
+    editVar.display == 'none' ? editVar.setDisplay('block') : editVar.setDisplay('none');
   };
 
-  const box = '500px';
-  const aaa = 'aaa';
   return (
     <>
       <div className={styles.grid}>
@@ -24,9 +20,6 @@ const Temp00001 = (props): JSX.Element => {
         <aside className={styles.sidebar} onClick={toggleEditTools}></aside>
         <footer className={styles.footer} onClick={toggleEditTools}></footer>
       </div>
-      <i className={`${styles['gg-attribution']}  ccc-in-js ${styles['bbb']} ${styles[aaa]}`}></i>
-
-      <style jsx>{``}</style>
     </>
   );
 };
