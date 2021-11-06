@@ -27,7 +27,7 @@ const BackgroundColor = (props): JSX.Element => {
       <li
         key={color.id}
         style={{ backgroundColor: color.colorCode }}
-        className="scroll_snap_child w-[100px]"
+        className="w-[calc(20%-8px)] scroll_snap_child"
       >
         <button
           value={`${color.colorCode}`}
@@ -41,15 +41,10 @@ const BackgroundColor = (props): JSX.Element => {
     return (
       <div
         style={{ display: props.display }}
-        className="absolute w-full h-full"
+        className="justify-center items-center bg-transparent bg_modal"
         onClick={hundleHiddenBgColor}
       >
-        <ul
-          className="flex overflow-scroll flex-wrap gap-2 m-auto gajustify-start h-[424px] w-[434px] scroll_snap_y
-        scrollbar_style overflow-x-hidden"
-        >
-          {listColor}
-        </ul>
+        <ul className={styles.tool_bgcolor}>{listColor}</ul>
       </div>
     );
   }

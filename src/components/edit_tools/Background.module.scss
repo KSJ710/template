@@ -1,0 +1,11 @@
+.tool_bgcolor {
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  height: 532px;
+  width: 75%;
+  padding-left: 8px;
+  gap: 8px;
+  scroll-snap-type: y mandatory;
+}
