@@ -1,9 +1,7 @@
-import App from 'src/components/App'
+import App from 'src/components/App';
 
 const Index = (): JSX.Element => {
-  return (
-    <App />
-  )
+  return <App />;
 };
 
 export default Index;
