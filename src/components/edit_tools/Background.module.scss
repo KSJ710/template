@@ -16,16 +16,6 @@
   place-content: center;
   width: calc(100vw / 10 - 8px);
   height: calc(100vw / 10 - 8px);
+  border: 1px solid #000000;
   background-color: rgba(255, 255, 255, 0.25);
-}
-
-.gg_drop {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: rotate(45deg) scale(var(--ggs, 1));
-  width: 16px;
-  height: 16px;
-  border-radius: 0% 100% 100% 100%;
-  margin: 0 auto 4px;
 }
