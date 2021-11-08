@@ -24,9 +24,9 @@
     width: calc(100vw * 0.2 - 8px);
     height: calc(100vh * 0.2 - 8px);
   }
-  @media screen and (min-width: 1280px) {
-    width: calc(100vw * 0.14 - 8px);
-    height: calc(100vh * 0.14 - 8px);
+  @media screen and (min-width: 1024px) {
+    width: calc(100vw * 0.15 - 8px);
+    height: calc(100vh * 0.15 - 8px);
   }
   @media screen and (min-width: 1536px) {
     width: calc(100vw * 0.12 - 8px);
