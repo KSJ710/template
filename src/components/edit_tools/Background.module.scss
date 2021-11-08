@@ -1,11 +1,31 @@
 .tool_bgcolor {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  height: calc(100vw / 2);
+  width: calc(100vw / 2);
   overflow: scroll;
   overflow-x: hidden;
-  flex-wrap: wrap;
-  height: 532px;
-  width: 75%;
-  padding-left: 8px;
-  gap: 8px;
   scroll-snap-type: y mandatory;
+}
+
+.color_list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  place-content: center;
+  width: calc(100vw / 10 - 8px);
+  height: calc(100vw / 10 - 8px);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.gg_drop {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: rotate(45deg) scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border-radius: 0% 100% 100% 100%;
+  margin: 0 auto 4px;
 }

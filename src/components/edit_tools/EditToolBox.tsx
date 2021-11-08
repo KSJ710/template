@@ -24,13 +24,21 @@ const EditToolBox = (): JSX.Element => {
         className="modal_bg"
         onClick={hundleHiddenEditToolBox}
       >
-        <div className="w-full bg-[#38b48b] trbl_center">
-          <p>変更したい項目を選んで下さい</p>
-          <ul>
-            <li onClick={hundleShowBgColor}>背景カラー</li>
-            <li>文字サイズ</li>
-            <li></li>
-            <li></li>
+        <div className="p-3 w-4/5 bg-[#006e54] text-[#e6b422] trbl_center">
+          <p className="mb-4 text-2xl">変更したい項目を選んで下さい</p>
+          <ul className="flex flex-col gap-3 pl-3 font-thin leading-4">
+            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+              背景カラー
+            </li>
+            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+              文字サイズ
+            </li>
+            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+              テキストテキスト
+            </li>
+            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+              テキストテキスト
+            </li>
           </ul>
         </div>
       </div>

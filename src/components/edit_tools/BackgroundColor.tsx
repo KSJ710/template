@@ -1,8 +1,9 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
 import { TempEditContext } from 'src/pages/template';
+import Drop from 'src/components/svg/Drop';
 import styles from './Background.module.scss';
 
 const BackgroundColor = (props): JSX.Element => {
@@ -23,19 +24,19 @@ const BackgroundColor = (props): JSX.Element => {
   if (!data) {
     return <div>loading...</div>;
   } else {
-    const listColor = data.map((color: Color) => (
-      <li
-        key={color.id}
-        style={{ backgroundColor: color.colorCode }}
-        className="w-[calc(20%-8px)] scroll_snap_child"
-      >
+    const colorList = data.map((color: Color) => (
+      <li key={color.id} className={`${styles.color_list} scroll_snap_child`}>
         <button
           value={`${color.colorCode}`}
-          className={'block w-full text-center h-[100px]'}
+          className="absolute w-full h-full"
           onClick={hundleChangeBgColer}
-        >
-          {color.name}
-        </button>
+        ></button>
+        <div>
+          <Drop colorCode={color.colorCode} />
+          <p style={{ color: color.colorCode }} className="text-center">
+            {color.name}
+          </p>
+        </div>
       </li>
     ));
     return (
@@ -44,7 +45,7 @@ const BackgroundColor = (props): JSX.Element => {
         className="justify-center items-center bg-transparent bg_modal"
         onClick={hundleHiddenBgColor}
       >
-        <ul className={styles.tool_bgcolor}>{listColor}</ul>
+        <ul className={styles.tool_bgcolor}>{colorList}</ul>
       </div>
     );
   }
