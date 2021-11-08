@@ -35,6 +35,8 @@ const BackgroundColor = (props): JSX.Element => {
           <Drop colorCode={color.colorCode} />
           <p style={{ color: color.colorCode }} className="text-center">
             {color.name}
+            <br />
+            {color.kanaName}
           </p>
         </div>
       </li>
