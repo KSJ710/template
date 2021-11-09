@@ -31,6 +31,7 @@ const BackgroundColor = (props): JSX.Element => {
           className="absolute w-full h-full"
           onClick={hundleChangeBgColer}
         ></button>
+        <div className={styles.label}>{color.id}</div>
         <div>
           <Drop colorCode={color.colorCode} />
           <p style={{ color: color.colorCode }} className="text-center">
