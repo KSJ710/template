@@ -2,16 +2,21 @@
 import React, { useContext } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
-import { TempEditContext } from 'src/pages/template';
+import { TempEditContext } from 'src/pages/templates/temp_1';
 import Drop from 'src/components/svg/Drop';
 import styles from './Background.module.scss';
+import { useRecoilState } from 'recoil';
+import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 
 const BackgroundColor = (props): JSX.Element => {
   const tempEditVar: TempEditVar = useContext(TempEditContext);
+  const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
+  const [currentTarget, setCurrentTarge] = useRecoilState(currentTargetState);
 
   const hundleChangeBgColer = (e) => {
     e.stopPropagation();
-    tempEditVar.currentTarget.style.backgroundColor = e.target.value;
+    // tempEditVar.currentTarget.style.backgroundColor = e.target.value;
+    currentTarget.style.backgroundColor = e.target.value;
   };
   const hundleHiddenBgColor = () => {
     props.setDisplay('none');
