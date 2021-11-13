@@ -1,21 +1,17 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useContext } from 'react';
+import React from 'react';
+import { useRecoilValue } from 'recoil';
+import { currentTargetState } from 'src/states/atoms/tempAtoms';
 import useSWR from 'swr';
 import axios from 'axios';
-import { TempEditContext } from 'src/pages/templates/temp_1';
 import Drop from 'src/components/svg/Drop';
 import styles from './Background.module.scss';
-import { useRecoilState } from 'recoil';
-import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 
 const BackgroundColor = (props): JSX.Element => {
-  const tempEditVar: TempEditVar = useContext(TempEditContext);
-  const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
-  const [currentTarget, setCurrentTarge] = useRecoilState(currentTargetState);
+  const currentTarget = useRecoilValue(currentTargetState);
 
   const hundleChangeBgColer = (e) => {
     e.stopPropagation();
-    // tempEditVar.currentTarget.style.backgroundColor = e.target.value;
     currentTarget.style.backgroundColor = e.target.value;
   };
   const hundleHiddenBgColor = () => {

@@ -1,14 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
+import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
-import { TempEditContext } from 'src/pages/templates/temp_1';
 import styles from './EditTools.module.scss';
-import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 
 const EditToolBox = (): JSX.Element => {
   const [editDisplayTools, setEditDisplayTools] = useRecoilState(editToolsDisplayState);
-  // const tempEditVar: TempEditVar = useContext(TempEditContext);
   const [display, setDisplay] = useState<classDisplay>('none');
 
   const hundleHiddenEditTools = () => {
