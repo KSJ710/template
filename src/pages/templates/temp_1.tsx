@@ -10,6 +10,7 @@ export const TempEditContext = createContext({} as TempEditVar);
 const Template = (): JSX.Element => {
   const setCurrentTarget = useSetRecoilState(currentTargetState);
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
+
   const hundleToggleEditTools = (e) => {
     setCurrentTarget(e.currentTarget);
     editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');

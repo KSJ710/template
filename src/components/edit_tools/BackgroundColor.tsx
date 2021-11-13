@@ -7,7 +7,12 @@ import axios from 'axios';
 import Drop from 'src/components/svg/Drop';
 import styles from './Background.module.scss';
 
-const BackgroundColor = (props): JSX.Element => {
+type Props = {
+  display: classDisplay;
+  setDisplay: React.Dispatch<React.SetStateAction<classDisplay>>;
+};
+
+const BackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
   const hundleChangeBgColer = (e) => {
