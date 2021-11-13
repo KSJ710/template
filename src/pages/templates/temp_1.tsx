@@ -5,8 +5,6 @@ import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/temp
 import EditTools from 'src/components/edit_tools/EditTools';
 import styles from './Temp_1.module.scss';
 
-export const TempEditContext = createContext({} as TempEditVar);
-
 const Template = (): JSX.Element => {
   const setCurrentTarget = useSetRecoilState(currentTargetState);
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
