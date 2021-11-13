@@ -1,8 +1,9 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { createContext } from 'react';
+import React from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import EditTools from 'src/components/edit_tools/EditTools';
+import Nav from 'src/components/template_parts/navigation/Nav_1';
 import styles from './Temp_1.module.scss';
 
 const Template = (): JSX.Element => {
@@ -10,6 +11,7 @@ const Template = (): JSX.Element => {
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
 
   const hundleToggleEditTools = (e) => {
+    e.stopPropagation();
     setCurrentTarget(e.currentTarget);
     editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');
   };
@@ -18,7 +20,9 @@ const Template = (): JSX.Element => {
     <>
       <EditTools />
       <div className={styles.grid}>
-        <header className={styles.header} onClick={hundleToggleEditTools}></header>
+        <header className={styles.header} onClick={hundleToggleEditTools}>
+          <Nav />
+        </header>
         <main className={styles.main} onClick={hundleToggleEditTools}></main>
         <aside className={styles.sidebar} onClick={hundleToggleEditTools}></aside>
         <footer className={styles.footer} onClick={hundleToggleEditTools}></footer>
