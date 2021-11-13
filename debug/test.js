@@ -1,3 +1,3 @@
-const pRoot = require("app-root-path");
+const pRoot = require('app-root-path');
 
-console.log(pRoot.path)
+console.log(pRoot.path);
