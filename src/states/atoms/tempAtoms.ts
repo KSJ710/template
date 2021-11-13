@@ -2,7 +2,7 @@ import { atom } from 'recoil';
 
 export const currentTargetState = atom<HTMLElement>({
   key: 'currentTrgetState',
-  default: null as HTMLElement,
+  default: null,
 });
 
 export const editToolsDisplayState = atom<classDisplay>({
