@@ -20,8 +20,8 @@ const Template = (): JSX.Element => {
     <>
       <EditTools />
       <div className={styles.grid}>
-        <header className={styles.header} onClick={hundleToggleEditTools}>
-          <Nav />
+        <header className={styles.header}>
+          <Nav hTgEitTls={hundleToggleEditTools} />
         </header>
         <main className={styles.main} onClick={hundleToggleEditTools}></main>
         <aside className={styles.sidebar} onClick={hundleToggleEditTools}></aside>
