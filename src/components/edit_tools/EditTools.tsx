@@ -1,13 +1,15 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
+import { tempHeadState } from 'src/states/atoms/tempAtoms';
 import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
   const [editDisplayTools, setEditDisplayTools] = useRecoilState(editToolsDisplayState);
   const [display, setDisplay] = useState<classDisplay>('none');
+  const setHead = useSetRecoilState(tempHeadState);
 
   const hundleHiddenEditTools = () => {
     setDisplay('none');
@@ -18,6 +20,10 @@ const EditToolBox = (): JSX.Element => {
     setDisplay('flex');
     setEditDisplayTools('none');
   };
+  const hundleChangeLayoutParts = () => {
+    setHead(2);
+  };
+
   return (
     <>
       <div
@@ -32,10 +38,10 @@ const EditToolBox = (): JSX.Element => {
               背景カラー
             </li>
             <li className="cursor-pointer" onClick={hundleShowBgColor}>
-              文字サイズ
+              文字フォントを変える
             </li>
-            <li className="cursor-pointer" onClick={hundleShowBgColor}>
-              テキストテキスト
+            <li className="cursor-pointer" onClick={hundleChangeLayoutParts}>
+              コンポーネント2にする
             </li>
             <li className="cursor-pointer" onClick={hundleShowBgColor}>
               テキストテキスト

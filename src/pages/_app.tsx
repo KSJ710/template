@@ -6,7 +6,7 @@ import 'src/styles/global.scss';
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <RecoilRoot>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </RecoilRoot>
   );
 }
