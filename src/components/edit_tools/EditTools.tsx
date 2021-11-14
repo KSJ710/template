@@ -1,5 +1,5 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import BackgroundColor from 'src/components/edit_tools/BackgroundColor';

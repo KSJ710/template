@@ -1,5 +1,4 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import EditTools from 'src/components/edit_tools/EditTools';

@@ -1,5 +1,4 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { currentTargetState } from 'src/states/atoms/tempAtoms';
 import useSWR from 'swr';
