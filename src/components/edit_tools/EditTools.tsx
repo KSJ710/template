@@ -41,7 +41,7 @@ const EditToolBox = (): JSX.Element => {
               文字フォントを変える
             </li>
             <li className="cursor-pointer" onClick={hundleChangeLayoutParts}>
-              コンポーネント2にする
+              コンポーネント変更する
             </li>
             <li className="cursor-pointer" onClick={hundleShowBgColor}>
               テキストテキスト
