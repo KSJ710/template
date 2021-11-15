@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 import React from 'react';
 import Base from 'src/components/templates/layout/Base';
 import EditTools from 'src/components/edit_tools/EditTools';

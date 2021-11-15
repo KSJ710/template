@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 import React, { createContext } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';

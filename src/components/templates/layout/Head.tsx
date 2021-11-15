@@ -1,11 +1,11 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { tempHeadState } from 'src/states/atoms/tempAtoms';
+import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import * as HeadBulk from 'src/components/templates/layout_parts/header/index';
 import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
-  const state = useRecoilValue(tempHeadState);
+  const state = useRecoilValue(tempHeadNumberState);
   let count = 1;
   for (let key in HeadBulk) {
     if (HeadBulk.hasOwnProperty(key)) {

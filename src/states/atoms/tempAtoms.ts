@@ -15,7 +15,7 @@ export const tempLayoutState = atom<number>({
   default: 1,
 });
 
-export const tempHeadState = atom<number>({
+export const tempHeadNumberState = atom<number>({
   key: 'tempHeadState',
   default: 1,
 });

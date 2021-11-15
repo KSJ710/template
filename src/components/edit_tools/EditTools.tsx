@@ -2,14 +2,14 @@
 import { useState } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
-import { tempHeadState } from 'src/states/atoms/tempAtoms';
+import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
   const [editDisplayTools, setEditDisplayTools] = useRecoilState(editToolsDisplayState);
   const [display, setDisplay] = useState<classDisplay>('none');
-  const setHead = useSetRecoilState(tempHeadState);
+  const setHead = useSetRecoilState(tempHeadNumberState);
 
   const hundleHiddenEditTools = () => {
     setDisplay('none');
