@@ -7,18 +7,18 @@ import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
-  const [editDisplayTools, setEditDisplayTools] = useRecoilState(editToolsDisplayState);
+  const [editToolDisplay, setEditToolDisplay] = useRecoilState(editToolsDisplayState);
   const [display, setDisplay] = useState<classDisplay>('none');
   const setHead = useSetRecoilState(tempHeadNumberState);
 
   const hundleHiddenEditTools = () => {
     setDisplay('none');
-    setEditDisplayTools('none');
+    setEditToolDisplay('none');
   };
   const hundleShowBgColor = (e) => {
     e.stopPropagation();
     setDisplay('flex');
-    setEditDisplayTools('none');
+    setEditToolDisplay('none');
   };
   const hundleChangeLayoutParts = () => {
     setHead(2);
@@ -27,7 +27,7 @@ const EditToolBox = (): JSX.Element => {
   return (
     <>
       <div
-        style={{ display: editDisplayTools }}
+        style={{ display: editToolDisplay }}
         className="modal_bg"
         onClick={hundleHiddenEditTools}
       >
