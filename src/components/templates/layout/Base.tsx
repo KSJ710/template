@@ -1,32 +1,21 @@
-import React, { createContext } from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
-import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
-import Head from 'src/components/templates/layout/Head';
+import React from 'react';
+import { useRecoilValue } from 'recoil';
+import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
+import * as BaseBulk from 'src/components/templates/layout_parts/bases/index';
 import styles from './Base.module.scss';
 
-const Temp = (): JSX.Element => {
-  const setCurrentTarget = useSetRecoilState(currentTargetState);
-  const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
-
-  const hundleToggleEditTools = (e) => {
-    e.stopPropagation();
-    setCurrentTarget(e.currentTarget);
-    editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');
-  };
-
-  return (
-    <HundleContext.Provider value={hundleToggleEditTools}>
-      <div className={styles.grid}>
-        <header className={styles.header}>
-          <Head />
-        </header>
-        <main className={styles.main} onClick={hundleToggleEditTools}></main>
-        <aside className={styles.sidebar} onClick={hundleToggleEditTools}></aside>
-        <footer className={styles.footer} onClick={hundleToggleEditTools}></footer>
-      </div>
-    </HundleContext.Provider>
-  );
+const Head = (): JSX.Element => {
+  // const state = useRecoilValue(tempHeadNumberState);
+  let count = 1;
+  for (let key in BaseBulk) {
+    if (BaseBulk.hasOwnProperty(key)) {
+      if (count == 1) {
+        const Base = BaseBulk[key];
+        return <Base />;
+      }
+      count++;
+    }
+  }
 };
 
-export const HundleContext = createContext({} as React.MouseEventHandler<HTMLUListElement>);
-export default Temp;
+export default Head;

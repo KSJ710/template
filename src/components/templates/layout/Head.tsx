@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
-import * as HeadBulk from 'src/components/templates/layout_parts/header/index';
+import * as HeadBulk from 'src/components/templates/layout_parts/headers/index';
 import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
@@ -17,8 +17,6 @@ const Head = (): JSX.Element => {
       count++;
     }
   }
-
-  return <div>load</div>;
 };
 
 export default Head;

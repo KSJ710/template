@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { HundleContext } from 'src/components/templates/layout/Base';
+import { HundleContext } from 'src/pages/templates/index';
 import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
@@ -7,7 +7,7 @@ const Head = (): JSX.Element => {
   return (
     <nav className="w-full h-full">
       <ul className={styles.common} onClick={hundleToggleEditTools}>
-        <li>2</li>
+        <li>1</li>
         <li>トップ</li>
         <li>トップ</li>
         <li>トップ</li>
