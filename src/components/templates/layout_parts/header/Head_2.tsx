@@ -1,17 +1,13 @@
+import React, { useContext } from 'react';
+import { HundleContext } from 'src/components/templates/layout/Base';
 import styles from './Head.module.scss';
 
-type Props = {
-  hdleTgEdtTls: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-};
-
-const Head = (props: Props): JSX.Element => {
+const Head = (): JSX.Element => {
+  const hundleToggleEditTools = useContext(HundleContext);
   return (
     <nav className="w-full h-full">
-      <ul
-        className={`flex gap-6 items-center place-content-center h-full`}
-        onClick={props.hdleTgEdtTls}
-      >
-        <li>トップ</li>
+      <ul className={styles.common} onClick={hundleToggleEditTools}>
+        <li>2</li>
         <li>トップ</li>
         <li>トップ</li>
         <li>トップ</li>

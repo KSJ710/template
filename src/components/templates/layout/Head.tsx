@@ -1,20 +1,24 @@
+import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { tempHeadState } from 'src/states/atoms/tempAtoms';
-import Head_1 from 'src/components/templates/layout_parts/header/Head_1';
-import Head_2 from 'src/components/templates/layout_parts/header/Head_2';
+import * as HeadBulk from 'src/components/templates/layout_parts/header/index';
 import styles from './Head.module.scss';
 
-type Props = {
-  hdleTgEdtTls: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
-};
-
-const Head = (props: Props): JSX.Element => {
-  const a = useRecoilValue(tempHeadState);
-  if (1 == a) {
-    return <Head_1 hdleTgEdtTls={props.hdleTgEdtTls} />;
-  } else {
-    return <Head_2 hdleTgEdtTls={props.hdleTgEdtTls} />;
+const Head = (): JSX.Element => {
+  const state = useRecoilValue(tempHeadState);
+  let count = 1;
+  for (let key in HeadBulk) {
+    if (HeadBulk.hasOwnProperty(key)) {
+      if (count == state) {
+        console.log(state);
+        const Head = HeadBulk[key];
+        return <Head />;
+      }
+      count++;
+    }
   }
+
+  return <div>load</div>;
 };
 
 export default Head;
