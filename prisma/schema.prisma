@@ -15,3 +15,10 @@ model Colors {
 
   @@map("colors")
 }
+
+model HeadParts {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  @@map("head_parts")
+}
