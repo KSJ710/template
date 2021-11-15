@@ -13,7 +13,7 @@
     "fmt": "prettier --write src/pages/**/*.{html,js,jsx,json,scss,ts,tsx} src/components/**/*.{html,js,jsx,json,scss,ts,tsx}"
   },
   "dependencies": {
-    "@prisma/client": "^3.3.0",
+    "@prisma/client": "^3.4.2",
     "animejs": "^3.2.1",
     "aws-amplify": "^4.3.4",
     "axios": "^0.24.0",
