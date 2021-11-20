@@ -15,11 +15,13 @@ const EditToolBox = (): JSX.Element => {
     setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
+
   const hundleShowBgColor = (e) => {
     e.stopPropagation();
     setBgColorDisplay('flex');
     setEditToolDisplay('none');
   };
+
   const hundleShowHeadPart = (e) => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
