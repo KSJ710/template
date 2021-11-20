@@ -4,7 +4,7 @@ import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
 import useSWR from 'swr';
 import axios from 'axios';
 import anime from 'animejs';
-import Drop from 'src/components/svg/Drop';
+import Drop from 'src/components/templates/svg/Drop';
 import styles from './ChangeBackgroundColor.module.scss';
 
 type Props = {
