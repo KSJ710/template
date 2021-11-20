@@ -10,12 +10,12 @@ export const editToolsDisplayState = atom<classDisplay>({
   default: 'none',
 });
 
-export const tempLayoutState = atom<number>({
-  key: 'tempLayoutState',
+export const tplLayoutState = atom<number>({
+  key: 'tplLayoutState',
   default: 1,
 });
 
-export const tempHeadNumberState = atom<number>({
-  key: 'tempHeadState',
+export const tplHeadNumberState = atom<number>({
+  key: 'tplHeadState',
   default: 1,
 });

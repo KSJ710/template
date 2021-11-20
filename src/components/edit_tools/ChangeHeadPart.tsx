@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useSetRecoilState } from 'recoil';
-import { tempHeadNumberState } from 'src/states/atoms/tplAtoms';
+import { tplHeadNumberState } from 'src/states/atoms/tplAtoms';
 import useSWR from 'swr';
 import axios from 'axios';
 import styles from './ChangeHeadPart.module.scss';
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const ChangeHeadPart = (props: Props): JSX.Element => {
-  const setHeadPartId = useSetRecoilState(tempHeadNumberState);
+  const setHeadPartId = useSetRecoilState(tplHeadNumberState);
 
   const hundleChangeHeadPart = (e) => {
     e.stopPropagation();
