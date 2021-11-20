@@ -5,6 +5,11 @@ type Color = {
   kanaName: string;
 };
 
+type HeadParts = {
+  id: number;
+  name: string;
+};
+
 type classDisplay = 'none' | 'block' | 'flex';
 
 type Fetcher = (url: string) => Promise<any>;

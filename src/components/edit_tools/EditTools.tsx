@@ -4,20 +4,27 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
+import HeadPart from 'src/components/edit_tools/HeadPart';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
   const [editToolDisplay, setEditToolDisplay] = useRecoilState(editToolsDisplayState);
-  const [display, setDisplay] = useState<classDisplay>('none');
+  const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
+  const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
   const setHead = useSetRecoilState(tempHeadNumberState);
 
   const hundleHiddenEditTools = () => {
-    setDisplay('none');
+    setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
   const hundleShowBgColor = (e) => {
     e.stopPropagation();
-    setDisplay('flex');
+    setBgColorDisplay('flex');
+    setEditToolDisplay('none');
+  };
+  const hundleShowHeadPart = (e) => {
+    e.stopPropagation();
+    setHeadPartDisplay('flex');
     setEditToolDisplay('none');
   };
   const hundleChangeLayoutParts = () => {
@@ -40,7 +47,7 @@ const EditToolBox = (): JSX.Element => {
             <li className="cursor-pointer" onClick={hundleShowBgColor}>
               文字フォントを変える
             </li>
-            <li className="cursor-pointer" onClick={hundleChangeLayoutParts}>
+            <li className="cursor-pointer" onClick={hundleShowHeadPart}>
               コンポーネント変更する
             </li>
             <li className="cursor-pointer" onClick={hundleShowBgColor}>
@@ -49,7 +56,8 @@ const EditToolBox = (): JSX.Element => {
           </ul>
         </div>
       </div>
-      <BackgroundColor display={display} setDisplay={setDisplay} />
+      <HeadPart display={headPartDisplay} setDisplay={setHeadPartDisplay} />
+      <BackgroundColor display={bgColorDisplay} setDisplay={setBgColorDisplay} />
     </>
   );
 };

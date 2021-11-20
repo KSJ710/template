@@ -10,7 +10,6 @@ const Head = (): JSX.Element => {
   for (let key in HeadBulk) {
     if (HeadBulk.hasOwnProperty(key)) {
       if (count == state) {
-        console.log(state);
         const Head = HeadBulk[key];
         return <Head />;
       }
