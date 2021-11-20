@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { tplHeadNumberState } from 'src/states/atoms/tplAtoms';
+import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
 import * as HeadBulk from 'src/components/templates/layout_parts/headers/index';
 import styles from './Head.module.scss';
 
@@ -13,7 +13,7 @@ const Head = (): JSX.Element => {
         const Head = HeadBulk[key];
         return <Head />;
       }
-      headNum++;
+      tplHeadNum++;
     }
   }
 };

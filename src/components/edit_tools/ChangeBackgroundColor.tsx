@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useRecoilValue } from 'recoil';
-import { currentTargetState } from 'src/states/atoms/tplAtoms';
+import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
 import useSWR from 'swr';
 import axios from 'axios';
 import anime from 'animejs';

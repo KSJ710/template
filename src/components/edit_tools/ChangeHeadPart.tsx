@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useSetRecoilState } from 'recoil';
-import { tplHeadNumberState } from 'src/states/atoms/tplAtoms';
+import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
 import useSWR from 'swr';
 import axios from 'axios';
 import styles from './ChangeHeadPart.module.scss';
