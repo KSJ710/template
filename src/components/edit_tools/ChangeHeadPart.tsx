@@ -11,11 +11,11 @@ type Props = {
 };
 
 const ChangeHeadPart = (props: Props): JSX.Element => {
-  const setHeadPartId = useSetRecoilState(tplHeadNumberState);
+  const setHeadNum = useSetRecoilState(tplHeadNumberState);
 
   const hundleChangeHeadPart = (e) => {
     e.stopPropagation();
-    setHeadPartId(e.target.value);
+    setHeadNum(e.target.value);
   };
 
   const hundleHiddenBgColor = () => {
