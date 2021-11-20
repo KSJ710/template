@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
-import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import ChangeBackgroundColor from 'src/components/edit_tools/ChangeBackgroundColor';
 import ChangeHeadPart from 'src/components/edit_tools/ChangeHeadPart';
 import styles from './EditTools.module.scss';
