@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState } from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import ChangeBackgroundColor from 'src/components/edit_tools/ChangeBackgroundColor';
@@ -11,7 +11,6 @@ const EditToolBox = (): JSX.Element => {
   const [editToolDisplay, setEditToolDisplay] = useRecoilState(editToolsDisplayState);
   const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
-  const setHead = useSetRecoilState(tempHeadNumberState);
 
   const hundleHiddenEditTools = () => {
     setBgColorDisplay('none');
@@ -26,9 +25,6 @@ const EditToolBox = (): JSX.Element => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
     setEditToolDisplay('none');
-  };
-  const hundleChangeLayoutParts = () => {
-    setHead(2);
   };
 
   return (
