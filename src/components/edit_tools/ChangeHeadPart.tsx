@@ -3,14 +3,14 @@ import { useSetRecoilState } from 'recoil';
 import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './HeadPart.module.scss';
+import styles from './ChangeHeadPart.module.scss';
 
 type Props = {
   display: classDisplay;
   setDisplay: React.Dispatch<React.SetStateAction<classDisplay>>;
 };
 
-const HeadPart = (props: Props): JSX.Element => {
+const ChangeHeadPart = (props: Props): JSX.Element => {
   const setHeadPartId = useSetRecoilState(tempHeadNumberState);
 
   const hundleChangeHeadPart = (e) => {
@@ -56,4 +56,4 @@ const fetcher: Fetcher = (url) =>
     return res.data;
   });
 
-export default HeadPart;
+export default ChangeHeadPart;

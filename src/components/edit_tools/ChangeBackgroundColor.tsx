@@ -5,14 +5,14 @@ import useSWR from 'swr';
 import axios from 'axios';
 import anime from 'animejs';
 import Drop from 'src/components/svg/Drop';
-import styles from './Background.module.scss';
+import styles from './ChangeBackgroundColor.module.scss';
 
 type Props = {
   display: classDisplay;
   setDisplay: React.Dispatch<React.SetStateAction<classDisplay>>;
 };
 
-const BackgroundColor = (props: Props): JSX.Element => {
+const ChangeBackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
   const hundleChangeBgColer = (e) => {
@@ -102,4 +102,4 @@ const fetcher: Fetcher = (url) =>
     return res.data;
   });
 
-export default BackgroundColor;
+export default ChangeBackgroundColor;

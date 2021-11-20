@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
 import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
-import BackgroundColor from 'src/components/edit_tools/BackgroundColor';
-import HeadPart from 'src/components/edit_tools/HeadPart';
+import BackgroundColor from 'src/components/edit_tools/ChangeBackgroundColor';
+import HeadPart from 'src/components/edit_tools/ChangeHeadPart';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
