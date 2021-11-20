@@ -1,42 +1,12 @@
-.tool_bgcolor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-height: calc(100vh * 0.6);
-  max-width: calc(100vw * 0.8);
-  box-sizing: content-box;
-  border-top: 2px solid #006e54;
-  border-bottom: 2px solid #006e54;
-  border-left: 2px solid #006e54;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
+@use '/src/components/edit_tools/common_etit_tools' as common;
 
-  @media screen and (min-width: 540px) {
-    max-width: calc(100vw * 0.6);
-  }
+.tool_bgcolor {
+  @include common.tool_bg;
 }
 
 .tool_list {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  place-content: center;
-  width: calc(100vw * 0.4 - 8px);
-  height: calc(100vh * 0.2 - 8px);
-  border: 1px solid #000000;
-  background-color: rgba(0, 0, 0, 1);
-  font-size: 1em;
-
-  @media screen and (min-width: 540px) {
-    width: calc(100vw * 0.2 - 8px);
-    font-size: 1.2em;
-  }
-  @media screen and (min-width: 1024px) {
-    width: calc(100vw * 0.15 - 8px);
-  }
-  @media screen and (min-width: 1536px) {
-    width: calc(100vw * 0.12 - 8px);
-  }
+  @include common.tool_list;
+  background-color: #000000;
 }
 
 .label {
@@ -45,8 +15,4 @@
   left: 0;
   font-size: 0.75em;
   color: #fff;
-}
-
-.active {
-  background-color: #fff;
 }
