@@ -59,11 +59,11 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
 
   const { data, error } = useSWR('/api/colors', fetcher);
   if (error) {
-    return <div>error</div>;
+    return <div style={{ display: props.display }}>error</div>;
   }
 
   if (!data) {
-    return <div>loading...</div>;
+    return <div style={{ display: props.display }}>loading...</div>;
   } else {
     const colorList = data.map((color: Color) => (
       <li key={color.id} className={`${styles.tool_list} scroll_snap_child`}>
