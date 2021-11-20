@@ -5,11 +5,11 @@ import * as HeadBulk from 'src/components/templates/layout_parts/headers/index';
 import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
-  const state = useRecoilValue(tplHeadNumberState);
-  let headNum = 1;
+  const curtTplHeadNum = useRecoilValue(tplHeadNumberState);
+  let tplHeadNum = 1;
   for (let key in HeadBulk) {
     if (HeadBulk.hasOwnProperty(key)) {
-      if (headNum == state) {
+      if (tplHeadNum == curtTplHeadNum) {
         const Head = HeadBulk[key];
         return <Head />;
       }

@@ -25,30 +25,30 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
   };
 
   const hundleChangeColorListBgColer = (e) => {
-    let crtTrgChld: HTMLElement[] = Array.from(e.currentTarget.children);
-    crtTrgChld.map((crtTrgChld) => {
+    let curtTgtCh: HTMLElement[] = Array.from(e.currentTarget.children);
+    curtTgtCh.map((curtTgtCh) => {
       if (e.currentTarget.scrollTop >= 12155) {
         anime({
-          targets: crtTrgChld,
+          targets: curtTgtCh,
           backgroundColor: '#ffffff',
           easing: 'easeInOutQuad',
           duration: 200,
         });
         anime({
-          targets: crtTrgChld.getElementsByClassName('trackColorNum'),
+          targets: curtTgtCh.getElementsByClassName('trackColorNum'),
           color: '#000000',
           easing: 'easeInOutQuad',
           duration: 200,
         });
       } else {
         anime({
-          targets: crtTrgChld,
+          targets: curtTgtCh,
           backgroundColor: '#000000',
           easing: 'easeInOutQuad',
           duration: 200,
         });
         anime({
-          targets: crtTrgChld.getElementsByClassName('trackColorNum'),
+          targets: curtTgtCh.getElementsByClassName('trackColorNum'),
           color: '#ffffff',
           easing: 'easeInOutQuad',
           duration: 200,
