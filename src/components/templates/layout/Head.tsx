@@ -6,14 +6,14 @@ import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
   const state = useRecoilValue(tempHeadNumberState);
-  let count = 1;
+  let headNum = 1;
   for (let key in HeadBulk) {
     if (HeadBulk.hasOwnProperty(key)) {
-      if (count == state) {
+      if (headNum == state) {
         const Head = HeadBulk[key];
         return <Head />;
       }
-      count++;
+      headNum++;
     }
   }
 };
