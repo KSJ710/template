@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tempAtoms';
+import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tplAtoms';
 import Base from 'src/components/templates/layout/Base';
 import EditTools from 'src/components/edit_tools/EditTools';
 

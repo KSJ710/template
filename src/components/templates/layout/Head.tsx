@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { tempHeadNumberState } from 'src/states/atoms/tempAtoms';
+import { tempHeadNumberState } from 'src/states/atoms/tplAtoms';
 import * as HeadBulk from 'src/components/templates/layout_parts/headers/index';
 import styles from './Head.module.scss';
 

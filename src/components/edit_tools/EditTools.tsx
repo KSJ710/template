@@ -1,7 +1,7 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState } from 'react';
 import { useRecoilState } from 'recoil';
-import { editToolsDisplayState } from 'src/states/atoms/tempAtoms';
+import { editToolsDisplayState } from 'src/states/atoms/tplAtoms';
 import ChangeBackgroundColor from 'src/components/edit_tools/ChangeBackgroundColor';
 import ChangeHeadPart from 'src/components/edit_tools/ChangeHeadPart';
 import styles from './EditTools.module.scss';
