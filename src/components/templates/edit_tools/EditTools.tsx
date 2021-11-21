@@ -19,7 +19,7 @@ const EditToolBox = (): JSX.Element => {
 
   const handleShowBgColor = (e) => {
     e.stopPropagation();
-    setBgColorDisplay('flex');
+    bgColorDisplay == 'none' ? setBgColorDisplay('flex') : setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
 
@@ -33,7 +33,7 @@ const EditToolBox = (): JSX.Element => {
     <>
       <div
         style={{ display: editToolDisplay }}
-        className="modal_bg"
+        className="bg_modal"
         onClick={handleHiddenEditTools}
       >
         <div className="p-3 w-4/5 bg-[#006e54] text-[#e6b422] trbl_center">
