@@ -19,7 +19,7 @@ const EditToolBox = (): JSX.Element => {
 
   const handleShowBgColor = (e) => {
     e.stopPropagation();
-    bgColorDisplay == 'none' ? setBgColorDisplay('flex') : setBgColorDisplay('none');
+    setBgColorDisplay('flex');
     setEditToolDisplay('none');
   };
 
