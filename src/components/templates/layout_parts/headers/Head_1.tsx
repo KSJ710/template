@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Head.module.scss';
 
-const Head = (props): JSX.Element => {
+const Head_1 = (props): JSX.Element => {
   return (
     <nav className="w-full h-full">
       <ul className={styles.common} onClick={props.handleToggleEditTools}>
@@ -15,4 +15,4 @@ const Head = (props): JSX.Element => {
   );
 };
 
-export default Head;
+export default Head_1;

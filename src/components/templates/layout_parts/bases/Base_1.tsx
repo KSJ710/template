@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'src/components/templates/layout/Head';
 import styles from './Base.module.scss';
 
-const Temp = (props): JSX.Element => {
+const Base_1 = (props): JSX.Element => {
   return (
     <div className={styles.grid}>
       <header className={styles.header}>
@@ -15,4 +15,4 @@ const Temp = (props): JSX.Element => {
   );
 };
 
-export default Temp;
+export default Base_1;

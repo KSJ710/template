@@ -4,7 +4,7 @@ import { currentTargetState, editToolsDisplayState } from 'src/states/atoms/tamp
 import * as BaseBulk from 'src/components/templates/layout_parts/bases/index';
 import styles from './Base.module.scss';
 
-const Head = (): JSX.Element => {
+const Base = (): JSX.Element => {
   const setCurrentTarget = useSetRecoilState(currentTargetState);
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
 
@@ -26,4 +26,4 @@ const Head = (): JSX.Element => {
   }
 };
 
-export default Head;
+export default Base;
