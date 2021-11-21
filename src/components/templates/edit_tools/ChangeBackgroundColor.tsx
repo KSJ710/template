@@ -20,7 +20,8 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     currentTarget.style.backgroundColor = e.target.value;
   };
 
-  const hundleHiddenBgColor = () => {
+  const hundleHiddenBgColor = (e) => {
+    e.stopPropagation();
     props.setDisplay('none');
   };
 

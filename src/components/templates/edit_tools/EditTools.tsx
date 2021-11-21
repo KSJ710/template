@@ -11,7 +11,8 @@ const EditToolBox = (): JSX.Element => {
   const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
 
-  const hundleHiddenEditTools = () => {
+  const hundleHiddenEditTools = (e) => {
+    e.stopPropagation();
     setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
