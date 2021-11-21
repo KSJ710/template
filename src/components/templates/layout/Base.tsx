@@ -8,7 +8,7 @@ const Head = (): JSX.Element => {
   const setCurrentTarget = useSetRecoilState(currentTargetState);
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
 
-  const hundleToggleEditTools = (e) => {
+  const handleToggleEditTools = (e) => {
     e.stopPropagation();
     setCurrentTarget(e.currentTarget);
     editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');
@@ -19,7 +19,7 @@ const Head = (): JSX.Element => {
     if (BaseBulk.hasOwnProperty(key)) {
       if (count == 1) {
         const Base = BaseBulk[key];
-        return <Base hundleToggleEditTools={hundleToggleEditTools} />;
+        return <Base handleToggleEditTools={handleToggleEditTools} />;
       }
       count++;
     }

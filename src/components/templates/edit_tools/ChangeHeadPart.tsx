@@ -13,12 +13,12 @@ type Props = {
 const ChangeHeadPart = (props: Props): JSX.Element => {
   const setHeadNum = useSetRecoilState(tplHeadNumberState);
 
-  const hundleChangeHeadPart = (e) => {
+  const handleChangeHeadPart = (e) => {
     e.stopPropagation();
     setHeadNum(e.target.value);
   };
 
-  const hundleHiddenBgColor = () => {
+  const handleHiddenBgColor = () => {
     props.setDisplay('none');
   };
 
@@ -34,7 +34,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
         <button
           value={`${headPart.id}`}
           className="absolute w-full h-full"
-          onClick={hundleChangeHeadPart}
+          onClick={handleChangeHeadPart}
         ></button>
         <div className={styles.label}>{headPart.id}</div>
       </li>
@@ -43,7 +43,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
       <div
         style={{ display: props.display }}
         className="justify-center items-center bg-transparent bg_modal"
-        onClick={hundleHiddenBgColor}
+        onClick={handleHiddenBgColor}
       >
         <ul className={styles.tool_bg}>{headPartList}</ul>
       </div>

@@ -8,9 +8,9 @@ const Temp = (props): JSX.Element => {
       <header className={styles.header}>
         <Head />
       </header>
-      <main className={styles.main} onClick={props.hundleToggleEditTools}></main>
-      <aside className={styles.sidebar} onClick={props.hundleToggleEditTools}></aside>
-      <footer className={styles.footer} onClick={props.hundleToggleEditTools}></footer>
+      <main className={styles.main} onClick={props.handleToggleEditTools}></main>
+      <aside className={styles.sidebar} onClick={props.handleToggleEditTools}></aside>
+      <footer className={styles.footer} onClick={props.handleToggleEditTools}></footer>
     </div>
   );
 };

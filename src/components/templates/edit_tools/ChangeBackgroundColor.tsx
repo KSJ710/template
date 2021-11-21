@@ -15,17 +15,17 @@ type Props = {
 const ChangeBackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
-  const hundleChangeBgColer = (e) => {
+  const handleChangeBgColer = (e) => {
     e.stopPropagation();
     currentTarget.style.backgroundColor = e.target.value;
   };
 
-  const hundleHiddenBgColor = (e) => {
+  const handleHiddenBgColor = (e) => {
     e.stopPropagation();
     props.setDisplay('none');
   };
 
-  const hundleChangeColorListBgColer = (e) => {
+  const handleChangeColorListBgColer = (e) => {
     let curtTgtCh: HTMLElement[] = Array.from(e.currentTarget.children);
     curtTgtCh.map((curtTgtCh) => {
       if (e.currentTarget.scrollTop >= 12155) {
@@ -71,7 +71,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
         <button
           value={`${color.colorCode}`}
           className="absolute w-full h-full"
-          onClick={hundleChangeBgColer}
+          onClick={handleChangeBgColer}
         ></button>
         <div className={`${styles.label} trackColorNum`}>{color.id}</div>
         <div>
@@ -88,9 +88,9 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
       <div
         style={{ display: props.display }}
         className="justify-center items-center bg-transparent bg_modal"
-        onClick={hundleHiddenBgColor}
+        onClick={handleHiddenBgColor}
       >
-        <ul className={styles.tool_bgcolor} onScroll={hundleChangeColorListBgColer}>
+        <ul className={styles.tool_bgcolor} onScroll={handleChangeColorListBgColer}>
           {colorList}
         </ul>
       </div>

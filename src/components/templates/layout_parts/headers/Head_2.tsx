@@ -4,7 +4,7 @@ import styles from './Head.module.scss';
 const Head = (props): JSX.Element => {
   return (
     <nav className="w-full h-full">
-      <ul className={styles.common} onClick={props.hundleToggleEditTools}>
+      <ul className={styles.common} onClick={props.handleToggleEditTools}>
         <li>2</li>
         <li>トップ</li>
         <li>トップ</li>

@@ -11,19 +11,19 @@ const EditToolBox = (): JSX.Element => {
   const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
 
-  const hundleHiddenEditTools = (e) => {
+  const handleHiddenEditTools = (e) => {
     e.stopPropagation();
     setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
 
-  const hundleShowBgColor = (e) => {
+  const handleShowBgColor = (e) => {
     e.stopPropagation();
     setBgColorDisplay('flex');
     setEditToolDisplay('none');
   };
 
-  const hundleShowHeadPart = (e) => {
+  const handleShowHeadPart = (e) => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
     setEditToolDisplay('none');
@@ -34,21 +34,21 @@ const EditToolBox = (): JSX.Element => {
       <div
         style={{ display: editToolDisplay }}
         className="modal_bg"
-        onClick={hundleHiddenEditTools}
+        onClick={handleHiddenEditTools}
       >
         <div className="p-3 w-4/5 bg-[#006e54] text-[#e6b422] trbl_center">
           <p className="mb-4 text-2xl">変更したい項目を選んで下さい</p>
           <ul className="flex flex-col gap-3 pl-3 font-thin leading-4">
-            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+            <li className="cursor-pointer" onClick={handleShowBgColor}>
               背景カラー
             </li>
-            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+            <li className="cursor-pointer" onClick={handleShowBgColor}>
               文字フォントを変える
             </li>
-            <li className="cursor-pointer" onClick={hundleShowHeadPart}>
+            <li className="cursor-pointer" onClick={handleShowHeadPart}>
               コンポーネント変更する
             </li>
-            <li className="cursor-pointer" onClick={hundleShowBgColor}>
+            <li className="cursor-pointer" onClick={handleShowBgColor}>
               テキストテキスト
             </li>
           </ul>
