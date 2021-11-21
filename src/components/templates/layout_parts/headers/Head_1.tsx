@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
-import { HundleContext } from 'src/pages/templates/index';
+import React from 'react';
 import styles from './Head.module.scss';
 
-const Head = (): JSX.Element => {
-  const hundleToggleEditTools = useContext(HundleContext);
+const Head = (props): JSX.Element => {
   return (
     <nav className="w-full h-full">
-      <ul className={styles.common} onClick={hundleToggleEditTools}>
+      <ul className={styles.common} onClick={props.hundleToggleEditTools}>
         <li>1</li>
         <li>トップ</li>
         <li>トップ</li>
