@@ -1,7 +1,7 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext } from 'react';
 import { HandleContex } from 'src/pages/templates/index';
-import styles from './Head.module.scss';
+import styles from './Head_2.module.scss';
 
 const Head_1 = (): JSX.Element => {
   const handleContex = useContext(HandleContex);
