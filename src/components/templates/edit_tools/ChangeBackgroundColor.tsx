@@ -36,7 +36,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
           duration: 200,
         });
         anime({
-          targets: curtTgtCh.getElementsByClassName('trackcolorNum'),
+          targets: curtTgtCh.getElementsByClassName('_track_color_num'),
           color: '#000000',
           easing: 'easeInOutQuad',
           duration: 200,
@@ -49,7 +49,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
           duration: 200,
         });
         anime({
-          targets: curtTgtCh.getElementsByClassName('trackColorNum'),
+          targets: curtTgtCh.getElementsByClassName('_track_color_num'),
           color: '#ffffff',
           easing: 'easeInOutQuad',
           duration: 200,
@@ -73,7 +73,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
           className="absolute w-full h-full"
           onClick={handleChangeBgColer}
         ></button>
-        <div className={`${styles.label} trackColorNum`}>{color.id}</div>
+        <div className={`${styles.label} _track_color_num`}>{color.id}</div>
         <div>
           <Drop colorCode={color.colorCode} />
           <p style={{ color: color.colorCode }} className="text-center">
