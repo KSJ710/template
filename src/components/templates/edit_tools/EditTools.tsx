@@ -1,7 +1,7 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState } from 'react';
-import { useRecoilState } from 'recoil';
-import { editToolsDisplayState } from 'src/states/atoms/tamplate_atoms';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { currentLayoutPart, editToolsDisplayState } from 'src/states/atoms/tamplate_atoms';
 import ChangeBackgroundColor from 'src/components/templates/edit_tools/ChangeBackgroundColor';
 import ChangeHeadPart from 'src/components/templates/edit_tools/ChangeHeadPart';
 import styles from './EditTools.module.scss';
@@ -10,6 +10,7 @@ const EditToolBox = (): JSX.Element => {
   const [editToolDisplay, setEditToolDisplay] = useRecoilState(editToolsDisplayState);
   const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
+  const curtLayPart = useRecoilValue(currentLayoutPart);
 
   const handleHiddenEditTools = (e) => {
     e.stopPropagation();
@@ -45,7 +46,7 @@ const EditToolBox = (): JSX.Element => {
             <li className="cursor-pointer" onClick={handleShowBgColor}>
               文字フォントを変える
             </li>
-            <li className="cursor-pointer" onClick={handleShowHeadPart}>
+            <li className="cursor-pointer" onClick={eval(`handleShow${curtLayPart}Part`)}>
               コンポーネント変更する
             </li>
             <li className="cursor-pointer" onClick={handleShowBgColor}>

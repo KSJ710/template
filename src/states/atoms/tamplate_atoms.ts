@@ -10,6 +10,11 @@ export const editToolsDisplayState = atom<classDisplay>({
   default: 'none',
 });
 
+export const currentLayoutPart = atom<string>({
+  key: 'currentLayoutPart',
+  default: 'Head',
+});
+
 export const tplLayoutState = atom<number>({
   key: 'tplLayoutState',
   default: 1,

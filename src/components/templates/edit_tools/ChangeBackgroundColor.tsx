@@ -36,7 +36,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
           duration: 200,
         });
         anime({
-          targets: curtTgtCh.getElementsByClassName('trackColorNum'),
+          targets: curtTgtCh.getElementsByClassName('trackcolorNum'),
           color: '#000000',
           easing: 'easeInOutQuad',
           duration: 200,

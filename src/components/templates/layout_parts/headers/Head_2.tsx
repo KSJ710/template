@@ -1,10 +1,14 @@
-import React from 'react';
+/* eslint-disable tailwindcss/no-custom-classname */
+import React, { useContext } from 'react';
+import { HandleContex } from 'src/pages/templates/index';
 import styles from './Head.module.scss';
 
-const Head_2 = (props): JSX.Element => {
+const Head_1 = (): JSX.Element => {
+  const handleContex = useContext(HandleContex);
+
   return (
     <nav className="w-full h-full">
-      <ul className={styles.common} onClick={props.handleToggleEditTools}>
+      <ul className={`${styles.common} _track_lay_part_Head`} onClick={handleContex}>
         <li>2</li>
         <li>トップ</li>
         <li>トップ</li>
@@ -15,4 +19,4 @@ const Head_2 = (props): JSX.Element => {
   );
 };
 
-export default Head_2;
+export default Head_1;
