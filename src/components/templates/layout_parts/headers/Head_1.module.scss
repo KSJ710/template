@@ -1,9 +1,21 @@
-.common {
+.base {
   display: flex;
-  gap: 8px;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  background-color: rgb(26, 81, 184);
+}
+.logo {
+  display: flex;
+  gap: 5px;
   place-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(53, 103, 197);
+  font-size: 1.4em;
+}
+.menu {
+  display: flex;
+  gap: 50px;
+  place-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
