@@ -6,7 +6,7 @@ const App = (): JSX.Element => {
   return (
     <div className="container mx-auto w-full h-screen bg-green-600">
       <div className="flex justify-center items-center w-auto h-full">
-        <Link href="/templates/temp_1">
+        <Link href="/templates">
           <a className={`${styles.btn_orange} ${styles.btn_radius}`}>クリック</a>
         </Link>
       </div>
