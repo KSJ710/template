@@ -13,6 +13,9 @@
     "fmt": "prettier --write src/pages/**/*.{html,js,jsx,json,scss,ts,tsx} src/components/**/*.{html,js,jsx,json,scss,ts,tsx}"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@prisma/client": "^3.4.2",
     "animejs": "^3.2.1",
     "aws-amplify": "^4.3.4",
