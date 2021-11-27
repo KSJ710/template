@@ -13,16 +13,6 @@
   align-items: center;
   font-size: 1.4em;
 }
-.menu {
-  display: none;
-  gap: 50px;
-  place-content: center;
-  align-items: center;
-  margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
 
 /*=============================
 .btn_trigger
