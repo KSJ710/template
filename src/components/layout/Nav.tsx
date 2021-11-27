@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SearchIcon from '@material-ui/icons/Search';
-import HambugModal from '../button/HambugModal';
+import HambugModal from '../templates/button/HambugButton';
 import React, { useState } from 'react';
 
 export default function Nav() {

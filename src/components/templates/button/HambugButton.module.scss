@@ -1,29 +1,3 @@
-.base {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  padding: 8px;
-  background-color: rgb(26, 81, 184);
-  cursor: pointer;
-}
-.logo {
-  display: flex;
-  gap: 5px;
-  place-content: center;
-  align-items: center;
-  font-size: 1.4em;
-}
-.menu {
-  display: none;
-  gap: 50px;
-  place-content: center;
-  align-items: center;
-  margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-
 /*=============================
 .btn_trigger
 =============================*/
