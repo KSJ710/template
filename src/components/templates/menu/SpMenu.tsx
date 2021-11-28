@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Menu.module.scss';
+import styles from './SpMenu.module.scss';
 
-const Menu = () => {
+const SpMenu = (props) => {
   const hundleStopPropagation = (e) => e.stopPropagation();
 
   return (
-    <ul className={styles.menu}>
+    <ul style={{ display: props.toggleDisplay }} className={styles.menu}>
       <Link href="/">
         <a onClick={hundleStopPropagation}>
           <li>ページ1</li>
@@ -27,8 +27,13 @@ const Menu = () => {
           <li>ページ4</li>
         </a>
       </Link>
+      <Link href="#">
+        <a onClick={hundleStopPropagation}>
+          <li>ログイン</li>
+        </a>
+      </Link>
     </ul>
   );
 };
 
-export default Menu;
+export default SpMenu;
