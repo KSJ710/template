@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'src/components/templates/layout/Head';
+import Main from 'src/components/templates/layout/Main';
 import styles from './Base.module.scss';
 
 const Base_1 = (): JSX.Element => {
@@ -8,9 +9,11 @@ const Base_1 = (): JSX.Element => {
       <header className={styles.header}>
         <Head />
       </header>
-      <main className={styles.main}></main>
-      <aside className={styles.sidebar}></aside>
-      <footer className={styles.footer}></footer>
+      <main className={styles.main}>
+        <Main />
+      </main>
+      <aside className={styles.sidebar}>aaa</aside>
+      <footer className={styles.footer}>aaa</footer>
     </div>
   );
 };
