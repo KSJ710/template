@@ -12,7 +12,7 @@ const Head = (): JSX.Element => {
     if (MainBulk.hasOwnProperty(key)) {
       if (tplHeadNum == curtTplHeadNum) {
         const Main = MainBulk[key];
-        return <Main />;
+        return <Main className="w-full" />;
       }
       tplHeadNum++;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'src/components/templates/layout/Head';
 import Main from 'src/components/templates/layout/Main';
-import styles from './Base.module.scss';
+import styles from './Base_1.module.scss';
 
 const Base_1 = (): JSX.Element => {
   return (

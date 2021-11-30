@@ -5,8 +5,8 @@
   gap: 40px;
   flex-direction: column;
   place-content: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: -(var.$outer_padding);
   background-color: #0d0015;
   li {

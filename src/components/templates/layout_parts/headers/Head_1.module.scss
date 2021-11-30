@@ -1,11 +1,11 @@
 @use '/src/styles/variables' as var;
 
 .base {
+  position: fixed;
   display: flex;
-  height: 100%;
   width: 100%;
   padding: var.$outer_padding;
-  background-color: rgb(26, 81, 184);
+  background-color: transparent;
   cursor: pointer;
 }
 .logo {

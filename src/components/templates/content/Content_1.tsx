@@ -1,8 +1,8 @@
 import React from 'react';
 const Content_1 = (): JSX.Element => {
   return (
-    <div className="w-full bg-red-500">
-      <div>a</div>
+    <div className="w-full h-screen bg-red-500">
+      <div></div>
     </div>
   );
 };

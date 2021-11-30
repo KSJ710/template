@@ -17,7 +17,7 @@ const Head_1 = (): JSX.Element => {
   };
 
   return (
-    <nav className={`${styles.base} _track_lay_part_Head`} onClick={handleContex}>
+    <nav className={`${styles.base} hover:bg-gray-50 _track_lay_part_Head`} onClick={handleContex}>
       <h1 className={`${styles.logo}`}>
         <Logo />
         <p>ロゴロゴ</p>
