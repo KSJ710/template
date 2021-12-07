@@ -13,20 +13,12 @@
   grid-column-start: 1;
   grid-column-end: 10;
   background-color: #aaa;
-  @media screen and (min-width: 768px) {
-    grid-column-start: 1;
-    grid-column-end: 7;
-  }
 }
 
 .sidebar {
   grid-column-start: 1;
   grid-column-end: 10;
   background-color: #aaa;
-  @media screen and (min-width: 768px) {
-    grid-column-start: 7;
-    grid-column-end: 10;
-  }
 }
 
 .footer {
