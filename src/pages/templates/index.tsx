@@ -18,8 +18,17 @@ const Index = (): JSX.Element => {
     setCurrentTarget(e.currentTarget);
 
     const className: string = e.currentTarget.className;
-    const targetPart = className.match(/_track_lay_part_.*$/)[0].substr(16);
-    setCurtLayPart(targetPart);
+
+    const layPartNames: string[] = ['Head'];
+    const targetPartName: string = className.match(/_track_lay_part_.*/)[0];
+    let resultPartName: string = 'layPartName';
+    for (let layPartName of layPartNames) {
+      if (~targetPartName.indexOf(layPartName)) {
+        resultPartName = layPartName;
+        break;
+      }
+    }
+    setCurtLayPart(resultPartName);
 
     editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');
   };
