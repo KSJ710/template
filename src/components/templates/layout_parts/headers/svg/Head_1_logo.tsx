@@ -1,5 +1,5 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-const Drop = (): JSX.Element => {
+const Head_1_logo = (): JSX.Element => {
   return (
     <svg height="36px" width="36px" viewBox="0 0 24 24" fill="#000000">
       <path d="M0 0h24v24H0V0z" fill="none" />
@@ -8,4 +8,4 @@ const Drop = (): JSX.Element => {
   );
 };
 
-export default Drop;
+export default Head_1_logo;
