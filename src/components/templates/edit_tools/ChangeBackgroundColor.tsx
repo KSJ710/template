@@ -25,6 +25,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     props.setDisplay('none');
   };
 
+  // 背景カラーのパネルの背景カラー変更アニメーション
   const handleChangeColorListBgColer = (e) => {
     let curtTgtCh: HTMLElement[] = Array.from(e.currentTarget.children);
     curtTgtCh.map((curtTgtCh) => {

@@ -1,9 +1,11 @@
+@use 'src/styles/_responsive' as respons;
+
 @mixin tool_bg {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-height: calc(100vh * 0.6);
   max-width: calc(100vw * 0.8);
+  max-height: calc(100vh * 0.6);
   box-sizing: content-box;
   border-top: 2px solid #006e54;
   border-bottom: 2px solid #006e54;
@@ -11,7 +13,7 @@
   overflow-y: auto;
   scroll-snap-type: y mandatory;
 
-  @media screen and (min-width: 540px) {
+  @include respons.mq('sm') {
     max-width: calc(100vw * 0.6);
   }
 }
@@ -22,19 +24,24 @@
   flex-direction: column;
   place-content: center;
   width: calc(100vw * 0.4 - 8px);
-  height: calc(100vh * 0.2 - 8px);
+  height: calc(100vw * 0.4 - 8px);
   border: 1px solid #000000;
   font-size: 1em;
 
-  @media screen and (min-width: 540px) {
+  @include respons.mq('sm') {
     width: calc(100vw * 0.2 - 8px);
+    height: calc(100vw * 0.2 - 8px);
+    border: 1px solid #000000;
     font-size: 1.2em;
   }
-  @media screen and (min-width: 1024px) {
+  @include respons.mq('lg') {
     width: calc(100vw * 0.15 - 8px);
+    height: calc(100vw * 0.15 - 8px);
+  }
+  @include respons.mq('2xl') {
+    width: calc(100vw * 0.12 - 8px);
   }
   @media screen and (min-width: 1536px) {
-    width: calc(100vw * 0.12 - 8px);
   }
 }
 
