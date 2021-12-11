@@ -1,22 +1,33 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { HandleContex } from 'src/pages/templates/index';
+import Menu from 'src/components/templates/menu/Menu';
+import SpMenu from 'src/components/templates/menu/SpMenu';
+import HambugButton from 'src/components/templates/button/HambugButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Head_2.module.scss';
+import Logo from './svg/Head_1_logo';
 
-const Head_1 = (): JSX.Element => {
+const Head_2 = (): JSX.Element => {
   const handleContex = useContext(HandleContex);
+  const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
+
+  const handleAddActiveClass = () => {
+    toggleDisplay == 'none' ? setToggleDisplay('flex') : setToggleDisplay('none');
+  };
 
   return (
-    <nav className="w-full h-full">
-      <ul className={`${styles.common} _track_lay_part_Head`} onClick={handleContex}>
-        <li>2</li>
-        <li>トップ</li>
-        <li>トップ</li>
-        <li>トップ</li>
-        <li>トップ</li>
-      </ul>
+    <nav className={`${styles.base} _track_lay_part_Head`} onClick={handleContex}>
+      <h1 className={`${styles.logo}`}>
+        <Logo />
+        <p>ロゴロゴ2</p>
+      </h1>
+      <Menu />
+      <SpMenu toggleDisplay={toggleDisplay} />
+      <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
+      <HambugButton handleOnClick={handleAddActiveClass} />
     </nav>
   );
 };
 
-export default Head_1;
+export default Head_2;

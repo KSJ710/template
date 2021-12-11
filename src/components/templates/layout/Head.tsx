@@ -8,6 +8,7 @@ const Head = (): JSX.Element => {
   const curtTplHeadNum = useRecoilValue(tplHeadNumberState);
 
   let tplHeadNum = 1;
+  // keyはコンポーネント名
   for (let key in HeadBulk) {
     if (HeadBulk.hasOwnProperty(key)) {
       if (tplHeadNum == curtTplHeadNum) {

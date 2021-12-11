@@ -13,11 +13,13 @@ type Props = {
 const ChangeHeadPart = (props: Props): JSX.Element => {
   const setHeadNum = useSetRecoilState(tplHeadNumberState);
 
+  //Head部分のパーツを切り替える
   const handleChangeHeadPart = (e) => {
     e.stopPropagation();
     setHeadNum(e.target.value);
   };
 
+  //エディタを非表示にする
   const handleHiddenBgColor = () => {
     props.setDisplay('none');
   };
@@ -32,7 +34,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     const headPartList = data.map((headPart: HeadParts) => (
       <li key={headPart.id} className={`${styles.tool_list} scroll_snap_child`}>
         <button
-          value={`${headPart.id}`}
+          value={headPart.id}
           className="absolute w-full h-full"
           onClick={handleChangeHeadPart}
         ></button>

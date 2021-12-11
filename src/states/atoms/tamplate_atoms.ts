@@ -15,12 +15,12 @@ export const currentLayoutPart = atom<string>({
   default: 'Head',
 });
 
-export const tplLayoutState = atom<number>({
-  key: 'tplLayoutState',
+export const tplHeadNumberState = atom<number>({
+  key: 'tplHeadNumberState',
   default: 1,
 });
 
-export const tplHeadNumberState = atom<number>({
-  key: 'tplHeadState',
+export const tplMainNumberState = atom<number>({
+  key: 'tplMainNumberState',
   default: 1,
 });

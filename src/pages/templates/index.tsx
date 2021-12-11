@@ -19,10 +19,13 @@ const Index = (): JSX.Element => {
 
     const className: string = e.currentTarget.className;
 
+    // レイアウトパーツの種類を配列化
     const layPartNames: string[] = ['Head'];
+    // レイアウトパーツを断定するクラス名を検索
     const targetPartName: string = className.match(/_track_lay_part_.*/)[0];
-    let resultPartName: string = 'layPartName';
+    let resultPartName: string = 'resultPartName';
     for (let layPartName of layPartNames) {
+      // マッチしないなら-1でそれをビット反転し0にし、falseとする
       if (~targetPartName.indexOf(layPartName)) {
         resultPartName = layPartName;
         break;

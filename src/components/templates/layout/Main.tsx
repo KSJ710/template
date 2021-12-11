@@ -1,16 +1,16 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
+import { tplMainNumberState } from 'src/states/atoms/tamplate_atoms';
 import * as MainBulk from 'src/components/templates/layout_parts/main/index';
 import styles from './Main.module.scss';
 
 const Head = (): JSX.Element => {
-  const curtTplHeadNum = useRecoilValue(tplHeadNumberState);
+  const curtTplMainNum = useRecoilValue(tplMainNumberState);
 
   let tplHeadNum = 1;
   for (let key in MainBulk) {
     if (MainBulk.hasOwnProperty(key)) {
-      if (tplHeadNum == curtTplHeadNum) {
+      if (tplHeadNum == curtTplMainNum) {
         const Main = MainBulk[key];
         return <Main className="w-full" />;
       }
