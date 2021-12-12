@@ -24,7 +24,7 @@ const Head_1 = (): JSX.Element => {
       </h1>
       <Menu />
       <SpMenu toggleDisplay={toggleDisplay} />
-      <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
+      <FontAwesomeIcon className="hidden md:block" icon="user-circle" size="3x" />
       <HambugButton handleOnClick={handleAddActiveClass} />
     </nav>
   );
