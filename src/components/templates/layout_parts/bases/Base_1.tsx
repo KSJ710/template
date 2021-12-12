@@ -12,7 +12,6 @@ const Base_1 = (): JSX.Element => {
       <main className={styles.main}>
         <Main />
       </main>
-      <aside className={styles.sidebar}></aside>
       <footer className={styles.footer}></footer>
     </div>
   );
