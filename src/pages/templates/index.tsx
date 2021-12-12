@@ -25,7 +25,7 @@ const Index = (): JSX.Element => {
     const targetPartName: string = className.match(/_track_lay_part_.*/)[0];
     let resultPartName: string = 'resultPartName';
     for (let layPartName of layPartNames) {
-      // マッチしないなら-1でそれをビット反転し0にし、falseとする
+      // 対象要素がどのパーツか確認、マッチしないなら-1でそれをビット反転し0にし、falseとする
       if (~targetPartName.indexOf(layPartName)) {
         resultPartName = layPartName;
         break;
