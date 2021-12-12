@@ -5,7 +5,7 @@
   place-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: var.$header_height;
   padding: var.$outer_padding;
   background-color: #ebf6f7;
   cursor: pointer;
