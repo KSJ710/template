@@ -1,4 +1,8 @@
+@use '/src/styles/_variables' as var;
+
 .base {
+  width: 100%;
+  height: calc(100vh - var.$heder_height);
   background-image: url('/images/tamplate/content/content_1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
