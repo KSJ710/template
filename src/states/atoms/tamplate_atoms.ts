@@ -24,3 +24,8 @@ export const tplMainNumberState = atom<number>({
   key: 'tplMainNumberState',
   default: 1,
 });
+
+export const tplFootNumberState = atom<number>({
+  key: 'tplFooterNumberState',
+  default: 1,
+});
