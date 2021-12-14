@@ -1,8 +1,8 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React from 'react';
-import styles from './Footer_1.module.scss';
+import styles from './Foot_2.module.scss';
 
-const Footer_1 = (): JSX.Element => {
+const Footer_2 = (): JSX.Element => {
   return (
     <nav>
       <ul>
@@ -16,4 +16,4 @@ const Footer_1 = (): JSX.Element => {
   );
 };
 
-export default Footer_1;
+export default Footer_2;

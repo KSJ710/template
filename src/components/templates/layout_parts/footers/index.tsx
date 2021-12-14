@@ -1,2 +1,2 @@
-export { default as Footer_1 } from './Footer_1';
-export { default as Footer_2 } from './Footer_2';
+export { default as Foot_1 } from './Foot_1';
+export { default as Foot_2 } from './Foot_2';
