@@ -4,15 +4,15 @@ import styles from './Foot_1.module.scss';
 
 const Footer_1 = (): JSX.Element => {
   return (
-    <nav>
-      <ul>
+    <nav className="flex gap-[50px] w-[300px]">
+      <ul className="flex gap-[50px] w-[500px]">
         <li>ページ1</li>
         <li>ページ2</li>
         <li>ページ3</li>
         <li>ページ4</li>
         <li>ページ5</li>
       </ul>
-      <ul>
+      <ul className="flex">
         <li>ページ6</li>
         <li>ページ7</li>
         <li>ページ8</li>
