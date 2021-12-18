@@ -26,9 +26,5 @@
 }
 
 .label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 0.75em;
-  color: #fff;
+  @include common.label;
 }
