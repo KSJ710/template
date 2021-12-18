@@ -32,12 +32,8 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     return <div>loading...</div>;
   } else {
     const headPartList = data.map((headPart: HeadParts) => (
-      <li key={headPart.id} className={`${styles.tool_list} scroll_snap_child`}>
-        <button
-          value={headPart.id}
-          className="absolute w-full h-full"
-          onClick={handleChangeHeadPart}
-        ></button>
+      <li key={headPart.id} className={styles.tool_list}>
+        <button value={headPart.id} onClick={handleChangeHeadPart}></button>
         <div className={styles.label}>{headPart.id}</div>
       </li>
     ));
