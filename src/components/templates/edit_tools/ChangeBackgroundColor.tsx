@@ -69,7 +69,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
   } else {
     const colorList = data.map((color: Color) => (
       <li key={color.id} className={styles.tool_list}>
-        <button value={`${color.colorCode}`} onClick={handleChangeBgColer}></button>
+        <button value={color.colorCode} onClick={handleChangeBgColer}></button>
         <div className={`${styles.label} _track_color_num`}>{color.id}</div>
         <div>
           <Drop colorCode={color.colorCode} />
