@@ -1,0 +1,24 @@
+.base {
+  display: flex;
+  align-items: flex-start;
+  padding: 80px 40px;
+  background-color: #9f563a;
+  color: #ebf6f7;
+  font-size: 20px;
+  font-weight: 500;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    li {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+    li:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  ul:last-of-type {
+    font-size: 16px;
+  }
+}
