@@ -18,21 +18,16 @@ body,
 div#__next {
 }
 
+// スクロールバースタイリング
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
-
 ::-webkit-scrollbar-track {
   background: #555555;
 }
-
 ::-webkit-scrollbar-thumb {
   background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
   box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
   border-radius: 100px;
-}
-
-.scroll_snap_y {
-  scroll-snap-type: y mandatory;
 }
