@@ -34,24 +34,16 @@ const EditToolBox = (): JSX.Element => {
     <>
       <div
         style={{ display: editToolDisplay }}
-        className="bg_modal"
+        className={`${styles.base} bg_modal`}
         onClick={handleHiddenEditTools}
       >
-        <div className="p-3 w-4/5 bg-[#006e54] text-[#e6b422] trbl_center">
-          <p className="mb-4 text-2xl">変更したい項目を選んで下さい</p>
-          <ul className="flex flex-col gap-3 pl-3 font-thin leading-4">
-            <li className="cursor-pointer" onClick={handleShowBgColor}>
-              背景カラー
-            </li>
-            <li className="cursor-pointer" onClick={handleShowBgColor}>
-              文字フォントを変える
-            </li>
-            <li className="cursor-pointer" onClick={eval(`handleShow${curtLayPart}Part`)}>
-              コンポーネント変更する
-            </li>
-            <li className="cursor-pointer" onClick={handleShowBgColor}>
-              テキストテキスト
-            </li>
+        <div className="trbl_center">
+          <p>変更したい項目を選んで下さい</p>
+          <ul>
+            <li onClick={handleShowBgColor}>背景カラー</li>
+            <li onClick={handleShowBgColor}>文字フォントを変える</li>
+            <li onClick={eval(`handleShow${curtLayPart}Part`)}>コンポーネント変更する</li>
+            <li onClick={handleShowBgColor}>テキストテキスト</li>
           </ul>
         </div>
       </div>
