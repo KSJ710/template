@@ -25,6 +25,8 @@
   place-content: center;
   width: calc(100vw * 0.4 - 8px);
   height: calc(100vw * 0.4 - 8px);
+  // ボックスのスクロールスナップ領域の先頭位置がこの軸のスナップ位置になります。
+  scroll-snap-align: start;
   border: 1px solid #000000;
   font-size: 1em;
 
