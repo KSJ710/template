@@ -68,12 +68,8 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     return <div style={{ display: props.display }}>loading...</div>;
   } else {
     const colorList = data.map((color: Color) => (
-      <li key={color.id} className={`${styles.tool_list} scroll_snap_child`}>
-        <button
-          value={`${color.colorCode}`}
-          className="absolute w-full h-full"
-          onClick={handleChangeBgColer}
-        ></button>
+      <li key={color.id} className={styles.tool_list}>
+        <button value={`${color.colorCode}`} onClick={handleChangeBgColer}></button>
         <div className={`${styles.label} _track_color_num`}>{color.id}</div>
         <div>
           <Drop colorCode={color.colorCode} />
@@ -88,7 +84,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     return (
       <div
         style={{ display: props.display }}
-        className="justify-center items-center bg-transparent bg_modal"
+        className={`${styles.base} bg_modal`}
         onClick={handleHiddenBgColor}
       >
         <ul className={styles.tool_bgcolor} onScroll={handleChangeColorListBgColer}>

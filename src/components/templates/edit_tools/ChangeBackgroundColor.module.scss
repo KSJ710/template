@@ -1,5 +1,11 @@
 @use './common_etit_tools' as common;
 
+.base {
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
 .tool_bgcolor {
   @include common.tool_bg;
 }

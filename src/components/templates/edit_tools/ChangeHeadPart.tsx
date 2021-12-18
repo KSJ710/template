@@ -40,7 +40,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     return (
       <div
         style={{ display: props.display }}
-        className="justify-center items-center bg-transparent bg_modal"
+        className={`${styles.base} bg_modal`}
         onClick={handleHiddenBgColor}
       >
         <ul className={styles.tool_bg}>{headPartList}</ul>

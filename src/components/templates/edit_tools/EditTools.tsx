@@ -34,10 +34,10 @@ const EditToolBox = (): JSX.Element => {
     <>
       <div
         style={{ display: editToolDisplay }}
-        className={`${styles.base} bg_modal`}
+        className={styles.base}
         onClick={handleHiddenEditTools}
       >
-        <div className="trbl_center">
+        <div>
           <p>変更したい項目を選んで下さい</p>
           <ul>
             <li onClick={handleShowBgColor}>背景カラー</li>
