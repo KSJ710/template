@@ -49,6 +49,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
   }
 };
 
+// useSWRが受け取る関数でapiルートURLが渡される
 const fetcher: Fetcher = (url) =>
   axios.get(url).then((res) => {
     return res.data;
