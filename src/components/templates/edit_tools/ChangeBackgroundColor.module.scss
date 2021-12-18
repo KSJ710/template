@@ -17,6 +17,12 @@
 .tool_list {
   @include common.tool_list;
   background-color: #000000;
+
+  button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .label {
