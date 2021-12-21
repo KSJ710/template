@@ -1,28 +1,116 @@
+@use '/src/styles/_responsive' as res;
+
 .base {
-  display: flex;
-  align-items: flex-start;
-  padding: 80px 40px;
-  background-color: #9f563a;
+  padding: 80px 20px;
+  background-color: #965036;
   color: #ebf6f7;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 600;
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 500px;
+  .menu {
+    margin-bottom: 40px;
 
-    li {
-      width: 50%;
-      margin-bottom: 20px;
+    ul {
+      margin-bottom: 40px;
+
+      li {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+
+      li:last-of-type {
+        margin-bottom: 0px;
+      }
     }
-
-    li:last-of-type {
-      margin-bottom: 0px;
+    ul:last-of-type {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.6rem;
     }
   }
+  .sns {
+    width: 204px;
+    margin-bottom: 20px;
 
-  ul:last-of-type {
-    font-size: 16px;
+    svg {
+      width: calc(100% / 4 - 20px * 3 / 4 - 8px * 2);
+      margin-right: 20px;
+      padding: 8px;
+      box-sizing: content-box;
+      background-color: #f8cf96;
+
+      path {
+        fill: #965036;
+      }
+
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+  }
+  .site_policy {
+    display: flex;
+
+    p {
+      margin-right: 40px;
+      font-size: 1rem;
+    }
+
+    p:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+// ブレイクポイント
+@include res.mq('md') {
+  .base {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    .menu {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 80px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+      }
+    }
+    .sns {
+      margin-left: auto;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// ブレイクポイント
+@include res.mq('xl') {
+  .base {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    .base_inner {
+      width: 1180px;
+      margin: 0 auto;
+
+      .menu {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 80px;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 500px;
+        }
+      }
+      .sns {
+        margin-left: auto;
+        margin-bottom: 40px;
+      }
+    }
   }
 }
