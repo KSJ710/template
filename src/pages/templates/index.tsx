@@ -13,8 +13,12 @@ const Index = (): JSX.Element => {
   const setCurtLayPart = useSetRecoilState(currentLayoutPart);
   const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
 
+  // 編集するelementを設定する
   const handleToggleEditTools = (e) => {
     e.stopPropagation();
+    // スクロールさせない
+    document.body.style.overflow = 'hidden';
+
     setCurrentTarget(e.currentTarget);
 
     const className: string = e.currentTarget.className;
@@ -33,6 +37,7 @@ const Index = (): JSX.Element => {
     }
     setCurtLayPart(resultPartName);
 
+    //editToolの表示非表示を行う
     editToolDisplay == 'none' ? setEditToolsDisplay('flex') : setEditToolsDisplay('none');
   };
 

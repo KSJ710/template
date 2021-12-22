@@ -3,6 +3,8 @@ import styles from './HambugButton.module.scss';
 
 const handleAddActiveClass = (e) => {
   e.stopPropagation();
+  // スクロールさせない
+  document.body.style.overflow = 'hidden';
   e.currentTarget.classList.toggle(styles.active);
 };
 
