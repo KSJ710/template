@@ -29,16 +29,18 @@ const Footer_1 = (): JSX.Element => {
           </ul>
         </div>
         <div className={styles.sns}>
-          <FontAwesomeIcon icon={['fab', 'instagram-square']} />
-          <FontAwesomeIcon icon={['fab', 'twitter']} />
-          <FontAwesomeIcon icon={['fab', 'youtube']} />
-          <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+          <FontAwesomeIcon icon={['fab', 'apple']} />
+          <FontAwesomeIcon icon={['fab', 'evernote']} />
+          <FontAwesomeIcon icon={['fab', 'amazon']} />
+          <FontAwesomeIcon icon={['fab', 'spotify']} />
         </div>
         <div className={styles.site_policy}>
-          <p>© 2021 Mysite All Rights Reserved.</p>
           <p>利用規約</p>
           <p>プライバシーポリシー</p>
+          <p>© 2021 Mysite All Rights Reserved.</p>
         </div>
+        <i className="fab fa-apple"></i>
+        <i className="fab fa-twitter"></i>
       </div>
     </nav>
   );

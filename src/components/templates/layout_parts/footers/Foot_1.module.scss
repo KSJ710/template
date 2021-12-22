@@ -1,7 +1,7 @@
 @use '/src/styles/_responsive' as res;
 
 .base {
-  padding: 80px 20px;
+  padding: 80px 20px 40px;
   background-color: #965036;
   color: #ebf6f7;
   font-size: 2rem;
@@ -30,7 +30,7 @@
   }
   .sns {
     width: 204px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     svg {
       width: calc(100% / 4 - 20px * 3 / 4 - 8px * 2);
@@ -50,14 +50,20 @@
   }
   .site_policy {
     display: flex;
+    flex-wrap: wrap;
 
     p {
+      margin-bottom: 40px;
       margin-right: 40px;
       font-size: 1rem;
     }
 
-    p:last-of-type {
+    p:nth-child(2n) {
       margin-right: 0px;
+    }
+    p:last-of-type {
+      width: auto;
+      margin: 0px;
     }
   }
 }
@@ -89,9 +95,6 @@
 // ブレイクポイント
 @include res.mq('xl') {
   .base {
-    padding-right: 40px;
-    padding-left: 40px;
-
     .base_inner {
       width: 1180px;
       margin: 0 auto;
