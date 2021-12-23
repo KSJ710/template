@@ -47,6 +47,7 @@ const EditToolBox = (): JSX.Element => {
           </ul>
         </div>
       </div>
+      {/* editToolで選択した項目に対して表示がされる */}
       <ChangeHeadPart display={headPartDisplay} setDisplay={setHeadPartDisplay} />
       <ChangeBackgroundColor display={bgColorDisplay} setDisplay={setBgColorDisplay} />
     </>
