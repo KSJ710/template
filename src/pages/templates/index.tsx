@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useSetRecoilState } from 'recoil';
 import {
   currentLayoutPart,
   currentTargetState,
@@ -11,9 +11,8 @@ import EditTools from 'src/components/templates/edit_tools/EditTools';
 const Index = (): JSX.Element => {
   const setCurrentTarget = useSetRecoilState(currentTargetState);
   const setCurtLayPart = useSetRecoilState(currentLayoutPart);
-  const [editToolDisplay, setEditToolsDisplay] = useRecoilState(editToolsDisplayState);
+  const setEditToolsDisplay = useSetRecoilState(editToolsDisplayState);
 
-  // 編集パネルを表示する
   const handleToggleEditTools = (e) => {
     e.stopPropagation();
     // 編集するelementを設定する
