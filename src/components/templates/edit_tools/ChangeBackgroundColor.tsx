@@ -22,7 +22,6 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
 
   const handleHiddenBgColor = (e) => {
     e.stopPropagation();
-    document.body.style.overflow = 'auto';
     props.setDisplay('none');
   };
 

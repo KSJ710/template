@@ -21,7 +21,6 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
 
   //背景カラーエディタを非表示にする
   const handleHiddenHeadPart = () => {
-    document.body.style.overflow = 'auto';
     props.setDisplay('none');
   };
 
