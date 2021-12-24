@@ -19,8 +19,9 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     setHeadNum(e.target.value);
   };
 
-  //エディタを非表示にする
-  const handleHiddenBgColor = () => {
+  //背景カラーエディタを非表示にする
+  const handleHiddenHeadPart = () => {
+    document.body.style.overflow = 'auto';
     props.setDisplay('none');
   };
 
@@ -38,7 +39,11 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
       </li>
     ));
     return (
-      <div style={{ display: props.display }} className={styles.base} onClick={handleHiddenBgColor}>
+      <div
+        style={{ display: props.display }}
+        className={styles.base}
+        onClick={handleHiddenHeadPart}
+      >
         <ul className={styles.tool_bg}>{headPartList}</ul>
       </div>
     );

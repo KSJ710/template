@@ -12,6 +12,7 @@ const Head_1 = (): JSX.Element => {
   const handleContex = useContext(HandleContex);
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
+  // SpMenuの表示非表示を切り替える
   const handleAddActiveClass = () => {
     toggleDisplay == 'none' ? setToggleDisplay('flex') : setToggleDisplay('none');
   };

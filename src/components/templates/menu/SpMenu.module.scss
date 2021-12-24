@@ -1,7 +1,7 @@
 @use '/src/styles/variables' as var;
 
 .menu {
-  position: absolute;
+  position: fixed;
   gap: 40px;
   flex-direction: column;
   place-content: center;

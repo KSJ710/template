@@ -22,10 +22,11 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
 
   const handleHiddenBgColor = (e) => {
     e.stopPropagation();
+    document.body.style.overflow = 'auto';
     props.setDisplay('none');
   };
 
-  // 背景カラーのパネルの背景カラー変更アニメーション
+  // カラーパネルの背景カラー変更アニメーション
   const handleChangeColorListBgColer = (e) => {
     let curtTgtCh: HTMLElement[] = Array.from(e.currentTarget.children);
     curtTgtCh.map((curtTgtCh) => {
