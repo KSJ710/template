@@ -35,10 +35,11 @@ const Index = (): JSX.Element => {
     }
     setCurtLayPart(resultPartName);
 
-    //editToolの表示する
-    setEditToolsDisplay('flex');
     // 背景スクロールを停止
     document.body.style.overflow = 'hidden';
+
+    //editToolの表示する
+    setEditToolsDisplay('flex');
   };
 
   return (

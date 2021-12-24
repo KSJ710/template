@@ -14,9 +14,9 @@ const EditToolBox = (): JSX.Element => {
 
   const handleHiddenEditTools = (e) => {
     e.stopPropagation();
+    document.body.style.overflow = 'auto';
     setBgColorDisplay('none');
     setEditToolDisplay('none');
-    document.body.style.overflow = 'auto';
   };
 
   const handleShowBgColor = (e) => {
