@@ -24,7 +24,15 @@ const EditToolBox = (): JSX.Element => {
     setEditToolDisplay('none');
   };
 
+  // 動的に変数名が決定されれる
   const handleShowHeadPart = (e) => {
+    e.stopPropagation();
+    setHeadPartDisplay('flex');
+    setEditToolDisplay('none');
+  };
+
+  // 動的に変数名が決定されれる
+  const handleShowFootPart = (e) => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
     setEditToolDisplay('none');

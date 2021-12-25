@@ -21,7 +21,7 @@ const Index = (): JSX.Element => {
     const className: string = e.currentTarget.className;
 
     // レイアウトパーツの種類を配列化
-    const layPartNames: string[] = ['Head'];
+    const layPartNames: string[] = ['Head', 'Foot'];
     // レイアウトパーツを断定するクラス名を検索
     const targetPartName: string = className.match(/_track_lay_part_.*/)[0];
     let resultPartName: string = 'resultPartName';

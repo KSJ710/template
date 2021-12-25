@@ -1,11 +1,13 @@
 /* eslint-disable tailwindcss/no-custom-classname */
-import React from 'react';
+import React, { useContext } from 'react';
+import { HandleContex } from 'src/pages/templates/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Foot_1.module.scss';
 
 const Footer_1 = (): JSX.Element => {
+  const handleContex = useContext(HandleContex);
   return (
-    <nav className={styles.base}>
+    <nav className={`${styles.base} _track_lay_part_Foot`} onClick={handleContex}>
       <div className={styles.base_inner}>
         <div className={styles.menu}>
           <ul>
