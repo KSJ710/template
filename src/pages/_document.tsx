@@ -11,9 +11,9 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Hachi+Maru+Pop&family=Hina+Mincho&family=Kaisei+Decol:wght@400;500;700&family=Kaisei+HarunoUmi:wght@400;500;700&family=Kaisei+Opti:wght@400;500;700&family=Kaisei+Tokumin:wght@400;500;700;800&family=Kiwi+Maru:wght@300;400;500&family=Klee+One:wght@400;600&family=Kosugi&family=Kosugi+Maru&display=swap"
+            href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
             rel="stylesheet"
-          />
+          ></link>
         </Head>
         <body>
           <Main />
