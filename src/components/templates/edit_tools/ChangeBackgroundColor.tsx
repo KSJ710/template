@@ -15,6 +15,7 @@ type Props = {
 const ChangeBackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
+  // 設定されているエレメントの背景カラーを変える
   const handleChangeBgColer = (e) => {
     e.stopPropagation();
     currentTarget.style.backgroundColor = e.target.value;
