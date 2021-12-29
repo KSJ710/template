@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext, useState } from 'react';
-import { HandleContex } from 'src/pages/templates/index';
+import { HandleToggleEditTools } from 'src/pages/templates/index';
 import Menu from 'src/components/templates/menu/Menu';
 import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
@@ -9,7 +9,7 @@ import styles from './Head_1.module.scss';
 import Logo from './svg/Head_1_logo';
 
 const Head_1 = (): JSX.Element => {
-  const handleContex = useContext(HandleContex);
+  const hTET: (event) => void = useContext(HandleToggleEditTools);
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
   // SpMenuの表示非表示を切り替える
@@ -20,7 +20,7 @@ const Head_1 = (): JSX.Element => {
   return (
     <>
       <SpMenu toggleDisplay={toggleDisplay} />
-      <nav className={`${styles.base} _track_lay_part_Head`} onClick={handleContex}>
+      <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
         <h1 className={`${styles.logo}`}>
           <Logo />
           <p>ロゴロゴ</p>

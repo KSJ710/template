@@ -39,14 +39,14 @@ const Index = (): JSX.Element => {
   };
 
   return (
-    <HandleContex.Provider value={handleToggleEditTools}>
+    <HandleToggleEditTools.Provider value={handleToggleEditTools}>
       <Base />
       <EditTools />
-    </HandleContex.Provider>
+    </HandleToggleEditTools.Provider>
   );
 };
 
-export const HandleContex = React.createContext(
+export const HandleToggleEditTools = React.createContext(
   {} as (event: React.MouseEvent<HTMLElement>) => void
 );
 export default Index;
