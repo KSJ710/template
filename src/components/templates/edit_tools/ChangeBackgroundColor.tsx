@@ -3,8 +3,6 @@ import { useRecoilValue } from 'recoil';
 import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
 import useSWR from 'swr';
 import axios from 'axios';
-import anime from 'animejs';
-import Drop from 'src/components/templates/svg/Drop';
 import styles from './ChangeBackgroundColor.module.scss';
 
 type Props = {
@@ -26,40 +24,6 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     props.setDisplay('none');
   };
 
-  // カラーパネルの背景カラー変更アニメーション
-  const handleChangeColorListBgColer = (e) => {
-    let curtTgtCh: HTMLElement[] = Array.from(e.currentTarget.children);
-    curtTgtCh.map((curtTgtCh) => {
-      if (e.currentTarget.scrollTop >= 12155) {
-        anime({
-          targets: curtTgtCh,
-          backgroundColor: '#ffffff',
-          easing: 'easeInOutQuad',
-          duration: 200,
-        });
-        anime({
-          targets: curtTgtCh.getElementsByClassName('_track_color_num'),
-          color: '#000000',
-          easing: 'easeInOutQuad',
-          duration: 200,
-        });
-      } else {
-        anime({
-          targets: curtTgtCh,
-          backgroundColor: '#000000',
-          easing: 'easeInOutQuad',
-          duration: 200,
-        });
-        anime({
-          targets: curtTgtCh.getElementsByClassName('_track_color_num'),
-          color: '#ffffff',
-          easing: 'easeInOutQuad',
-          duration: 200,
-        });
-      }
-    });
-  };
-
   const { data, error } = useSWR('/api/colors', fetcher);
   if (error) {
     return <div style={{ display: props.display }}>error</div>;
@@ -69,24 +33,21 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     return <div style={{ display: props.display }}>loading...</div>;
   } else {
     const colorList = data.map((color: Color) => (
-      <li key={color.id} className={styles.tool_list}>
+      <li
+        style={{ backgroundColor: color.colorCode, color: specifiedColorNameColor(color.id) }}
+        key={color.id}
+        className={styles.tool_list}
+      >
         <button value={color.colorCode} onClick={handleChangeBgColer}></button>
-        <div className={`${styles.label} _track_color_num`}>{color.id}</div>
-        <div>
-          <Drop colorCode={color.colorCode} />
-          <p style={{ color: color.colorCode }} className="text-center">
-            {color.name}
-            <br />
-            {color.kanaName}
-          </p>
-        </div>
+        <div className={styles.label}>{color.id}</div>
+        {color.name}
+        <br />
+        {color.kanaName}
       </li>
     ));
     return (
       <div style={{ display: props.display }} className={styles.base} onClick={handleHiddenBgColor}>
-        <ul className={styles.tool_bgcolor} onScroll={handleChangeColorListBgColer}>
-          {colorList}
-        </ul>
+        <ul className={styles.tool_bgcolor}>{colorList}</ul>
       </div>
     );
   }
@@ -96,5 +57,14 @@ const fetcher: Fetcher = (url) =>
   axios.get(url).then((res) => {
     return res.data;
   });
+
+// 背景の明度で文字が見えにくいので文字色を制御
+const specifiedColorNameColor = (colorID) => {
+  if (colorID >= 228) {
+    return '#ffffff';
+  } else {
+    return '#000000';
+  }
+};
 
 export default ChangeBackgroundColor;

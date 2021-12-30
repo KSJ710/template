@@ -1,9 +1,9 @@
-@use 'src/styles/_responsive' as respons;
+@use '/src/styles/_responsive' as respons;
+@use '/src/styles/_position' as ps;
 
 @mixin tool_bg {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   max-width: calc(100vw * 0.8);
   max-height: calc(100vh * 0.6);
   box-sizing: content-box;
@@ -11,46 +11,36 @@
   border-bottom: 2px solid #006e54;
   border-left: 2px solid #006e54;
   overflow-y: auto;
+  overscroll-behavior: contain;
   scroll-snap-type: y mandatory;
-
-  @include respons.mq('sm') {
-    max-width: calc(100vw * 0.6);
-  }
 }
 
 @mixin tool_list {
   display: flex;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
   place-content: center;
-  width: calc(100vw * 0.4 - 8px);
-  height: calc(100vw * 0.4 - 8px);
+  width: calc(100% / 2);
   // ボックスのスクロールスナップ領域の先頭位置がこの軸のスナップ位置になります。
   scroll-snap-align: start;
   border: 1px solid #000000;
-  font-size: 1em;
+  font-size: 0.85em;
 
   @include respons.mq('sm') {
-    width: calc(100vw * 0.2 - 8px);
-    height: calc(100vw * 0.2 - 8px);
-    border: 1px solid #000000;
-    font-size: 1.2em;
+    width: calc(100% / 4);
   }
   @include respons.mq('lg') {
-    width: calc(100vw * 0.15 - 8px);
-    height: calc(100vw * 0.15 - 8px);
+    width: calc(100% / 6);
   }
   @include respons.mq('2xl') {
-    width: calc(100vw * 0.12 - 8px);
-  }
-  @media screen and (min-width: 1536px) {
+    width: calc(100% / 8);
   }
 }
 
 @mixin label {
   position: absolute;
   top: 0;
-  left: 0;
-  font-size: 0.75em;
-  color: #fff;
+  right: 4px;
+  font-size: 2em;
+  opacity: 0.1;
 }
