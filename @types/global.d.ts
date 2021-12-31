@@ -5,6 +5,11 @@ type Color = {
   kanaName: string;
 };
 
+type FontFamily = {
+  id: number;
+  name: string;
+};
+
 type HeadParts = {
   id: number;
   name: string;
