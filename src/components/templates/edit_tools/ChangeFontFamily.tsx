@@ -3,7 +3,7 @@ import { useRecoilValue } from 'recoil';
 import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './ChangeBackgroundColor.module.scss';
+import styles from './ChangeFontFamily.module.scss';
 
 type Props = {
   display: classDisplay;
@@ -13,18 +13,17 @@ type Props = {
 const ChangeBackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
-  // 設定されているエレメントの背景カラーを変える
-  const handleChangeBgColer = (e) => {
-    e.stopPropagation();
-    currentTarget.style.backgroundColor = e.target.value;
-  };
-
-  const handleHiddenBgColor = (e) => {
+  const handleHiddenFontFamily = (e) => {
     e.stopPropagation();
     props.setDisplay('none');
   };
 
-  const { data, error } = useSWR('/api/colors', fetcher);
+  const handleChangeBgColer = (e) => {
+    e.stopPropagation();
+    currentTarget.style.fontFamily = e.target.value;
+  };
+
+  const { data, error } = useSWR('/api/font_families', fetcher);
   if (error) {
     return <div style={{ display: props.display }}>error</div>;
   }
@@ -32,22 +31,20 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
   if (!data) {
     return <div style={{ display: props.display }}>loading...</div>;
   } else {
-    const colorList = data.map((color: Color) => (
-      <li
-        style={{ backgroundColor: color.colorCode, color: specifiedColorNameColor(color.id) }}
-        key={color.id}
-        className={styles.tool_list}
-      >
-        <button value={color.colorCode} onClick={handleChangeBgColer}></button>
-        <div className={styles.label}>{color.id}</div>
-        {color.name}
-        <br />
-        {color.kanaName}
+    const fontFamilyList = data.map((fontFamily: FontFamily) => (
+      <li style={{ fontFamily: fontFamily.name }} key={fontFamily.id} className={styles.tool_list}>
+        <button value={fontFamily.name} onClick={handleChangeBgColer}></button>
+        <div className={styles.label}>{fontFamily.id}</div>
+        {fontFamily.name}
       </li>
     ));
     return (
-      <div style={{ display: props.display }} className={styles.base} onClick={handleHiddenBgColor}>
-        <ul className={styles.tool_bgcolor}>{colorList}</ul>
+      <div
+        style={{ display: props.display }}
+        className={styles.base}
+        onClick={handleHiddenFontFamily}
+      >
+        <ul className={styles.tool_bgcolor}>{fontFamilyList}</ul>
       </div>
     );
   }
