@@ -16,6 +16,13 @@ model Colors {
   @@map("colors")
 }
 
+model FontFamilies {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  @@map("font_families")
+}
+
 model HeadParts {
   id   Int    @id @default(autoincrement())
   name String
