@@ -24,6 +24,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     props.setDisplay('none');
   };
 
+  // カラーデータフェッチして一覧に表示
   const { data, error } = useSWR('/api/head_parts', fetcher);
   if (error) {
     return <div>error</div>;
