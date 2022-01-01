@@ -46,4 +46,6 @@ $tool_gap: 2px;
   right: 4px;
   font-size: 2em;
   opacity: 0.1;
+  // クリック無効
+  pointer-events: none;
 }
