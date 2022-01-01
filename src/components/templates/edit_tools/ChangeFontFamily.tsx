@@ -10,7 +10,7 @@ type Props = {
   setDisplay: React.Dispatch<React.SetStateAction<classDisplay>>;
 };
 
-const ChangeBackgroundColor = (props: Props): JSX.Element => {
+const ChangeFontFamily = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
   const handleHiddenFontFamily = (e) => {
@@ -55,13 +55,4 @@ const fetcher: Fetcher = (url) =>
     return res.data;
   });
 
-// 背景の明度で文字が見えにくいので文字色を制御
-const specifiedColorNameColor = (colorID) => {
-  if (colorID >= 228) {
-    return '#ffffff';
-  } else {
-    return '#000000';
-  }
-};
-
-export default ChangeBackgroundColor;
+export default ChangeFontFamily;
