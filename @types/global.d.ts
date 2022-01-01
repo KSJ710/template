@@ -8,6 +8,7 @@ type Color = {
 type FontFamily = {
   id: number;
   name: string;
+  style: string;
 };
 
 type HeadParts = {
