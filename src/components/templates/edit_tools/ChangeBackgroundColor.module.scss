@@ -1,5 +1,5 @@
 @use '/src/styles/_position' as ps;
-@use './common_etit_tools' as common;
+@use './common' as common;
 
 .base {
   @include ps.box_cener;
