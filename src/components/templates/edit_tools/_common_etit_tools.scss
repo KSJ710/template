@@ -1,9 +1,12 @@
 @use '/src/styles/_responsive' as respons;
 @use '/src/styles/_position' as ps;
 
+$tool_gap: 2px;
+
 @mixin tool_bg {
   display: flex;
   flex-wrap: wrap;
+  gap: $tool_gap;
   max-width: calc(100vw * 0.8);
   max-height: calc(100vh * 0.6);
   box-sizing: content-box;
@@ -21,20 +24,19 @@
   position: relative;
   flex-direction: row;
   place-content: center;
-  width: calc(100% / 2);
+  width: calc(100% / 2 - $tool_gap);
   // ボックスのスクロールスナップ領域の先頭位置がこの軸のスナップ位置になります。
   scroll-snap-align: start;
-  border: 1px solid #000000;
   font-size: 0.85em;
 
   @include respons.mq('sm') {
-    width: calc(100% / 4);
+    width: calc(100% / 4 - $tool_gap);
   }
   @include respons.mq('lg') {
-    width: calc(100% / 6);
+    width: calc(100% / 6 - $tool_gap);
   }
   @include respons.mq('2xl') {
-    width: calc(100% / 8);
+    width: calc(100% / 8 - $tool_gap);
   }
 }
 
