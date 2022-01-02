@@ -44,7 +44,7 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
         className={styles.base}
         onClick={handleHiddenFontFamily}
       >
-        <ul className={styles.tool_bgcolor}>{fontFamilyList}</ul>
+        <ul className={styles.tool_bg}>{fontFamilyList}</ul>
       </div>
     );
   }

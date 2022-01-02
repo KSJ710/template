@@ -48,7 +48,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
     ));
     return (
       <div style={{ display: props.display }} className={styles.base} onClick={handleHiddenBgColor}>
-        <ul className={styles.tool_bgcolor}>{colorList}</ul>
+        <ul className={styles.tool_bg}>{colorList}</ul>
       </div>
     );
   }
