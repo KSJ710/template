@@ -4,6 +4,7 @@
 .base {
   position: fixed;
   display: flex;
+  place-content: center;
   align-items: center;
   width: 100%;
   padding: var.$outer_padding;
@@ -16,7 +17,7 @@
     place-content: center;
     align-items: center;
     width: 100%;
-    font-size: 2em;
+    font-size: 1.6em;
   }
 
   div {
