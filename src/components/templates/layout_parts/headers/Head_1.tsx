@@ -9,7 +9,7 @@ import styles from './Head_1.module.scss';
 import Logo from './svg/Head_1_logo';
 
 const Head_1 = (): JSX.Element => {
-  const hTET: (event) => void = useContext(ToggleEditTools);
+  const tET: (event) => void = useContext(ToggleEditTools);
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
   // SpMenuの表示非表示を切り替える
@@ -20,7 +20,7 @@ const Head_1 = (): JSX.Element => {
   return (
     <>
       <SpMenu toggleDisplay={toggleDisplay} />
-      <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
+      <nav className={`${styles.base} _track_lay_part_Head`} onClick={tET}>
         <h1 className={`${styles.logo}`}>
           <Logo />
           <p>ロゴロゴ</p>
