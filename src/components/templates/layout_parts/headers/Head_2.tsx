@@ -17,18 +17,20 @@ const Head_2 = (): JSX.Element => {
   };
 
   return (
-    <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
-      <h1 className={`${styles.logo}`}>
-        <Logo />
-        <p>ロゴロゴ2</p>
-      </h1>
-      <div>
-        <Menu />
-        <SpMenu toggleDisplay={toggleDisplay} />
-        <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
-        <HambugButton onClick={addActiveClass} />
-      </div>
-    </nav>
+    <>
+      <SpMenu toggleDisplay={toggleDisplay} />
+      <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
+        <h1 className={`${styles.logo}`}>
+          <Logo />
+          <p>ロゴロゴ2</p>
+        </h1>
+        <div>
+          <Menu />
+          <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
+          <HambugButton onClick={addActiveClass} />
+        </div>
+      </nav>
+    </>
   );
 };
 
