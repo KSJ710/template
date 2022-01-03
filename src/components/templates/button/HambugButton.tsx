@@ -7,7 +7,7 @@ const addActiveClass = (e) => {
   e.currentTarget.classList.toggle(styles.active);
 };
 
-function HambugButton(props) {
+function HambugButton(props): JSX.Element {
   return (
     <div
       className={`${styles.btn_trigger} ${styles.btn}`}

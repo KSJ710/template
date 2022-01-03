@@ -12,7 +12,7 @@ const Head_2 = (): JSX.Element => {
   const hTET: (event) => void = useContext(ToggleEditTools);
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
-  const handleAddActiveClass = () => {
+  const addActiveClass = () => {
     toggleDisplay == 'none' ? setToggleDisplay('flex') : setToggleDisplay('none');
   };
 
@@ -22,10 +22,12 @@ const Head_2 = (): JSX.Element => {
         <Logo />
         <p>ロゴロゴ2</p>
       </h1>
-      <Menu />
-      <SpMenu toggleDisplay={toggleDisplay} />
-      <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
-      <HambugButton handleOnClick={handleAddActiveClass} />
+      <div>
+        <Menu />
+        <SpMenu toggleDisplay={toggleDisplay} />
+        <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
+        <HambugButton onClick={addActiveClass} />
+      </div>
     </nav>
   );
 };
