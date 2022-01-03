@@ -8,9 +8,9 @@ const Base_2 = (props): JSX.Element => {
       <header className={styles.header}>
         <Head />
       </header>
-      <main className={styles.main} onClick={props.handleToggleEditTools}></main>
-      <aside className={styles.sidebar} onClick={props.handleToggleEditTools}></aside>
-      <footer className={styles.footer} onClick={props.handleToggleEditTools}></footer>
+      <main className={styles.main} onClick={props.toggleEditTools}></main>
+      <aside className={styles.sidebar} onClick={props.toggleEditTools}></aside>
+      <footer className={styles.footer} onClick={props.toggleEditTools}></footer>
     </div>
   );
 };

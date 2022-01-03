@@ -13,7 +13,7 @@ const Index = (): JSX.Element => {
   const setCurtLayPart = useSetRecoilState(currentLayoutPart);
   const setEditToolsDisplay = useSetRecoilState(editToolsDisplayState);
 
-  const handleToggleEditTools = (e) => {
+  const toggleEditTools = (e) => {
     e.stopPropagation();
     // 編集するelementを設定する
     setCurrentTarget(e.currentTarget);
@@ -39,14 +39,14 @@ const Index = (): JSX.Element => {
   };
 
   return (
-    <HandleToggleEditTools.Provider value={handleToggleEditTools}>
+    <ToggleEditTools.Provider value={toggleEditTools}>
       <Base />
       <EditTools />
-    </HandleToggleEditTools.Provider>
+    </ToggleEditTools.Provider>
   );
 };
 
-export const HandleToggleEditTools = React.createContext(
+export const ToggleEditTools = React.createContext(
   {} as (event: React.MouseEvent<HTMLElement>) => void
 );
 export default Index;

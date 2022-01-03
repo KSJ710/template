@@ -1,11 +1,11 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext } from 'react';
-import { HandleToggleEditTools } from 'src/pages/templates/index';
+import { ToggleEditTools } from 'src/pages/templates/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Foot_1.module.scss';
 
 const Footer_1 = (): JSX.Element => {
-  const hTET: (event) => void = useContext(HandleToggleEditTools);
+  const hTET: (event) => void = useContext(ToggleEditTools);
   return (
     <nav className={`${styles.base} _track_lay_part_Foot`} onClick={hTET}>
       <div className={styles.base_inner}>

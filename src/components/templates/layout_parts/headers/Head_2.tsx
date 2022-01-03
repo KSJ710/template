@@ -1,6 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext, useState } from 'react';
-import { HandleToggleEditTools } from 'src/pages/templates/index';
+import { ToggleEditTools } from 'src/pages/templates/index';
 import Menu from 'src/components/templates/menu/Menu';
 import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
@@ -9,7 +9,7 @@ import styles from './Head_2.module.scss';
 import Logo from './svg/Head_1_logo';
 
 const Head_2 = (): JSX.Element => {
-  const hTET: (event) => void = useContext(HandleToggleEditTools);
+  const hTET: (event) => void = useContext(ToggleEditTools);
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
   const handleAddActiveClass = () => {
