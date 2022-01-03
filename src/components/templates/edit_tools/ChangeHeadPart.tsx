@@ -35,6 +35,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
       <li key={headPart.id} className={styles.tool_list}>
         <button value={headPart.id} onClick={handleChangeHeadPart}></button>
         <div className={styles.label}>{headPart.id}</div>
+        {headPart.name}
       </li>
     ));
     return (
