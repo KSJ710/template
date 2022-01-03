@@ -9,10 +9,10 @@
   padding: var.$outer_padding;
   background-color: #cbb994;
   cursor: pointer;
-}
 
-.logo {
-  display: flex;
-  gap: 5px;
-  font-size: 1.4em;
+  .logo {
+    display: flex;
+    gap: 5px;
+    font-size: 1.6em;
+  }
 }
