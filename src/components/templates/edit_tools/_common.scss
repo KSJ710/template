@@ -3,6 +3,15 @@
 
 $tool_gap: 2px;
 
+@mixin tool_base {
+  @include ps.box_cener;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 @mixin tool_bg {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +32,8 @@ $tool_gap: 2px;
   display: flex;
   position: relative;
   flex-direction: row;
-  place-content: center;
+  place-content: center space-between;
+  align-items: center;
   width: calc(100% / 2 - $tool_gap);
   // ボックスのスクロールスナップ領域の先頭位置がこの軸のスナップ位置になります。
   scroll-snap-align: start;
