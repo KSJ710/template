@@ -14,13 +14,13 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
   const setHeadNum = useSetRecoilState(tplHeadNumberState);
 
   //Head部分のパーツを切り替える
-  const handleChangeHeadPart = (e) => {
+  const changeHeadPart = (e) => {
     e.stopPropagation();
     setHeadNum(e.target.value);
   };
 
   //背景カラーエディタを非表示にする
-  const handleHiddenHeadPart = () => {
+  const hiddenHeadPart = () => {
     props.setDisplay('none');
   };
 
@@ -33,17 +33,13 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
   } else {
     const headPartList = data.map((headPart: HeadParts) => (
       <li key={headPart.id} className={styles.tool_list}>
-        <button value={headPart.id} onClick={handleChangeHeadPart}></button>
+        <button value={headPart.id} onClick={changeHeadPart}></button>
         <div className={styles.label}>{headPart.id}</div>
         {headPart.name}
       </li>
     ));
     return (
-      <div
-        style={{ display: props.display }}
-        className={styles.base}
-        onClick={handleHiddenHeadPart}
-      >
+      <div style={{ display: props.display }} className={styles.base} onClick={hiddenHeadPart}>
         <ul className={styles.tool_bg}>{headPartList}</ul>
       </div>
     );

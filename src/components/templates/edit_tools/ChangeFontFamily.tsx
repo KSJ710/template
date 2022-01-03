@@ -13,12 +13,12 @@ type Props = {
 const ChangeFontFamily = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
-  const handleHiddenFontFamily = (e) => {
+  const hiddenFontFamily = (e) => {
     e.stopPropagation();
     props.setDisplay('none');
   };
 
-  const handleChangeBgColer = (e) => {
+  const changeBgColer = (e) => {
     e.stopPropagation();
     currentTarget.style.fontFamily = e.target.value;
   };
@@ -33,7 +33,7 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
   } else {
     const fontFamilyList = data.map((fontFamily: FontFamily) => (
       <li style={{ fontFamily: fontFamily.style }} key={fontFamily.id} className={styles.tool_list}>
-        <button value={fontFamily.style} onClick={handleChangeBgColer}></button>
+        <button value={fontFamily.style} onClick={changeBgColer}></button>
         <div className={styles.label}>{fontFamily.id}</div>
         {fontFamily.name}
       </li>
@@ -42,7 +42,7 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
       <div
         style={{ display: props.display }}
         className={styles.base}
-        onClick={handleHiddenFontFamily}
+        onClick={hiddenFontFamily}
       >
         <ul className={styles.tool_bg}>{fontFamilyList}</ul>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HambugButton.module.scss';
 
 // クラスを着脱することでボタンの形を変える
-const handleAddActiveClass = (e) => {
+const addActiveClass = (e) => {
   e.stopPropagation();
   e.currentTarget.classList.toggle(styles.active);
 };
@@ -12,8 +12,8 @@ function HambugButton(props) {
     <div
       className={`${styles.btn_trigger} ${styles.btn}`}
       onClick={(e) => {
-        handleAddActiveClass(e);
-        props.handleOnClick();
+        addActiveClass(e);
+        props.onClick();
       }}
     >
       <span></span>

@@ -14,33 +14,33 @@ const EditToolBox = (): JSX.Element => {
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
   const curtLayPart = useRecoilValue(currentLayoutPart);
 
-  const handleHiddenEditTools = (e) => {
+  const hiddenEditTools = (e) => {
     e.stopPropagation();
     setBgColorDisplay('none');
     setEditToolDisplay('none');
   };
 
-  const handleShowBgColor = (e) => {
+  const showBgColor = (e) => {
     e.stopPropagation();
     setBgColorDisplay('flex');
     setEditToolDisplay('none');
   };
 
-  const handleShowFontFamily = (e) => {
+  const showFontFamily = (e) => {
     e.stopPropagation();
     setFontFamilyDisplay('flex');
     setEditToolDisplay('none');
   };
 
   // 動的に変数名が決定されれる
-  const handleShowHeadPart = (e) => {
+  const showHeadPart = (e) => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
     setEditToolDisplay('none');
   };
 
   // 動的に変数名が決定されれる
-  const handleShowFootPart = (e) => {
+  const showFootPart = (e) => {
     e.stopPropagation();
     setHeadPartDisplay('flex');
     setEditToolDisplay('none');
@@ -48,18 +48,14 @@ const EditToolBox = (): JSX.Element => {
 
   return (
     <>
-      <div
-        style={{ display: editToolDisplay }}
-        className={styles.base}
-        onClick={handleHiddenEditTools}
-      >
+      <div style={{ display: editToolDisplay }} className={styles.base} onClick={hiddenEditTools}>
         <div>
           <p>変更したい項目を選んで下さい</p>
           <ul>
-            <li onClick={handleShowBgColor}>背景カラー</li>
-            <li onClick={handleShowFontFamily}>文字フォントを変える</li>
-            <li onClick={eval(`handleShow${curtLayPart}Part`)}>コンポーネント変更する</li>
-            <li onClick={handleShowBgColor}>テキストテキスト</li>
+            <li onClick={showBgColor}>背景カラー</li>
+            <li onClick={showFontFamily}>文字フォントを変える</li>
+            <li onClick={eval(`show${curtLayPart}Part`)}>コンポーネント変更する</li>
+            <li onClick={showBgColor}>テキストテキスト</li>
           </ul>
         </div>
       </div>

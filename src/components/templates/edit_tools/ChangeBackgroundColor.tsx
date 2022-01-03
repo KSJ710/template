@@ -14,12 +14,12 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
   const currentTarget = useRecoilValue(currentTargetState);
 
   // 設定されているエレメントの背景カラーを変える
-  const handleChangeBgColer = (e) => {
+  const changeBgColer = (e) => {
     e.stopPropagation();
     currentTarget.style.backgroundColor = e.target.value;
   };
 
-  const handleHiddenBgColor = (e) => {
+  const hiddenBgColor = (e) => {
     e.stopPropagation();
     props.setDisplay('none');
   };
@@ -39,7 +39,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
         key={color.id}
         className={styles.tool_list}
       >
-        <button value={color.colorCode} onClick={handleChangeBgColer}></button>
+        <button value={color.colorCode} onClick={changeBgColer}></button>
         <div className={styles.label}>{color.id}</div>
         {color.name}
         <br />
@@ -47,7 +47,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
       </li>
     ));
     return (
-      <div style={{ display: props.display }} className={styles.base} onClick={handleHiddenBgColor}>
+      <div style={{ display: props.display }} className={styles.base} onClick={hiddenBgColor}>
         <ul className={styles.tool_bg}>{colorList}</ul>
       </div>
     );
