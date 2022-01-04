@@ -20,15 +20,19 @@ const Head_2 = (): JSX.Element => {
     <>
       <SpMenu toggleDisplay={toggleDisplay} />
       <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
-        <h1 className={`${styles.logo}`}>
-          <Logo />
-          <p>ロゴロゴ2</p>
-        </h1>
-        <div>
+        <div className={styles.wrap}>
+          <h1 className={`${styles.logo}`}>
+            <Logo />
+            <p>ロゴロゴ2</p>
+          </h1>
           <Menu />
-          <FontAwesomeIcon className="hidden md:block ml-auto" icon="user-circle" size="3x" />
-          <HambugButton onClick={addActiveClass} />
         </div>
+        <FontAwesomeIcon
+          className="hidden md:block absolute right-1.5"
+          icon="user-circle"
+          size="3x"
+        />
+        <HambugButton onClick={addActiveClass} />
       </nav>
     </>
   );

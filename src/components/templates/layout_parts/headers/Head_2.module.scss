@@ -5,26 +5,29 @@
 .base {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: var.$outer_padding;
   background-color: #ffffff;
   cursor: pointer;
 
-  .logo {
+  .wrap {
     display: flex;
-    gap: 5px;
-    align-items: center;
-    place-content: center;
-    font-size: 1.6em;
-  }
-
-  div {
-    display: flex;
-  }
-}
-@include res.mq('md') {
-  .base {
     flex-flow: column;
+
+    .logo {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      place-content: center;
+      font-size: 1.6em;
+    }
+
+    @include res.mq('md') {
+      .logo {
+        font-size: 2.5em;
+        font-weight: 600;
+      }
+    }
   }
 }
