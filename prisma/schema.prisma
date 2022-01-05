@@ -30,3 +30,10 @@ model HeadParts {
 
   @@map("head_parts")
 }
+
+model FootParts {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  @@map("foot_parts")
+}

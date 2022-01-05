@@ -5,6 +5,7 @@ import { currentLayoutPart, editToolsDisplayState } from 'src/states/atoms/tampl
 import ChangeBackgroundColor from 'src/components/templates/edit_tools/ChangeBackgroundColor';
 import ChangeFontFamily from 'src/components/templates/edit_tools/ChangeFontFamily';
 import ChangeHeadPart from 'src/components/templates/edit_tools/ChangeHeadPart';
+import ChangeFootPart from 'src/components/templates/edit_tools/ChangeFootPart';
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
@@ -12,6 +13,7 @@ const EditToolBox = (): JSX.Element => {
   const [bgColorDisplay, setBgColorDisplay] = useState<classDisplay>('none');
   const [fontFamilyDisplay, setFontFamilyDisplay] = useState<classDisplay>('none');
   const [headPartDisplay, setHeadPartDisplay] = useState<classDisplay>('none');
+  const [footPartDisplay, setFootPartDisplay] = useState<classDisplay>('none');
   const curtLayPart = useRecoilValue(currentLayoutPart);
 
   const hiddenEditTools = (e) => {
@@ -42,7 +44,7 @@ const EditToolBox = (): JSX.Element => {
   // 動的に変数名が決定されれる
   const showFootPart = (e) => {
     e.stopPropagation();
-    setHeadPartDisplay('flex');
+    setFootPartDisplay('flex');
     setEditToolDisplay('none');
   };
 
@@ -63,6 +65,7 @@ const EditToolBox = (): JSX.Element => {
       <ChangeBackgroundColor display={bgColorDisplay} setDisplay={setBgColorDisplay} />
       <ChangeFontFamily display={fontFamilyDisplay} setDisplay={setFontFamilyDisplay} />
       <ChangeHeadPart display={headPartDisplay} setDisplay={setHeadPartDisplay} />
+      <ChangeFootPart display={footPartDisplay} setDisplay={setFootPartDisplay} />
     </>
   );
 };

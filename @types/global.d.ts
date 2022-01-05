@@ -11,7 +11,7 @@ type FontFamily = {
   style: string;
 };
 
-type HeadParts = {
+type LayoutParts = {
   id: number;
   name: string;
 };
