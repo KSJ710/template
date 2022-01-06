@@ -6,7 +6,7 @@ import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Head_1.module.scss';
-import Logo from './svg/Logo_1';
+import Logo from '../svg/Logo_1';
 
 const Head_1 = (): JSX.Element => {
   const tET: (event) => void = useContext(ToggleEditTools);
@@ -22,7 +22,7 @@ const Head_1 = (): JSX.Element => {
       <SpMenu toggleDisplay={toggleDisplay} />
       <nav className={`${styles.base} _track_lay_part_Head`} onClick={tET}>
         <h1 className={`${styles.logo}`}>
-          <Logo />
+          <Logo height="36px" width="36px" />
           <p>ロゴロゴ</p>
         </h1>
         <Menu />

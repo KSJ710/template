@@ -6,7 +6,7 @@ import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Head_2.module.scss';
-import Logo from './svg/Logo_2';
+import Logo from '../svg/Logo_1';
 
 const Head_2 = (): JSX.Element => {
   const hTET: (event) => void = useContext(ToggleEditTools);
@@ -22,7 +22,7 @@ const Head_2 = (): JSX.Element => {
       <nav className={`${styles.base} _track_lay_part_Head`} onClick={hTET}>
         <div className={styles.wrap}>
           <h1 className={`${styles.logo}`}>
-            <Logo />
+            <Logo height="48px" width="48px" />
             <p>ロゴロゴ2</p>
           </h1>
           <Menu />
