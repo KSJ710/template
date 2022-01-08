@@ -3,46 +3,49 @@ import React, { useContext } from 'react';
 import { ToggleEditTools } from 'src/pages/templates/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Foot_2.module.scss';
+import Logo from '../svg/Logo_1';
 
 const Footer_2 = (): JSX.Element => {
   const hTET: (event) => void = useContext(ToggleEditTools);
   return (
     <nav className={`${styles.base} _track_lay_part_Foot`} onClick={hTET}>
-      <div className={styles.base_inner}>
-        <div className={styles.menu}>
-          <ul>
-            <li>ページ1</li>
-            <li>ページ2</li>
-            <li>ページ3</li>
-            <li>ページ4</li>
-            <li>ページ5</li>
-          </ul>
-          <ul>
-            <li>ページ6</li>
-            <li>ページ7</li>
-            <li>ページ8</li>
-            <li>ページ9</li>
-            <li>ページ10</li>
-            <li>ページ11</li>
-            <li>ページ12</li>
-            <li>ページ13</li>
-            <li>ページ14</li>
-            <li>ページ15</li>
-          </ul>
-        </div>
-        <div className={styles.sns}>
-          <FontAwesomeIcon icon={['fab', 'apple']} />
-          <FontAwesomeIcon icon={['fab', 'evernote']} />
-          <FontAwesomeIcon icon={['fab', 'amazon']} />
-          <FontAwesomeIcon icon={['fab', 'spotify']} />
-        </div>
-        <div className={styles.site_policy}>
-          <p>利用規約</p>
-          <p>プライバシーポリシー</p>
-          <p>© 2021 Mysite All Rights Reserved.</p>
-        </div>
-        <i className="fab fa-apple"></i>
-        <i className="fab fa-twitter"></i>
+      <div className={styles.contact}>
+        <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+        <address>Email address</address>
+        <button>メルマガ登録</button>
+      </div>
+      <div className={styles.sns}>
+        <ul>
+          <li>CONTACT</li>
+          <li>FAQ</li>
+          <li>
+            <div className="hidden md:block">
+              <FontAwesomeIcon icon={['fab', 'spotify']} />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className={styles.site_policy}>
+        <p>利用規約</p>
+        <p>プライバシーポリシー</p>
+        <p>特定商取引法に基づく表記</p>
+      </div>
+      <div className={styles.logo}>
+        <Logo height="72px" width="72px" />
+        <p>ロゴロゴ</p>
+      </div>
+      <p>© 2021 Mysite All Rights Reserved.</p>
+      <div className={styles.test}>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </nav>
   );

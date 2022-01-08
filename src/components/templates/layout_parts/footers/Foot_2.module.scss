@@ -1,0 +1,119 @@
+@use '/src/styles/_responsive' as res;
+
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #a55c44;
+  color: #ebf6f7;
+  font-size: 1rem;
+  font-weight: 600;
+
+  .contact {
+    margin-bottom: 40px;
+  }
+
+  .sns {
+    width: 50%;
+
+    svg {
+      box-sizing: content-box;
+      background-color: #f8cf96;
+
+      path {
+        fill: #965036;
+      }
+    }
+  }
+
+  .site_policy {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    p:nth-child(2n) {
+      margin-right: 0px;
+    }
+    p:last-of-type {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+  }
+
+  .logo {
+    width: 100%;
+  }
+}
+
+// ブレイクポイント
+@include res.mq('md') {
+  .base {
+    padding-right: 40px;
+    padding-left: 40px;
+
+    .menu {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 80px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+      }
+    }
+    .sns {
+      margin-left: auto;
+      margin-bottom: 40px;
+    }
+    p {
+      width: 100%;
+    }
+  }
+}
+
+// ブレイクポイント
+@include res.mq('xl') {
+  .base {
+    .base_inner {
+      width: 1180px;
+      margin: 0 auto;
+
+      .menu {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 80px;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 500px;
+        }
+      }
+      .sns {
+        margin-left: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.test {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+
+  div {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: calc(100% / 3);
+    height: 10px;
+    background-color: #000;
+  }
+}
