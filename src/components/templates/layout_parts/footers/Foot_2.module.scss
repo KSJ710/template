@@ -106,13 +106,17 @@
 
 .test {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  width: 150px;
+  height: 100px;
   background-color: #fff;
 
   div {
-    margin-left: 10px;
+    flex-basis: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 5px;
     margin-bottom: 10px;
-    width: calc(100% / 3);
     height: 10px;
     background-color: #000;
   }
