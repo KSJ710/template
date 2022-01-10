@@ -4,50 +4,84 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px;
+  padding: 30px;
   background-color: #a55c44;
   color: #ebf6f7;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 
-  .contact {
+  .register {
+    flex-basis: 100%;
     margin-bottom: 40px;
+    color: #000000;
+
+    h2 {
+      margin-bottom: 5px;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    input[type='text'] {
+      margin-bottom: 15px;
+      background-color: transparent;
+      border-bottom: 1px solid #000000;
+      line-height: 2.5em;
+
+      &::placeholder {
+        font-size: 1.2em;
+        color: #000000;
+      }
+    }
+
+    input[type='submit'] {
+      width: 100%;
+      display: block;
+      line-height: 2em;
+    }
   }
 
-  .sns {
-    width: 50%;
+  .site_info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
 
-    svg {
-      box-sizing: content-box;
-      background-color: #f8cf96;
+    ul {
+      & :nth-of-type(1) {
+        svg {
+          box-sizing: content-box;
+          background-color: #f8cf96;
 
-      path {
-        fill: #965036;
+          path {
+            fill: #965036;
+          }
+        }
+      }
+
+      li {
+        margin-bottom: 5px;
       }
     }
   }
 
-  .site_policy {
-    display: flex;
-    flex-flow: column;
-    width: 50%;
+  .logo {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    font-size: 3em;
 
     p {
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
-
-    p:nth-child(2n) {
-      margin-right: 0px;
-    }
-    p:last-of-type {
-      width: 100%;
-      margin-bottom: 0px;
+      color: #000000;
+      margin-top: -10px;
     }
   }
 
-  .logo {
-    width: 100%;
+  .copy_right {
+    font-size: 1.2em;
   }
 }
 
@@ -101,23 +135,5 @@
         margin-bottom: 40px;
       }
     }
-  }
-}
-
-.test {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 150px;
-  height: 100px;
-  background-color: #fff;
-
-  div {
-    flex-basis: 10px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    height: 10px;
-    background-color: #000;
   }
 }
