@@ -28,6 +28,7 @@ const Footer_2 = (): JSX.Element => {
           <li>利用規約</li>
           <li>プライバシーポリシー</li>
           <li>特定商取引法に基づく表記</li>
+          <li>© 2021 Mysite All Rights Reserved.</li>
         </ul>
       </div>
       <div className={styles.logo}>
