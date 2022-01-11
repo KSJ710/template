@@ -41,8 +41,10 @@
     input[type='submit'] {
       width: 100%;
       display: block;
+      border: 1px solid #000000;
+
+      line-height: 2.5em;
       font-size: 1em;
-      line-height: 2em;
     }
   }
 
@@ -53,6 +55,10 @@
     margin-bottom: 30px;
 
     ul {
+      &:nth-of-type(1) {
+        font-size: 1.4em;
+      }
+
       &:nth-of-type(1) {
         svg {
           width: 20px;
@@ -106,6 +112,7 @@
     .register {
       flex-basis: 200px;
       order: 3;
+      margin-right: 80px;
       margin-bottom: 0;
 
       h2 {
@@ -115,7 +122,7 @@
     .site_info {
       position: relative;
       justify-content: space-around;
-      min-width: 400px;
+      min-width: 450px;
       flex-basis: 30%;
       order: 2;
       margin-bottom: 0;
