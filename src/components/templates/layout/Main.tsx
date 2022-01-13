@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { tplMainNumberState } from 'src/states/atoms/tamplate_atoms';
 import * as MainBulk from 'src/components/templates/layout_parts/main/index';

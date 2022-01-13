@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'src/components/templates/layout/Head';
 import styles from './Base_1.module.scss';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './HambugButton.module.scss';
 
 // クラスを着脱することでボタンの形を変える

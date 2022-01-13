@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
 import * as HeadBulk from 'src/components/templates/layout_parts/headers/index';

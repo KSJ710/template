@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'src/components/templates/layout/Head';
 import Main from 'src/components/templates/layout/Main';
 import Foot from 'src/components/templates/layout/Foot';

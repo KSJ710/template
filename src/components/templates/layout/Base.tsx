@@ -1,4 +1,3 @@
-import React from 'react';
 import * as BaseBulk from 'src/components/templates/layout_parts/bases/index';
 import styles from './Base.module.scss';
 
