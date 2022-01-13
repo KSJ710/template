@@ -55,9 +55,8 @@ const EditToolBox = (): JSX.Element => {
           <p>変更したい項目を選んで下さい</p>
           <ul>
             <li onClick={showBgColor}>背景カラー</li>
-            <li onClick={showFontFamily}>文字フォントを変える</li>
-            <li onClick={eval(`show${curtLayPart}Part`)}>コンポーネント変更する</li>
-            <li onClick={showBgColor}>テキストテキスト</li>
+            <li onClick={showFontFamily}>フォント</li>
+            <li onClick={eval(`show${curtLayPart}Part`)}>パーツ</li>
           </ul>
         </div>
       </div>
