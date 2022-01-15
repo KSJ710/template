@@ -1,8 +1,11 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext } from 'react';
+// context
 import { ToggleEditTools } from 'src/pages/templates/index';
+// image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../svg/Logo_1';
+// CSS
 import styles from './Foot_2.module.scss';
 
 const Footer_2 = (): JSX.Element => {

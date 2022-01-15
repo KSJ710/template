@@ -1,14 +1,14 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useState } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-// atoms
+// atom
 import { currentLayoutPart, editToolsDisplayState } from 'src/states/atoms/tamplate_atoms';
-// コンポーネント
+// component
 import ChangeBackgroundColor from 'src/components/templates/edit_tools/ChangeBackgroundColor';
 import ChangeFontFamily from 'src/components/templates/edit_tools/ChangeFontFamily';
 import ChangeHeadPart from 'src/components/templates/edit_tools/ChangeHeadPart';
 import ChangeFootPart from 'src/components/templates/edit_tools/ChangeFootPart';
-// スタイルシート
+// css
 import styles from './EditTools.module.scss';
 
 const EditToolBox = (): JSX.Element => {
