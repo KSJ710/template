@@ -1,12 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useSetRecoilState } from 'recoil';
+import useSWR from 'swr';
 // atom
 import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
+// helper
+import { fetcher } from 'src/helper/common';
 // css
 import styles from './ChangeHeadPart.module.scss';
-
-import useSWR from 'swr';
-import axios from 'axios';
 
 type Props = {
   display: classDisplay;
@@ -48,11 +48,5 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     );
   }
 };
-
-// useSWRが受け取る関数でapiルートURLが渡される
-const fetcher: Fetcher = (url) =>
-  axios.get(url).then((res) => {
-    return res.data;
-  });
 
 export default ChangeHeadPart;

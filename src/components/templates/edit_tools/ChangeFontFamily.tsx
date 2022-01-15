@@ -1,12 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useRecoilValue } from 'recoil';
+import useSWR from 'swr';
 // atom
 import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
+// helper
+import { fetcher } from 'src/helper/common';
 // css
 import styles from './ChangeFontFamily.module.scss';
-
-import useSWR from 'swr';
-import axios from 'axios';
 
 type Props = {
   display: classDisplay;
@@ -48,10 +48,5 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
     );
   }
 };
-
-const fetcher: Fetcher = (url) =>
-  axios.get(url).then((res) => {
-    return res.data;
-  });
 
 export default ChangeFontFamily;
