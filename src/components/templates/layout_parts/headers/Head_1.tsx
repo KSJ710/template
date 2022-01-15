@@ -1,12 +1,15 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext, useState } from 'react';
 import { ToggleEditTools } from 'src/pages/templates/index';
+// コンポーネント
 import Menu from 'src/components/templates/menu/Menu';
 import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
+// イメージ
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './Head_1.module.scss';
 import Logo from '../svg/Logo_1';
+// スタイルシート
+import styles from './Head_1.module.scss';
 
 const Head_1 = (): JSX.Element => {
   const tET: (event) => void = useContext(ToggleEditTools);

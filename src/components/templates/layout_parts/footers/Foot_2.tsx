@@ -2,8 +2,8 @@
 import React, { useContext } from 'react';
 import { ToggleEditTools } from 'src/pages/templates/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './Foot_2.module.scss';
 import Logo from '../svg/Logo_1';
+import styles from './Foot_2.module.scss';
 
 const Footer_2 = (): JSX.Element => {
   const hTET: (event) => void = useContext(ToggleEditTools);
