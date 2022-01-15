@@ -1,9 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useSetRecoilState } from 'recoil';
+// atom
 import { tplFootNumberState } from 'src/states/atoms/tamplate_atoms';
+// css
+import styles from './ChangeFootPart.module.scss';
+
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './ChangeFootPart.module.scss';
 
 type Props = {
   display: classDisplay;

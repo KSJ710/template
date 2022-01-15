@@ -1,9 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useRecoilValue } from 'recoil';
+// atom
 import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
+// css
+import styles from './ChangeBackgroundColor.module.scss';
+
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './ChangeBackgroundColor.module.scss';
 
 type Props = {
   display: classDisplay;

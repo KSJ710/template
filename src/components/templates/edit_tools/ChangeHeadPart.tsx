@@ -1,9 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useSetRecoilState } from 'recoil';
+// atom
 import { tplHeadNumberState } from 'src/states/atoms/tamplate_atoms';
+// css
+import styles from './ChangeHeadPart.module.scss';
+
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './ChangeHeadPart.module.scss';
 
 type Props = {
   display: classDisplay;

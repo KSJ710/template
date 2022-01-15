@@ -1,9 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import { useRecoilValue } from 'recoil';
+// atom
 import { currentTargetState } from 'src/states/atoms/tamplate_atoms';
+// css
+import styles from './ChangeFontFamily.module.scss';
+
 import useSWR from 'swr';
 import axios from 'axios';
-import styles from './ChangeFontFamily.module.scss';
 
 type Props = {
   display: classDisplay;
@@ -39,11 +42,7 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
       </li>
     ));
     return (
-      <div
-        style={{ display: props.display }}
-        className={styles.base}
-        onClick={hiddenFontFamily}
-      >
+      <div style={{ display: props.display }} className={styles.base} onClick={hiddenFontFamily}>
         <ul className={styles.tool_bg}>{fontFamilyList}</ul>
       </div>
     );
