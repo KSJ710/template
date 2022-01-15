@@ -1,11 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext, useState } from 'react';
+// context
 import { ToggleEditTools } from 'src/pages/templates/index';
 // component
 import Menu from 'src/components/templates/menu/Menu';
 import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
-// イメージ
+// image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../svg/Logo_1';
 // css
