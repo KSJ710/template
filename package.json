@@ -20,7 +20,6 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@prisma/client": "^3.8.0",
     "animejs": "^3.2.1",
-    "aws-amplify": "^4.3.12",
     "axios": "^0.24.0",
     "dotenv": "^11.0.0",
     "next": "^12.0.8",
