@@ -4,7 +4,6 @@ const path = require('path');
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      env: {},
       sassOptions: {
         includePaths: [path.join(__dirname, 'src/styles')],
       },
@@ -12,7 +11,6 @@ module.exports = (phase, { defaultConfig }) => {
   }
 
   return {
-    env: {},
     sassOptions: {
       includePaths: [path.join(__dirname, 'src/styles')],
     },
