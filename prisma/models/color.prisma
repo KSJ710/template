@@ -1,0 +1,8 @@
+model Colors {
+  id        Int    @id @default(autoincrement())
+  name      String
+  colorCode String @unique @map("color_code")
+  kanaName  String @map("kana_name")
+
+  @@map("colors")
+}

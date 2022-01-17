@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fmt": "prettier --write src/pages/**/*.{html,js,jsx,json,scss,ts,tsx} src/components/**/*.{html,js,jsx,json,scss,ts,tsx}"
+    "fmt": "prettier --write src/pages/**/*.{html,js,jsx,json,scss,ts,tsx} src/components/**/*.{html,js,jsx,json,scss,ts,tsx}",
+    "prisma-merge": "npx prisma-merge --baseFile prisma/base.prisma --schemaFilePatterns 'prisma/*/*.prisma' --outputFile prisma/schema.prisma"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
