@@ -1,3 +1,4 @@
+import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import styles from './App.module.scss';
 
