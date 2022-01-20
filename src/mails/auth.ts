@@ -1,5 +1,4 @@
 export function html({ url, host, email }) {
-  const escapedEmail = `${email.replace(/\./g, '&#8203;.')}`;
   const escapedHost = `${host.replace(/\./g, '&#8203;.')}`;
   const backgroundColor = '#f9f9f9';
   const textColor = '#444444';
