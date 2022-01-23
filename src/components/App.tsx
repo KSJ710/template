@@ -4,7 +4,11 @@ import styles from './App.module.scss';
 
 const App = (): JSX.Element => {
   return (
-    <div>test</div>
+    <Link href="/templates">
+      <a>
+        <div>test</div>
+      </a>
+    </Link>
     // <div className="container mx-auto w-full h-screen bg-green-600">
     //   <div className="flex justify-center items-center w-auto h-full">
     //     <Link href="/templates">

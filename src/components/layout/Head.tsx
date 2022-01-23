@@ -1,6 +1,7 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import Link from 'next/link';
 // component
 import Menu from 'src/components/templates/menu/Menu';
 import SpMenu from 'src/components/templates/menu/SpMenu';
@@ -11,12 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Head.module.scss';
 
 const Head = (): JSX.Element => {
-  const { data: session, status } = useSession({
-    required: true,
-    onUnauthenticated() {
-      return <p>エラー</p>;
-    },
-  });
+  const { status } = useSession();
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
 
   // SpMenuの表示非表示を切り替える
@@ -27,22 +23,21 @@ const Head = (): JSX.Element => {
   // ログイン状態チェック
   const LoginStatus = (): JSX.Element => {
     if (status === 'authenticated') {
-      return <p>{session.user.email}</p>;
+      return <p onClick={() => signOut()}>ログアウトする</p>;
     } else {
-      return <FontAwesomeIcon className="hidden md:block" icon="user-circle" size="3x" />;
+      return <p onClick={() => signIn()}>ログインする</p>;
     }
   };
 
   return (
     <>
       <SpMenu toggleDisplay={toggleDisplay} />
-      <nav className={`${styles.base} _track_lay_part_Head`}>
-        <h1 className={`${styles.logo}`}>
+      <nav className={styles.base}>
+        <h1 className={styles.logo}>
           <p>ロゴロゴ</p>
         </h1>
-        <button onClick={() => signOut()}>Sign out</button>
-        <button onClick={() => signIn()}>Sign in</button>
         <Menu />
+        <FontAwesomeIcon className="hidden md:block" icon="user-circle" size="3x" />
         <LoginStatus />
         <HambugButton onClick={addActiveClass} />
       </nav>
