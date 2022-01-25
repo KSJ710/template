@@ -1,15 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useContext } from 'react';
-// コンテクスト
-import { ToggleEditTools } from 'src/pages/templates/index';
 // イメージ
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Foot.module.scss';
 
 const Foot = (): JSX.Element => {
-  const hTET: (event) => void = useContext(ToggleEditTools);
   return (
-    <nav className={`${styles.base} _track_lay_part_Foot`} onClick={hTET}>
+    <nav className={styles.base}>
       <div className={styles.base_inner}>
         <div className={styles.menu}>
           <ul>

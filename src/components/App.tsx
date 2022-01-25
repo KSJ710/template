@@ -1,21 +1,19 @@
+import { useEffect, useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Home from 'src/components/content/Home';
+import MyPage from 'src/components/content/MyPage';
 import styles from './App.module.scss';
 
 const App = (): JSX.Element => {
+  const router = useRouter();
+  const { content } = router.query;
+
   return (
-    <Link href="/templates">
-      <a>
-        <div>test</div>
-      </a>
-    </Link>
-    // <div className="container mx-auto w-full h-screen bg-green-600">
-    //   <div className="flex justify-center items-center w-auto h-full">
-    //     <Link href="/templates">
-    //       <a className={`${styles.btn_orange} ${styles.btn_radius}`}>クリック</a>
-    //     </Link>
-    //   </div>
-    // </div>
+    <>
+      {content?.[0] === 'home' ? <Home /> : null}
+      {content?.[0] === 'mypage' ? <MyPage /> : null}
+    </>
   );
 };
 
