@@ -3,17 +3,18 @@ import Link from 'next/link';
 type ListValue = {
   value: string;
   href: string;
+  shallow: boolean;
 };
 
 type Props = {
-  content: ListValue[];
+  value: ListValue[];
 };
 
 const List = (props: Props): JSX.Element => {
-  const list = props.content?.map((x) => (
-    <Link href={x.href} key={x.value}>
+  const list = props.value?.map((props) => (
+    <Link href={props.href} key={props.value} shallow={props.shallow}>
       <a>
-        <li>{x.value}</li>
+        <li>{props.value}</li>
       </a>
     </Link>
   ));
