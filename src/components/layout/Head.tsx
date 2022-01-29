@@ -1,7 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
-import Link from 'next/link';
 // component
 import List from 'src/components/general/List';
 import SpMenu from 'src/components/templates/menu/SpMenu';
@@ -14,7 +13,6 @@ import styles from './Head.module.scss';
 const Head = (): JSX.Element => {
   const { status } = useSession();
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
-  const hundleStopPropagation = (e) => e.stopPropagation();
   const list = [
     { value: 'Home', href: '/home', shallow: true },
     { value: 'MyPage', href: '/mypage', shallow: true },
