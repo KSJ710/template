@@ -4,6 +4,7 @@ import { SessionProvider } from 'next-auth/react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import Base from 'src/components/layout/Base';
 import 'src/styles/global.scss';
 
 // fasのFontAwesomeIconコンポネントを全体で使用できる下記参照
@@ -14,11 +15,23 @@ export default function MyApp({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps): JSX.Element {
-  return (
-    <SessionProvider session={session}>
-      <RecoilRoot>
-        <Component {...pageProps} />
-      </RecoilRoot>
-    </SessionProvider>
-  );
+  if (Component?.props?.layout === 'main') {
+    return (
+      <SessionProvider session={session}>
+        <RecoilRoot>
+          <Base>
+            <Component {...pageProps} />
+          </Base>
+        </RecoilRoot>
+      </SessionProvider>
+    );
+  } else {
+    return (
+      <SessionProvider session={session}>
+        <RecoilRoot>
+          <Component {...pageProps} />
+        </RecoilRoot>
+      </SessionProvider>
+    );
+  }
 }
