@@ -5,6 +5,17 @@ type Color = {
   kanaName: string;
 };
 
+type FontFamily = {
+  id: number;
+  name: string;
+  style: string;
+};
+
+type LayoutParts = {
+  id: number;
+  name: string;
+};
+
 type classDisplay = 'none' | 'block' | 'flex';
 
 type Fetcher = (url: string) => Promise<any>;

@@ -1,14 +1,18 @@
-export default function Main(props) {
-  return (
-    <main>
-      {props.children}
+import { useRouter } from 'next/router';
+import Home from 'src/components/content/Home';
+import MyPage from 'src/components/content/MyPage';
+import styles from './Main.module.scss';
 
-      <style jsx>{`
-        main {
-          grid-area: main;
-          background-color: #800000;
-        }
-      `}</style>
-    </main>
+const Main = (): JSX.Element => {
+  const router = useRouter();
+  const { app } = router.query;
+
+  return (
+    <>
+      {app?.[0] === 'home' ? <Home /> : null}
+      {app?.[0] === 'mypage' ? <MyPage /> : null}
+    </>
   );
-}
+};
+
+export default Main;

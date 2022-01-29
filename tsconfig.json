@@ -18,5 +18,11 @@
     "incremental": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "index.mjs", "test_prisma.js"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "index.mjs",
+    "test_prisma.js",
+    "src/components/templates/layout_parts/header/index.jts"
+  ]
 }
