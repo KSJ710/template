@@ -1,11 +1,9 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import React, { useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 // component
-import Menu from 'src/components/templates/menu/Menu';
+import List from 'src/components/general/List';
 import SpMenu from 'src/components/templates/menu/SpMenu';
 import HambugButton from 'src/components/templates/button/HambugButton';
 // image
@@ -17,6 +15,10 @@ const Head = (): JSX.Element => {
   const { status } = useSession();
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
   const hundleStopPropagation = (e) => e.stopPropagation();
+  const list = [
+    { value: 'Home', href: '/home', shallow: true },
+    { value: 'MyPage', href: '/mypage', shallow: true },
+  ];
 
   // SpMenuの表示非表示を切り替える
   const addActiveClass = () => {
@@ -32,20 +34,6 @@ const Head = (): JSX.Element => {
     }
   };
 
-  const router = useRouter();
-
-  const toHome = () => {
-    router.push('/home', undefined, { shallow: true });
-  };
-
-  const toMyPage = () => {
-    router.push('/mypage', undefined, { shallow: true });
-  };
-
-  useEffect(() => {
-    // The counter changed!
-  }, [router.query.counter]);
-
   return (
     <>
       <SpMenu toggleDisplay={toggleDisplay} />
@@ -54,10 +42,7 @@ const Head = (): JSX.Element => {
           <p>ロゴロゴ</p>
         </h1>
         <ul className={styles.menu}>
-          <li onClick={toHome}>ページ1</li>
-          <li onClick={toMyPage}>ページ2</li>
-          <li>ページ3</li>
-          <li>ページ4</li>
+          <List value={list} />
         </ul>
         <FontAwesomeIcon className="hidden md:block" icon="user-circle" size="3x" />
         <LoginStatus />
