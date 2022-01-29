@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { route } from 'next/dist/server/router';
 
-const Exp = (): JSX.Element => {
+const Exp = ({ data }): JSX.Element => {
   const router = useRouter();
   const { exp } = router.query;
   console.log(router.isFallback);
@@ -15,7 +15,20 @@ const Exp = (): JSX.Element => {
 
   return (
     <div className={styles.grid}>
-      <p>{exp}1</p>
+      <div>{data}</div>
+      <ul>
+        <Link href="/templates">
+          <a>
+            <li>aaa</li>
+          </a>
+        </Link>
+        <Link href="/exp/aaaa">
+          <a>
+            <li>bbb</li>
+          </a>
+        </Link>
+        <li>ccc</li>
+      </ul>
     </div>
   );
 };
