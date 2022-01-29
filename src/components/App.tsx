@@ -7,12 +7,12 @@ import styles from './App.module.scss';
 
 const App = (): JSX.Element => {
   const router = useRouter();
-  const { content } = router.query;
+  const { main } = router.query;
 
   return (
     <>
-      {content?.[0] === 'home' ? <Home /> : null}
-      {content?.[0] === 'mypage' ? <MyPage /> : null}
+      {main?.[0] === 'home' ? <Home /> : null}
+      {main?.[0] === 'mypage' ? <MyPage /> : null}
     </>
   );
 };

@@ -1,7 +1,7 @@
 import App from 'src/components/App';
 import Base from 'src/components/layout/Base';
 
-const Index = (): JSX.Element => {
+const Main = (): JSX.Element => {
   return (
     <Base>
       <App />
@@ -9,4 +9,4 @@ const Index = (): JSX.Element => {
   );
 };
 
-export default Index;
+export default Main;
