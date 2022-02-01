@@ -5,5 +5,5 @@ model FontFamilies {
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
-  @@map("font_families")
+  @@map("m_font_families")
 }

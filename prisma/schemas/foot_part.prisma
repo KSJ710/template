@@ -4,5 +4,5 @@ model FootParts {
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
-  @@map("foot_parts")
+  @@map("m_foot_parts")
 }
