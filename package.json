@@ -11,7 +11,9 @@
     "start": "next start",
     "lint": "next lint",
     "fmt": "prettier --write src/pages/**/*.{html,js,jsx,json,scss,ts,tsx} src/components/**/*.{html,js,jsx,json,scss,ts,tsx}",
-    "prisma-merge": "npx prisma-merge --baseFile prisma/base.prisma --schemaFilePatterns 'prisma/schemas/*.prisma' --outputFile prisma/schema.prisma"
+    "prisma-merge": "npx prisma-merge --baseFile prisma/base.prisma --schemaFilePatterns 'prisma/schemas/*.prisma' --outputFile prisma/schema.prisma",
+    "prisma-migrate": "npx prisma-merge --baseFile prisma/base.prisma --schemaFilePatterns 'prisma/schemas/*.prisma' --outputFile prisma/schema.prisma; npx prisma migrate dev",
+    "prisma-reset": "npx prisma-merge --baseFile prisma/base.prisma --schemaFilePatterns 'prisma/schemas/*.prisma' --outputFile prisma/schema.prisma; npx prisma migrate dev; npx prisma migrate reset"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
