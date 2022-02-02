@@ -15,6 +15,7 @@ const Head = (): JSX.Element => {
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
   const list = [
     { value: 'Home', href: '/home', shallow: true },
+    { value: 'Auth', href: '/api/auth/signin', shallow: false },
     { value: 'MyPage', href: '/mypage', shallow: true },
   ];
 

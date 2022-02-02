@@ -3,10 +3,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const color = await prisma.colors.findMany({
-    where: { id: 1 },
+  const color = await prisma.user.delete({
+    where: { email: 'taro@sample.com' },
   });
-  console.log(color[0].id);
+  console.log(color);
 }
 
 main()
