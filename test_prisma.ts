@@ -3,10 +3,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const color = await prisma.user.delete({
-    where: { email: 'taro@sample.com' },
+  const data = await prisma.prefectures.createMany({
+    data: [{ name: 'test' }, { name: 'aaa' }],
   });
-  console.log(color);
+  console.log(data);
 }
 
 main()
