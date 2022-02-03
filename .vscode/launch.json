@@ -27,6 +27,12 @@
         "uriFormat": "%s",
         "action": "debugWithChrome"
       }
+    },
+    {
+      "name": "seed-Debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npx ts-node prisma/seed.ts"
     }
   ]
 }
