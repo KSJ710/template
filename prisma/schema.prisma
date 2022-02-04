@@ -143,6 +143,23 @@ model Prefectures {
 }
 
 
+model Member {
+  id           Int     @id @default(autoincrement())
+  name         String?
+  writtenPosts Post[]  @relation("WrittenPosts")
+  pinnedPost   Post?   @relation("PinnedPost")
+}
+
+model Post {
+  id         Int     @id @default(autoincrement())
+  title      String?
+  author     Member  @relation("WrittenPosts", fields: [authorId], references: [id])
+  authorId   Int
+  pinnedBy   Member? @relation(name: "PinnedPost", fields: [pinnedById], references: [id])
+  pinnedById Int?    @unique
+}
+
+
 model Users {
   id        Int      @id @default(autoincrement())
   name      String
