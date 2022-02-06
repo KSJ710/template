@@ -3,8 +3,8 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const data = await prisma.prefectures.createMany({
-    data: [{ name: 'test' }, { name: 'aaa' }],
+  const data = await prisma.prefectures.findFirst({
+    where: { name: { contains: '川' } },
   });
   console.log(data);
 }
