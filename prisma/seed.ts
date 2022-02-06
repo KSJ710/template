@@ -8,10 +8,10 @@ import axios from 'axios';
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.colors.createMany({ data: colors });
-  await prisma.fontFamilies.createMany({ data: fontFamilies });
-  await prisma.headParts.createMany({ data: headParts });
-  await prisma.footParts.createMany({ data: footParts });
+  await prisma.color.createMany({ data: colors });
+  await prisma.fontFamily.createMany({ data: fontFamilies });
+  await prisma.headPart.createMany({ data: headParts });
+  await prisma.footPart.createMany({ data: footParts });
 
   const [prefectures, cities] = await axios
     .get('https://geolonia.github.io/japanese-addresses/api/ja.json')
@@ -33,8 +33,8 @@ async function main() {
       }
       return [prefectures, cities];
     });
-  await prisma.prefectures.createMany({ data: prefectures });
-  await prisma.cities.createMany({ data: cities });
+  await prisma.prefecture.createMany({ data: prefectures });
+  await prisma.city.createMany({ data: cities });
 }
 
 main()

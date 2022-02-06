@@ -1,7 +1,7 @@
 import prisma from 'lib/prisma';
 
 const FootParts = async (req, res) => {
-  const footParts: LayoutParts[] = await prisma.footParts.findMany();
+  const footParts: LayoutParts[] = await prisma.footPart.findMany();
   res.status(200).json(footParts);
 };
 

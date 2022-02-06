@@ -1,7 +1,8 @@
-model Prefectures {
+model Prefecture {
   id        Int      @id @default(autoincrement())
   name      String
-  cities    Cities[]
+  cities    City[]
+  members   Member[]
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 

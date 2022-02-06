@@ -1,4 +1,4 @@
-model Colors {
+model Color {
   id        Int      @id @default(autoincrement())
   name      String
   colorCode String   @unique @map("color_code")

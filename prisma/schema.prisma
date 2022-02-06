@@ -10,19 +10,20 @@ datasource db {
 }
 
 
-model Cities {
-  id           Int         @id @default(autoincrement())
-  prefectureId Int
+model City {
+  id           Int        @id @default(autoincrement())
   name         String
-  Prefectures  Prefectures @relation(fields: [prefectureId], references: [id])
-  createdAt    DateTime    @default(now()) @map("created_at") @db.Timestamptz
-  updatedAt    DateTime    @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+  prefectureId Int
+  prefecture   Prefecture @relation(fields: [prefectureId], references: [id])
+  members      Member[]
+  createdAt    DateTime   @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
   @@map("m_cities")
 }
 
 
-model Colors {
+model Color {
   id        Int      @id @default(autoincrement())
   name      String
   colorCode String   @unique @map("color_code")
@@ -34,7 +35,7 @@ model Colors {
 }
 
 
-model FontFamilies {
+model FontFamily {
   id        Int      @id @default(autoincrement())
   name      String
   style     String
@@ -45,7 +46,7 @@ model FontFamilies {
 }
 
 
-model FootParts {
+model FootPart {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
@@ -55,13 +56,30 @@ model FootParts {
 }
 
 
-model HeadParts {
+model HeadPart {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
   @@map("m_head_parts")
+}
+
+
+model Member {
+  id           Int         @id @default(autoincrement())
+  name         String
+  email        String      @unique
+  password     String
+  image        String?
+  prefectureId Int?
+  prefecture   Prefecture? @relation(fields: [prefectureId], references: [id])
+  cityId       Int?
+  city         City?       @relation(fields: [cityId], references: [id])
+  createdAt    DateTime    @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime    @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@map("members")
 }
 
 
@@ -132,10 +150,11 @@ model VerificationToken {
 //******** nextauth.prisma end *********
 
 
-model Prefectures {
+model Prefecture {
   id        Int      @id @default(autoincrement())
   name      String
-  cities    Cities[]
+  cities    City[]
+  members   Member[]
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
@@ -144,16 +163,3 @@ model Prefectures {
 
 
 
-
-
-model Users {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  image     String?
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
-  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
-
-  @@map("users")
-}

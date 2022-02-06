@@ -1,4 +1,4 @@
-model FootParts {
+model FootPart {
   id        Int      @id @default(autoincrement())
   name      String
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
