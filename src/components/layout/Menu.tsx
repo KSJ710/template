@@ -12,7 +12,7 @@ const Head = (props): JSX.Element => {
   ];
 
   return (
-    <ul className={styles.menu} style={{ display: props.display }}>
+    <ul className={styles.base} style={{ display: props.display }}>
       <List value={list} />
     </ul>
   );
