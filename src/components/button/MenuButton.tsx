@@ -1,14 +1,15 @@
-import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 
 const MenuButton = (): JSX.Element => {
   const { status } = useSession();
 
-  let loginState = 'green';
+  let loginState = '';
   if (status === 'loading') {
     loginState = 'yellow';
-  } else if (status === 'unauthenticated') {
+  } else if (status === 'authenticated') {
+    loginState = 'green';
+  } else {
     loginState = 'white';
   }
 
