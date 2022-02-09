@@ -32,7 +32,7 @@ const Base = (props): JSX.Element => {
       <footer className={styles.footer}>
         <Foot />
       </footer>
-      <div className={styles.modal} style={{ display: toggleDisplay }}>
+      <div className="w-screen h-screen" style={{ display: toggleDisplay }}>
         <Menu />
       </div>
       <div onClick={handleTglDisp}>

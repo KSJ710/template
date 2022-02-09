@@ -6,9 +6,8 @@ import styles from './Menu.module.scss';
 
 const Head = (props): JSX.Element => {
   const list = [
-    { value: 'Home', href: '/home', shallow: true },
-    { value: 'Auth', href: '/api/auth/signin', shallow: false },
-    { value: 'MyPage', href: '/mypage', shallow: true },
+    { value: 'ログイン', href: '/api/auth/signin', shallow: false },
+    { value: 'アカウント作成', href: '/login', shallow: true },
   ];
 
   return (

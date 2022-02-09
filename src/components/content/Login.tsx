@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import styles from './Home.module.scss';
+import styles from './Login.module.scss';
 
-const MyPage = (): JSX.Element => {
+const Login = (): JSX.Element => {
   return <div>bbbbbbb</div>;
 };
 
-export default MyPage;
+export default Login;
