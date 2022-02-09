@@ -14,7 +14,7 @@ const MenuButton = (): JSX.Element => {
 
   return (
     <button
-      className="fixed right-8 bottom-8 w-16 h-16 rounded-full"
+      className="fixed right-8 bottom-8 w-16 h-16 rounded-full border-2 border-slate-900"
       style={{ backgroundColor: loginState }}
     ></button>
   );
