@@ -1,7 +1,12 @@
-import Main from 'src/components/layout/Main';
+import { useRouter } from 'next/router';
+import Home from 'src/components/content/Home';
+import styles from './Main.module.scss';
 
 const App = (): JSX.Element => {
-  return <Main />;
+  const router = useRouter();
+  const { app } = router.query;
+
+  return <>{app?.[0] === 'home' ? <Home /> : null}</>;
 };
 
 App.props = {
