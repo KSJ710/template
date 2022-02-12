@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Head from 'src/components/layout/Head';
 import Foot from 'src/components/layout/Foot';
 import Menu from 'src/components/layout/Menu';
-import MenuButton from 'src/components/button/MenuButton';
+import MenuButton from 'src/components/layout/MenuButton';
 import styles from './Base.module.scss';
 
 // ログイン状態チェック
@@ -33,7 +33,7 @@ const Base = (props): JSX.Element => {
         <Foot />
       </footer>
       <div className="w-screen h-screen" style={{ display: toggleDisplay }}>
-        <Menu />
+        <Menu handleTglDisp={handleTglDisp} />
       </div>
       <div onClick={handleTglDisp}>
         <MenuButton />
