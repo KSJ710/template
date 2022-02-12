@@ -11,13 +11,15 @@ const Head = (props): JSX.Element => {
   let list = [];
   if (status === 'authenticated') {
     list = [
-      { value: 'ログアウト', href: '/api/auth/signout', shallow: false },
-      { value: 'マイページ', href: '/mypage', shallow: true },
+      { value: 'ホーム', href: '/home', shallow: true, event: props.handleTglDisp },
+      { value: 'ログアウト', href: '/api/auth/signout', shallow: false, event: props.handleTglDisp },
+      { value: 'マイページ', href: '/mypage', shallow: true, event: props.handleTglDisp },
     ];
   } else {
     list = [
-      { value: 'ログイン', href: '/api/auth/signin', shallow: false },
-      { value: 'アカウント作成', href: '/login', shallow: true },
+      { value: 'ホーム', href: '/home', shallow: true, event: props.handleTglDisp },
+      { value: 'ログイン', href: '/api/auth/signin', shallow: false, event: props.handleTglDisp },
+      { value: 'アカウント作成', href: '/new/member', shallow: true, event: props.handleTglDisp },
     ];
   }
 
