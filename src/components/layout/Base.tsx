@@ -6,16 +6,6 @@ import Menu from 'src/components/layout/Menu';
 import MenuButton from 'src/components/layout/MenuButton';
 import styles from './Base.module.scss';
 
-// ログイン状態チェック
-const LoginStatus = (): JSX.Element => {
-  const { status } = useSession();
-  if (status === 'authenticated') {
-    return <p onClick={() => signOut()}>ログアウト</p>;
-  } else {
-    return <p onClick={() => signIn()}>ログイン</p>;
-  }
-};
-
 const Base = (props): JSX.Element => {
   const [toggleDisplay, setToggleDisplay] = useState<classDisplay>('none');
   // Menuの表示非表示を切り替える
