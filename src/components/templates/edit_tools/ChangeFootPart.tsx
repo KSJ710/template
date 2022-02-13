@@ -27,7 +27,7 @@ const ChangefootPart = (props: Props): JSX.Element => {
     props.setDisplay('none');
   };
 
-  const { data, error } = useSWR('/api/foot_parts', fetcher);
+  const { data, error } = useSWR('/api/templates/foot_parts', fetcher);
   if (error) {
     return <div>error</div>;
   }

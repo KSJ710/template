@@ -27,7 +27,7 @@ const ChangeHeadPart = (props: Props): JSX.Element => {
     props.setDisplay('none');
   };
 
-  const { data, error } = useSWR('/api/head_parts', fetcher);
+  const { data, error } = useSWR('/api/templates/head_parts', fetcher);
   if (error) {
     return <div>error</div>;
   }
