@@ -26,7 +26,7 @@ const ChangeFontFamily = (props: Props): JSX.Element => {
     currentTarget.style.fontFamily = e.target.value;
   };
 
-  const { data, error } = useSWR('/api/templates/font_families', fetcher);
+  const { data, error } = useSWR('/api/templates/font_family', fetcher);
   if (error) {
     return <div style={{ display: props.display }}>error</div>;
   }
