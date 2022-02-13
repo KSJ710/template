@@ -1,15 +1,30 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from 'lib/prisma';
 
-export default async function sample(req: NextApiRequest, res: NextApiResponse) {
-  // const member = await prisma.hoby.update({
-  //   where: { id: 7 },
-  //   data: { name: 'zz', predecessor: { connect: { id: 7 } } },
-  // });
+export default async function Sample(req: NextApiRequest, res: NextApiResponse) {
+  switch (req.method) {
+    case 'GET':
+      if (req.query.index === 'show') {
+        res.status(200).json({ message: 'GET_SHOW' });
+        break;
+      }
+      res.status(200).json({ message: 'GET_INDEX' });
+      break;
 
-  const member = await prisma.prefectures.findFirst({
-    where: { id: 11 },
-  });
-  const data = JSON.stringify(member, null, 2);
-  res.status(200).json(data);
+    case 'POST':
+      res.status(200).json({ message: 'POST' });
+      break;
+
+    case 'PATCH':
+      res.status(200).json({ message: 'PATCH' });
+      break;
+
+    case 'DELETE':
+      res.status(200).json({ message: 'DELETE' });
+      break;
+
+    default:
+      res.status(405).end();
+      break;
+  }
 }

@@ -3,7 +3,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 
 const New = (): JSX.Element => {
   return (
-    <form action="api/member/new">
+    <form action="/api/member/new" method="get">
       <label htmlFor="name">
         Name:
         <input type="text" name="name" className="border-2" />
