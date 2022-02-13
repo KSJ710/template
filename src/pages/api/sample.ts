@@ -8,7 +8,15 @@ export default async function Sample(req: NextApiRequest, res: NextApiResponse) 
         res.status(200).json({ message: 'GET_SHOW' });
         break;
       }
-      res.status(200).json({ message: 'GET_INDEX' });
+      console.log('debag');
+      const result = await prisma.member.create({
+        data: {
+          name: 'aa',
+          email: 'aa',
+          password: 'aa',
+        },
+      });
+      res.status(200).json(result);
       break;
 
     case 'POST':
