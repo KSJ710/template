@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from 'lib/prisma';
 
-const sample = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function sample(req: NextApiRequest, res: NextApiResponse) {
   // const member = await prisma.hoby.update({
   //   where: { id: 7 },
   //   data: { name: 'zz', predecessor: { connect: { id: 7 } } },
@@ -12,6 +12,4 @@ const sample = async (req: NextApiRequest, res: NextApiResponse) => {
   });
   const data = JSON.stringify(member, null, 2);
   res.status(200).json(data);
-};
-
-export default sample;
+}
