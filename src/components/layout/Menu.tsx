@@ -19,7 +19,7 @@ const Head = (props): JSX.Element => {
     list = [
       { value: 'ホーム', href: '/home', shallow: true, event: props.handleTglDisp },
       { value: 'ログイン', href: '/api/auth/signin', shallow: false, event: null },
-      { value: 'アカウント作成', href: '/new/member', shallow: true, event: props.handleTglDisp },
+      { value: 'アカウント作成', href: '/member/new', shallow: true, event: props.handleTglDisp },
     ];
   }
 

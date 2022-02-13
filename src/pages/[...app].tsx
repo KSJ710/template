@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Home from 'src/components/app/Home';
-import Member from 'src/components/app/new/Member';
+import MemberNew from 'src/components/app/member/New';
 
 const App = (): JSX.Element => {
   const router = useRouter();
@@ -9,7 +9,7 @@ const App = (): JSX.Element => {
   return (
     <>
       {app?.[0] === 'home' ? <Home /> : null}
-      {app?.[0] === 'new' && app?.[1] === 'member' ? <Member /> : null}
+      {app?.[0] === 'member' && app?.[1] === 'new' ? <MemberNew /> : null}
     </>
   );
 };
