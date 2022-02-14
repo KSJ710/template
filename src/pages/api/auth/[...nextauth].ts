@@ -3,6 +3,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import EmailProvider from 'next-auth/providers/email';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
+import bcrypt from 'bcrypt';
 import nodemailer from 'nodemailer';
 import { html, text } from 'src/mails/auth';
 
@@ -37,6 +38,10 @@ export default NextAuth({
     // You can define your own encode/decode functions for signing and encryption
     // if you want to override the default behavior.
   },
+  pages: {
+    signIn: '/auth/credentials-signin',
+    error: '/auth/credentials-signin?error=true',
+  },
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -56,20 +61,14 @@ export default NextAuth({
         // e.g. return { id: 1, name: 'J Smith', email: 'jsmith@example.com' }
         // You can also use the `req` object to obtain additional parameters
         // (i.e., the request IP address)
-        const res = await fetch('/your/endpoint', {
-          method: 'POST',
-          body: JSON.stringify(credentials),
-          headers: { 'Content-Type': 'application/json' },
-        });
-        const user = await res.json();
 
         // If no error and we have user data, return it
-        if (res.ok && user) {
-          return user;
+        const member = await checkUser(req.body.email, req.body.password);
+        if (member) {
+          return { name: member.name };
         }
 
         // Return null if user data could not be retrieved
-
         return null;
       },
     }),
@@ -96,20 +95,8 @@ export default NextAuth({
       },
     }),
   ],
-  callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
-      return true;
-    },
-  },
+  callbacks: {},
   events: {
-    async signIn(message) {
-      /* on successful sign in */
-      console.info(message);
-    },
-    async signOut(message) {
-      /* on signout */
-      console.info(message);
-    },
     async createUser(message) {
       /* user created */
       console.info(message);
@@ -141,3 +128,15 @@ export default NextAuth({
   },
   secret: 'Qspm1tLlmkMN8kE4AI3/L0uJUgKQhEME2olEdPcvvUk=',
 });
+
+async function checkUser(email, password) {
+  //... fetch user from a db etc.
+  const member = await prisma.member.findUnique({ where: { email: email } });
+  prisma.$disconnect();
+  const match = await bcrypt.compare(password, member.password);
+
+  if (match) {
+    return member;
+  }
+  return null;
+}
