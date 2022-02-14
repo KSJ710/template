@@ -3,10 +3,14 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 
 const New = (): JSX.Element => {
   return (
-    <form action="/api/member/new" method="get">
+    <form action="/api/member/new" method="post">
       <label htmlFor="name">
         Name:
         <input type="text" name="name" className="border-2" />
+      </label>
+      <label htmlFor="email">
+        email:
+        <input type="text" name="email" className="border-2" />
       </label>
       <label htmlFor="password">
         Password:
