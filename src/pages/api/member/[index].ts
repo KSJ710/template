@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import prisma from 'lib/prisma';
+import bcrypt from 'bcrypt';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
@@ -11,7 +13,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       break;
 
     case 'POST':
-      res.status(200).json({ message: 'POST' });
+      console.log(req.body.name);
+      console.log(req.body.password);
+      const saltRounds = 10;
+      let result;
+      bcrypt.hash(req.body.password, saltRounds, async function (err, hash) {
+        console.log(hash);
+        result = await prisma.member.create({
+          data: {
+            name: req.body.name,
+            email: req.body.email,
+            password: hash,
+          },
+        });
+      });
+      res.status(200).json(result);
       break;
 
     case 'PATCH':
