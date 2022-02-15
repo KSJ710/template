@@ -3,10 +3,10 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const color = await prisma.colors.findMany({
-    where: { id: 1 },
+  const data = await prisma.prefectures.findFirst({
+    where: { name: { contains: '川' } },
   });
-  console.log(color[0].id);
+  console.log(data);
 }
 
 main()

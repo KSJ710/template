@@ -28,7 +28,7 @@ const ChangeBackgroundColor = (props: Props): JSX.Element => {
   };
 
   // カラーデータフェッチして一覧に表示
-  const { data, error } = useSWR('/api/colors', fetcher);
+  const { data, error } = useSWR('/api/templates/color', fetcher);
   if (error) {
     return <div style={{ display: props.display }}>error</div>;
   }

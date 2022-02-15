@@ -21,7 +21,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
-  @@map("accounts")
+  @@map("nextauth_accounts")
 }
 
 model Session {
@@ -34,7 +34,7 @@ model Session {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@map("sessions")
+  @@map("nextauth_sessions")
 }
 
 model User {
@@ -48,7 +48,7 @@ model User {
   createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz
   updatedAt     DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
-  @@map("users")
+  @@map("nextauth_users")
 }
 
 model VerificationToken {
@@ -59,7 +59,7 @@ model VerificationToken {
   updatedAt  DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
   @@unique([identifier, token])
-  @@map("verificationtokens")
+  @@map("nextauth_verificationtokens")
 }
 
 //******** nextauth.prisma end *********

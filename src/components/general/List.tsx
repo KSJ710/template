@@ -4,6 +4,7 @@ type ListValue = {
   value: string;
   href: string;
   shallow: boolean;
+  event: () => {};
 };
 
 type Props = {
@@ -13,7 +14,7 @@ type Props = {
 const List = (props: Props): JSX.Element => {
   const list = props.value?.map((props) => (
     <Link href={props.href} key={props.value} shallow={props.shallow}>
-      <a>
+      <a onClick={props.event}>
         <li>{props.value}</li>
       </a>
     </Link>

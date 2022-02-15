@@ -1,4 +1,4 @@
-model Colors {
+model Color {
   id        Int      @id @default(autoincrement())
   name      String
   colorCode String   @unique @map("color_code")
@@ -6,5 +6,5 @@ model Colors {
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
   updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
 
-  @@map("colors")
+  @@map("m_colors")
 }

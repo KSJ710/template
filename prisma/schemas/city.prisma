@@ -1,0 +1,11 @@
+model City {
+  id           Int        @id @default(autoincrement())
+  name         String
+  prefectureId Int
+  prefecture   Prefecture @relation(fields: [prefectureId], references: [id])
+  members      Member[]
+  createdAt    DateTime   @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime   @default(now()) @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@map("m_cities")
+}
